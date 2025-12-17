@@ -1,0 +1,7 @@
+venv/
+models/talent_ner_model/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+*.log
