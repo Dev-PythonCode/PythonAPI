@@ -28,9 +28,22 @@ class QueryParser:
         if os.path.exists(model_path):
             print(f"[INFO] Loading SpaCy model from {model_path}")
             try:
+                # Load model and remove unnecessary pipeline components to speed up parsing.
                 self.nlp = spacy.load(model_path)
-                print(f"[INFO] ✅ Model loaded successfully!")
-                print(f"[INFO] Entity types: {list(self.nlp.get_pipe('ner').labels)}")
+                # Keep only the components required for our use-case (NER). Remove others.
+                keep = {"ner"}
+                existing = list(self.nlp.pipe_names)
+                for name in existing:
+                    if name not in keep:
+                        try:
+                            self.nlp.remove_pipe(name)
+                        except Exception:
+                            # If removal fails, ignore and continue
+                            pass
+
+                print(f"[INFO] ✅ Model loaded successfully! (pipes: {self.nlp.pipe_names})")
+                if "ner" in self.nlp.pipe_names:
+                    print(f"[INFO] Entity types: {list(self.nlp.get_pipe('ner').labels)}")
             except Exception as e:
                 print(f"[ERROR] ❌ Failed to load model: {e}")
                 print(f"[INFO] Using blank English model as fallback")
@@ -52,7 +65,31 @@ class QueryParser:
                     self.tech_dict = data
                     # ⭐ NEW: Extract categories structure
                     self.tech_categories = data.get('categories', {})
-                print(f"[INFO] ✅ Loaded tech dictionary with {len(self.tech_categories)} categories")
+                # Precompute known technologies and compiled regex patterns for faster lookups
+                known_techs = []
+                for category_data in self.tech_categories.values():
+                    known_techs.extend(category_data.get('technologies', []))
+
+                # Deduplicate and store lower-cased list
+                # IMPORTANT: Sort by length (longest first) to match "JavaScript" before "Java"
+                self.known_techs = list(dict.fromkeys(known_techs))
+                self.known_techs.sort(key=len, reverse=True)
+                
+                self._tech_patterns = {}
+                for tech in self.known_techs:
+                    tech_lower = tech.lower()
+                    # Use case-insensitive regex with proper word-boundary markers
+                    try:
+                        self._tech_patterns[tech] = re.compile(r'\b' + re.escape(tech_lower) + r'\b', re.I)
+                    except re.error:
+                        # Fallback to simple contains check using lowercased tech name
+                        self._tech_patterns[tech] = None
+
+                # Precompile role pattern for quick role detection
+                self.role_keywords = ['developer', 'engineer', 'manager', 'architect', 'analyst', 'consultant']
+                self._role_pattern = re.compile(r'\b(' + '|'.join(self.role_keywords) + r')s?\b', re.I)
+
+                print(f"[INFO] ✅ Loaded tech dictionary with {len(self.tech_categories)} categories and {len(self.known_techs)} techs")
             except Exception as e:
                 print(f"[ERROR] Failed to load tech dictionary: {e}")
                 self.tech_dict = {}
@@ -114,33 +151,60 @@ class QueryParser:
         """
         Fallback: Extract skills by keyword matching when SpaCy NER misses them
         (e.g., lowercase "angular" instead of "Angular")
+        Also checks normalization map for typos/variants (e.g., "phyton"→Python, ".net"→C#)
         """
         found_skills = []
         
-        # Get all known technologies from tech_dict
-        known_techs = []
+        # Common verb tokens to exclude (prevent "guide", "find", etc. being extracted as skills)
+        verb_tokens = {'guide', 'find', 'show', 'list', 'want', 'search', 'help', 'suggest', 'need', 'recommend', 'tell', 'display'}
+
+        # ⭐ NEW: Check normalization map for typos and variants first
+        # Build lowercase version of normalization map for case-insensitive matching
+        norm_map_lower = {k.lower(): v for k, v in self.normalization_map.items()}
         
-        # From categories structure
-        for category_data in self.tech_categories.values():
-            known_techs.extend(category_data.get('technologies', []))
-        
-        # Remove duplicates
-        known_techs = list(set(known_techs))
-        
-        # Check if any technology appears in query (case-insensitive)
-        for tech in known_techs:
-            tech_lower = tech.lower()
-            # Use word boundary to avoid partial matches
-            pattern = r'\b' + re.escape(tech_lower) + r'\b'
-            if re.search(pattern, query_lower):
-                found_skills.append(tech)
-                print(f"[INFO] 🔍 Found skill via keyword match: {tech}")
-        
-        return found_skills
+        for typo_lower, canonical in norm_map_lower.items():
+            # Use word boundary matching for alphanumeric-only patterns, but not for special chars like "."
+            if re.match(r'^\w+$', typo_lower):  # Pure alphanumeric (e.g., "phyton", "reacct")
+                pattern = re.compile(r'\b' + re.escape(typo_lower) + r'\b', re.I)
+            else:  # Has special chars (e.g., ".net"), no word boundaries
+                pattern = re.compile(re.escape(typo_lower), re.I)
+            
+            if pattern.search(query_lower):
+                normalized = self.normalize_skill(canonical)  # Normalize the canonical form
+                if normalized and normalized not in found_skills:
+                    found_skills.append(normalized)
+                    print(f"[INFO] 🔍 Found via normalization: '{typo_lower}'→'{normalized}'")
+
+        # Use precompiled patterns for faster matching
+        for tech, pattern in self._tech_patterns.items():
+            if pattern is None:
+                if tech.lower() in query_lower:
+                    found_skills.append(tech)
+                    print(f"[INFO] 🔍 Found skill via keyword match: {tech}")
+            else:
+                if pattern.search(query_lower):
+                    found_skills.append(tech)
+                    print(f"[INFO] 🔍 Found skill via keyword match: {tech}")
+
+        # Filter out any matches that exactly correspond to verb tokens
+        filtered_skills = []
+        for skill in found_skills:
+            if skill.lower() not in verb_tokens:
+                filtered_skills.append(skill)
+            else:
+                print(f"[DEBUG] Skipping verb-like skill: '{skill}'")
+
+        return filtered_skills
 
     def _detect_categories_and_expand(self, query_lower: str, doc) -> Tuple[List[str], List[str]]:
         """
         ⭐ NEW: Detect technology categories in query and expand to specific skills
+        
+        IMPORTANT FIX: 
+        - If a role-based keyword (developer, engineer, architect) is found BUT a specific technology 
+          appears before it (within 15 chars), skip the role-based category expansion
+        - Example: "Python developer" → only Python (not all programming languages)
+        - Example: "Need a developer" → expands to all programming languages (no specific tech before)
         
         Args:
             query_lower: Lowercase query string
@@ -154,27 +218,73 @@ class QueryParser:
         
         print(f"[DEBUG] Checking for categories in query: {query_lower}")
         
+        # ⭐ FIX: Define role-based keywords that should skip expansion if preceded by a technology
+        role_based_keywords = {'developer', 'programmer', 'engineer', 'architect', 'analyst', 'consultant'}
+        
+        # Get all known technologies to check for preceding tech matches
+        known_techs = []
+        # Add canonical tech names
+        for tech_name, tech_info in self.tech_dict.items():
+            known_techs.append(tech_name.lower())
+            # Also add variants if tech_info is a dict
+            if isinstance(tech_info, dict):
+                variants = tech_info.get('variants', [])
+                known_techs.extend([v.lower() for v in variants])
+        
+        # Also add all normalized tech keywords (from normalization_map values)
+        for normalized_name in self.normalization_map.values():
+            if normalized_name.lower() not in known_techs:
+                known_techs.append(normalized_name.lower())
+        
         # Check each category
         for category_name, category_data in self.tech_categories.items():
             category_name_lower = category_name.lower()
             keywords = category_data.get('keywords', [])
             aliases = category_data.get('aliases', [])
             technologies = category_data.get('technologies', [])
-            
-            # Check if category name is in query
-            if category_name_lower in query_lower:
-                detected_categories.append(category_name)
-                category_skills.extend(technologies)
-                print(f"[INFO] 📂 Category detected: {category_name} (from category name)")
+            # Check if category name is in query (use word boundaries and ensure it's not used as a verb)
+            try:
+                pattern_cat = re.compile(r"\b" + re.escape(category_name_lower) + r"\b")
+            except re.error:
+                pattern_cat = None
+
+            cat_matched = False
+            if pattern_cat:
+                for m in pattern_cat.finditer(query_lower):
+                    # map character span to doc tokens and skip if span corresponds to verb tokens
+                    span = doc.char_span(m.start(), m.end(), alignment_mode='contract')
+                    if span is not None:
+                        if any(tok.pos_ in ('VERB', 'AUX') for tok in span):
+                            # skip verb-like usages
+                            continue
+                    detected_categories.append(category_name)
+                    category_skills.extend(technologies)
+                    print(f"[INFO] 📂 Category detected: {category_name} (from category name)")
+                    cat_matched = True
+                    break
+
+            if cat_matched:
                 continue
             
             # Check aliases
             for alias in aliases:
-                if alias.lower() in query_lower:
-                    detected_categories.append(category_name)
-                    category_skills.extend(technologies)
-                    print(f"[INFO] 📂 Category detected: {category_name} (from alias: '{alias}')")
-                    break
+                alias_lower = alias.lower()
+                try:
+                    pattern_alias = re.compile(r"\b" + re.escape(alias_lower) + r"\b")
+                except re.error:
+                    pattern_alias = None
+
+                if pattern_alias:
+                    for m in pattern_alias.finditer(query_lower):
+                        span = doc.char_span(m.start(), m.end(), alignment_mode='contract')
+                        if span is not None and any(tok.pos_ in ('VERB', 'AUX') for tok in span):
+                            continue
+                        detected_categories.append(category_name)
+                        category_skills.extend(technologies)
+                        print(f"[INFO] 📂 Category detected: {category_name} (from alias: '{alias}')")
+                        break
+                    if category_name in detected_categories:
+                        break
             
             if category_name in detected_categories:
                 continue
@@ -183,15 +293,46 @@ class QueryParser:
             for keyword in keywords:
                 keyword_lower = keyword.lower()
                 # Only match keywords of 4+ chars to avoid false positives
-                if len(keyword_lower) >= 4 and keyword_lower in query_lower:
-                    # Additional check: make sure it's a word boundary match
-                    # This prevents "cloud" from matching "cloudy"
-                    pattern = r'\b' + re.escape(keyword_lower) + r'\b'
-                    if re.search(pattern, query_lower):
-                        detected_categories.append(category_name)
-                        category_skills.extend(technologies)
-                        print(f"[INFO] 📂 Category detected: {category_name} (from keyword: '{keyword}')")
-                        break
+                if len(keyword_lower) >= 4:
+                    try:
+                        pattern_kw = re.compile(r"\b" + re.escape(keyword_lower) + r"\b")
+                    except re.error:
+                        pattern_kw = None
+
+                    if pattern_kw:
+                        for m in pattern_kw.finditer(query_lower):
+                            span = doc.char_span(m.start(), m.end(), alignment_mode='contract')
+                            if span is not None and any(tok.pos_ in ('VERB', 'AUX') for tok in span):
+                                # skip matches where the keyword functions as a verb
+                                continue
+                            
+                            # ⭐ FIX: Check if this is a role-based keyword preceded by a specific technology
+                            if keyword_lower in role_based_keywords:
+                                # Check if a specific technology appears before this keyword
+                                keyword_pos = m.start()
+                                text_before_keyword = query_lower[:keyword_pos]
+                                
+                                # Check if any known tech appears in the 15 chars before the keyword
+                                found_preceding_tech = False
+                                for tech in known_techs:
+                                    # Find the last occurrence of this tech before the keyword
+                                    tech_pos = text_before_keyword.rfind(tech)
+                                    if tech_pos != -1:
+                                        # Check if this tech is within 15 chars before keyword
+                                        if keyword_pos - tech_pos < 15:
+                                            print(f"[DEBUG] 🚫 Skipping role-based keyword '{keyword_lower}' (preceded by tech '{tech}' at distance {keyword_pos - tech_pos})")
+                                            found_preceding_tech = True
+                                            break
+                                
+                                if found_preceding_tech:
+                                    continue  # Skip this role-based category if a tech precedes it
+                            
+                            detected_categories.append(category_name)
+                            category_skills.extend(technologies)
+                            print(f"[INFO] 📂 Category detected: {category_name} (from keyword: '{keyword}')")
+                            break
+                        if category_name in detected_categories:
+                            break
         
         # Remove duplicates
         detected_categories = list(dict.fromkeys(detected_categories))  # Preserves order
@@ -202,6 +343,185 @@ class QueryParser:
         
         return detected_categories, category_skills
 
+    def _detect_optional_skills(self, query: str) -> List[str]:
+        """
+        Extract sections that contain optional/nice-to-have keywords.
+        Returns: List of text sections marked as optional
+        """
+        optional_keywords = [
+            r'added advantage',
+            r'nice to have',
+            r'bonus',
+            r'preferred',
+            r'optional',
+        ]
+        
+        optional_sections = []
+        query_lower = query.lower()
+        
+        for keyword in optional_keywords:
+            if keyword in query_lower:
+                # Find the start: look for comma before the keyword or beginning
+                idx = query_lower.find(keyword)
+                start = query_lower.rfind(',', 0, idx)
+                if start == -1:
+                    start = 0
+                else:
+                    start += 1
+                
+                # Find the end: look for comma after the keyword or end
+                end = query_lower.find(',', idx)
+                if end == -1:
+                    end = len(query)
+                
+                section = query[start:end].strip()
+                if section and section not in optional_sections:
+                    optional_sections.append(section)
+        
+        return optional_sections
+
+    def _extract_locations(self, query: str, doc) -> List[str]:
+        """
+        Extract location names from query using:
+        1. SpaCy GPE (Geo-Political Entity) extraction
+        2. Keywords like "available in", "based in", "located in", "in"
+        3. Common city/location names
+        Handles multiple locations separated by "and", "or", ","
+        """
+        locations_found = []
+        query_lower = query.lower()
+        
+        # Extended location list with Trivandrum, Manila, Colombo, Sri Lanka, Philippines
+        common_locations = {
+            'bangalore', 'bengaluru', 'mumbai', 'delhi', 'new delhi',
+            'hyderabad', 'pune', 'chennai', 'kolkata', 'jaipur',
+            'ahmedabad', 'surat', 'lucknow', 'chandigarh', 'indore',
+            'kochi', 'coimbatore', 'vadodara', 'ludhiana', 'agra',
+            'visakhapatnam', 'pimpri-chinchwad', 'patna', 'raipur',
+            'trivandrum', 'thiruvananthapuram',
+            'new york', 'london', 'san francisco', 'seattle', 'austin',
+            'toronto', 'vancouver', 'singapore', 'dubai', 'sydney',
+            'manila', 'colombo', 'sri lanka', 'philippines',
+            'bay area', 'new york',
+            'us', 'uk', 'usa', 'india', 'canada', 'remote', 'work from home'
+        }
+        
+        # Extract from SpaCy GPE entities
+        for ent in doc.ents:
+            if ent.label_ in ('GPE', 'LOC', 'LOCATION'):
+                loc = ent.text.strip()
+                if loc.lower() not in [l.lower() for l in locations_found]:
+                    locations_found.append(loc)
+                    print(f"[INFO] 📍 Location detected (NER): {loc}")
+        
+        # Extract from keywords "available in", "based in", "located in", "can work in"
+        # This pattern captures multiple locations separated by and/or/,
+        location_patterns = [
+            r'available\s+(?:in|at)\s+([A-Z][a-zA-Z\s,\-&]*?)(?:\s+(?:based|with|for|$|\.))',
+            r'based\s+(?:in|at)\s+([A-Z][a-zA-Z\s,\-&]*?)(?:\s+(?:with|for|$|\.))',
+            r'located\s+(?:in|at)\s+([A-Z][a-zA-Z\s,\-&]*?)(?:\s+(?:with|for|$|\.))',
+            r'can\s+work\s+in\s+([A-Z][a-zA-Z\s,\-&]*?)(?:\s+(?:with|for|$|\.))',
+            r'(?:in|available in)\s+([A-Z][a-zA-Z\s,\-&]*)(?:\s*(?:$|\.|\,))',
+        ]
+        
+        for pattern in location_patterns:
+            matches = re.finditer(pattern, query)
+            for match in matches:
+                loc_str = match.group(1).strip().rstrip(',').strip()
+                if loc_str:
+                    # Skip if this is likely availability text
+                    availability_words = {'immediate', 'asap', 'urgently', 'temporary', 'support', 'contract'}
+                    if any(word in loc_str.lower() for word in availability_words):
+                        continue
+                    
+                    # Split by 'and', 'or', ','
+                    split_locs = re.split(r'\s+(?:and|or)\s+|,\s*', loc_str)
+                    for loc in split_locs:
+                        loc = loc.strip()
+                        if loc and len(loc) > 2 and loc.lower() not in [l.lower() for l in locations_found]:
+                            locations_found.append(loc)
+                            print(f"[INFO] 📍 Location detected (keyword): {loc}")
+        
+        # Extract common city names mentioned directly with multi-location support
+        for city in common_locations:
+            if city in query_lower:
+                # Ensure it's a word boundary match
+                pattern = r'\b' + re.escape(city) + r'\b'
+                if re.search(pattern, query_lower):
+                    # For multi-word locations like "Sri Lanka", "New York", etc.
+                    if ' ' in city:
+                        # Match the exact phrase
+                        matches = re.finditer(re.escape(city), query_lower)
+                        for match in matches:
+                            original_text = query[match.start():match.end()]
+                            if original_text.lower() not in [l.lower() for l in locations_found]:
+                                locations_found.append(original_text)
+                                print(f"[INFO] 📍 Location detected (common list): {original_text}")
+                    else:
+                        # For single-word cities, strip punctuation and find the word
+                        for word in query.split():
+                            word_clean = word.rstrip(',.;:!?')  # Remove trailing punctuation
+                            if word_clean.lower() == city:
+                                if word_clean.lower() not in [l.lower() for l in locations_found]:
+                                    locations_found.append(word_clean)
+                                    print(f"[INFO] 📍 Location detected (common list): {word_clean}")
+                                break
+        
+        return locations_found
+    
+    def _detect_availability(self, query: str) -> Dict[str, Any]:
+        """
+        Detect employee availability status from query text.
+        Maps keywords to database values: "Available", "Limited", "Not Available"
+        Handles: immediate, ASAP, part-time, contract, support, etc.
+        """
+        query_lower = query.lower()
+        availability_result = {
+            "status": None,
+            "keywords": [],
+            "details": None
+        }
+        
+        # Immediate availability keywords (Available)
+        immediate_keywords = ['immediate', 'immediately', 'asap', 'urgently', 'urgent', 'right away', 'straight away']
+        
+        # Part-time/Limited availability keywords (Limited)
+        limited_keywords = ['part time', 'part-time', 'part-timer', 'contract', 'freelance', 'support', 'temporarily', 
+                           'limited support', 'limited availability', 'flexible', 'flexible hours']
+        
+        # Not available keywords (Not Available)
+        unavailable_keywords = ['no availability', 'not available', 'unavailable', 'not immediately', 'cannot be available']
+        
+        # Check for immediate availability
+        for keyword in immediate_keywords:
+            if keyword in query_lower:
+                availability_result["status"] = "Available"
+                availability_result["keywords"].append(keyword)
+                availability_result["details"] = "Immediate/ASAP"
+                print(f"[INFO] ⏰ Availability detected (Immediate): {keyword}")
+        
+        # Check for limited/part-time availability (only if not already marked as Available)
+        if availability_result["status"] != "Available":
+            for keyword in limited_keywords:
+                if keyword in query_lower:
+                    availability_result["status"] = "Limited"
+                    availability_result["keywords"].append(keyword)
+                    availability_result["details"] = f"{keyword.title()} basis"
+                    print(f"[INFO] ⏰ Availability detected (Limited): {keyword}")
+                    break
+        
+        # Check for unavailable keywords (lowest priority)
+        if availability_result["status"] is None:
+            for keyword in unavailable_keywords:
+                if keyword in query_lower:
+                    availability_result["status"] = "Not Available"
+                    availability_result["keywords"].append(keyword)
+                    availability_result["details"] = "Currently unavailable"
+                    print(f"[INFO] ⏰ Availability detected (Not Available): {keyword}")
+                    break
+        
+        return availability_result
+
     def parse_query(self, query: str) -> Dict[str, Any]:
         if not query or not query.strip():
             return self._empty_result()
@@ -209,15 +529,24 @@ class QueryParser:
         query_lower = query.lower()
         doc = self.nlp(query)
 
+        # ⭐ STEP 0.25: Detect availability status
+        availability = self._detect_availability(query)
+
+        # ⭐ STEP 0.5: Detect optional skills/attributes
+        optional_sections = self._detect_optional_skills(query)
+
+        # ⭐ STEP 0.75: Extract locations (handles multiple locations with and/or/,)
+        locations = self._extract_locations(query, doc)
+
         # ⭐ STEP 1: Detect categories
         detected_categories, category_skills = self._detect_categories_and_expand(query_lower, doc)
 
         # ⭐ STEP 2: Extract entities from SpaCy
         technologies = []
+        optional_technologies = []
         tech_categories = []
         tech_experiences = []
         overall_experiences = []
-        locations = []
         skill_levels = []
         roles = []
         certifications = []
@@ -226,11 +555,31 @@ class QueryParser:
 
         for ent in doc.ents:
             entity_text = ent.text.strip()
+            
+            # Skip entities that are verb tokens (imperative commands)
+            verb_tokens = {'guide', 'find', 'show', 'list', 'want', 'search', 'help', 'suggest', 'need', 'recommend', 'tell', 'display', 'looking', 'seeking'}
+            if entity_text.lower() in verb_tokens:
+                print(f"[DEBUG] Skipping verb entity: '{entity_text}'")
+                continue
 
             if ent.label_ == "TECHNOLOGY":
                 normalized = self.normalize_skill(entity_text)
-                if normalized not in technologies:
-                    technologies.append(normalized)
+                
+                # Check if this technology is in optional sections
+                is_optional = False
+                for optional_text in optional_sections:
+                    if normalized.lower() in optional_text.lower():
+                        is_optional = True
+                        break
+                
+                if is_optional:
+                    if normalized not in optional_technologies:
+                        optional_technologies.append(normalized)
+                        print(f"[INFO] 🔷 Detected optional technology: {normalized}")
+                else:
+                    if normalized not in technologies:
+                        technologies.append(normalized)
+                        print(f"[INFO] 🔶 Detected required technology: {normalized}")
 
             elif ent.label_ == "TECH_CATEGORY":
                 if entity_text.lower() not in [c.lower() for c in tech_categories]:
@@ -249,8 +598,21 @@ class QueryParser:
                     locations.append(entity_text)
 
             elif ent.label_ == "SKILL_LEVEL":
-                if entity_text not in skill_levels:
-                    skill_levels.append(entity_text)
+                # Ignore entities that are actually verbs/imperatives (e.g., "find", "show")
+                is_verb = False
+                try:
+                    # ent may be a span; check its root token POS
+                    is_verb = getattr(ent.root, 'pos_', '').upper() == 'VERB' or getattr(ent.root, 'pos_', '').upper() == 'AUX'
+                except Exception:
+                    is_verb = False
+
+                verb_tokens = {'find', 'show', 'list', 'want', 'want to', 'looking', 'search'}
+                if entity_text.lower() in verb_tokens or is_verb:
+                    # skip misclassified imperative verbs
+                    print(f"[DEBUG] Ignoring verb-like SKILL_LEVEL entity: '{entity_text}'")
+                else:
+                    if entity_text not in skill_levels:
+                        skill_levels.append(entity_text)
 
             elif ent.label_ == "ROLE":
                 if entity_text not in roles:
@@ -274,6 +636,44 @@ class QueryParser:
             if skill not in technologies:
                 technologies.append(skill)
                 print(f"[INFO] ✅ Added skill from keyword match: {skill}")
+
+        # ⭐ STEP 2.6: Role keyword fallback - ensure roles like 'developer' are captured
+        if hasattr(self, '_role_pattern') and self._role_pattern.search(query):
+            # Find exact token in doc to preserve casing
+            for token in doc:
+                if token.text.lower().rstrip('s') in self.role_keywords and token.text not in roles:
+                    roles.append(token.text)
+                    print(f"[INFO] ✅ Added role from keyword fallback: {token.text}")
+                    break
+
+        # Clean up roles: remove entries that start with verbs/imperatives (misclassifications)
+        cleaned_roles = []
+        role_verb_prefixes = ('find', 'show', 'list', 'want', 'looking', 'search')
+        for r in roles:
+            if not r:
+                continue
+            low = r.lower().strip()
+            if any(low.startswith(p + ' ') or low == p for p in role_verb_prefixes):
+                print(f"[DEBUG] Removing misclassified role: '{r}'")
+                continue
+            cleaned_roles.append(r)
+
+        # Deduplicate while preserving order
+        seen = set()
+        roles = []
+        for r in cleaned_roles:
+            key = r.lower()
+            if key not in seen:
+                seen.add(key)
+                roles.append(r)
+
+        # If no roles found but a role keyword exists in the query, add a canonical form
+        if not roles and hasattr(self, '_role_pattern') and self._role_pattern.search(query_lower):
+            m = self._role_pattern.search(query_lower)
+            if m:
+                kw = m.group(1)
+                if kw:
+                    roles.append(kw.capitalize())
 
         # ⭐ STEP 3: Merge categories
         all_categories = list(dict.fromkeys(detected_categories + tech_categories))
@@ -300,11 +700,12 @@ class QueryParser:
         )
 
         location = locations[0] if locations else None
-        availability = self._extract_availability(query)
+        availability = self._detect_availability(query)
 
-        # Build parsed result WITH CATEGORIES
+        # Build parsed result WITH CATEGORIES AND OPTIONAL SKILLS
         parsed_result = {
             'skills': technologies,
+            'optional_skills': optional_technologies,  # ⭐ NEW: Optional/nice-to-have skills
             'categories': all_categories,  # ⭐ Now includes detected categories
             'category_skills': category_skills,  # ⭐ Now includes expanded skills
 
@@ -318,7 +719,8 @@ class QueryParser:
             'skill_requirements': skill_experience_map,
 
             'location': location,
-            'availability_status': availability,
+            'locations': locations,  # ⭐ All locations (handles multiple)
+            'availability_status': availability,  # ⭐ Availability with status, keywords, details
             'skill_levels': skill_levels,
             'roles': roles,
             'certifications': certifications,
@@ -339,11 +741,14 @@ class QueryParser:
             'skills_found': len(all_skills),  # ⭐ Total of explicit + category skills
             'entities_detected': {
                 'skills': technologies,
+                'optional_skills': optional_technologies,  # ⭐ Optional/nice-to-have skills
                 'categories': all_categories,
                 'category_skills': category_skills,
                 'tech_experiences': tech_experiences,
                 'overall_experiences': overall_experiences,
-                'location': location,
+                'locations': locations,  # ⭐ All locations
+                'primary_location': location,
+                'availability': availability,  # ⭐ Full availability object
                 'skill_levels': skill_levels,
                 'roles': roles,
                 'certifications': certifications,

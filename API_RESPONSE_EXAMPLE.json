@@ -1,0 +1,102 @@
+{
+  "original_query": "Find Python developers with 5 years experience and sql knowledge, cloud technology is added advantage and located in Bangalore",
+  "parsed": {
+    "skills": [
+      "Python",
+      "SQL"
+    ],
+    "optional_skills": [],
+    "categories": [
+      "Cloud Platform"
+    ],
+    "category_skills": [
+      "AWS",
+      "Azure",
+      "GCP"
+    ],
+    "min_years_experience": 5.0,
+    "max_years_experience": null,
+    "experience_operator": "gte",
+    "experience_context": {
+      "type": "total",
+      "skill": null,
+      "reason": "OVERALL_EXPERIENCE entity detected, no specific skill mentioned"
+    },
+    "skill_requirements": [
+      {
+        "skill": "Python",
+        "min_years": 5.0,
+        "max_years": null,
+        "operator": "gte",
+        "experience_type": "skill_specific"
+      },
+      {
+        "skill": "SQL",
+        "min_years": 5.0,
+        "max_years": null,
+        "operator": "gte",
+        "experience_type": "skill_specific"
+      }
+    ],
+    "location": "Bangalore",
+    "locations": [
+      "Bangalore"
+    ],
+    "availability_status": {
+      "status": null,
+      "keywords": [],
+      "details": null
+    },
+    "skill_levels": [],
+    "roles": [
+      "developers"
+    ],
+    "certifications": [],
+    "companies": [],
+    "dates": []
+  },
+  "applied_filters": [
+    "Skills: Python, SQL",
+    "Categories: Cloud Platform",
+    "Python: 5.0+ years",
+    "SQL: 5.0+ years",
+    "Location: Bangalore",
+    "Availability: {'status': None, 'keywords': [], 'details': None}"
+  ],
+  "skills_found": 5,
+  "entities_detected": {
+    "skills": [
+      "Python",
+      "SQL"
+    ],
+    "optional_skills": [],
+    "categories": [
+      "Cloud Platform"
+    ],
+    "category_skills": [
+      "AWS",
+      "Azure",
+      "GCP"
+    ],
+    "tech_experiences": [],
+    "overall_experiences": [
+      "with 5 years experience"
+    ],
+    "locations": [
+      "Bangalore"
+    ],
+    "primary_location": "Bangalore",
+    "availability": {
+      "status": null,
+      "keywords": [],
+      "details": null
+    },
+    "skill_levels": [],
+    "roles": [
+      "developers"
+    ],
+    "certifications": [],
+    "companies": [],
+    "dates": []
+  }
+}

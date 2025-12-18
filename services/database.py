@@ -1,5 +1,30 @@
-import pyodbc
-from config import Config
+import sys
+import os
+
+# Attempt to import pyodbc and provide a clear error if missing
+try:
+    import pyodbc
+except ModuleNotFoundError as e:
+    raise ModuleNotFoundError(
+        "pyodbc is not installed in this environment. Install with: .venv/bin/pip install pyodbc"
+    ) from e
+
+# `from config import Config` can fail when this file is executed directly
+# (python services/database.py) because the project root isn't on sys.path.
+try:
+    from config import Config
+except ModuleNotFoundError:
+    # Add project root (parent of services/) to sys.path and retry
+    PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
+    if PROJECT_ROOT not in sys.path:
+        sys.path.insert(0, PROJECT_ROOT)
+    try:
+        from config import Config
+    except Exception as e:
+        # Re-raise with a helpful message
+        raise ModuleNotFoundError(
+            f"Failed to import 'config'. Ensure you're running from the project root or that {PROJECT_ROOT} contains config.py"
+        ) from e
 
 
 class DatabaseService:

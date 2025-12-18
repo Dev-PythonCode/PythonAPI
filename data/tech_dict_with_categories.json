@@ -27,7 +27,7 @@
     "Database": {
       "description": "Database management systems",
       "keywords": ["database", "db", "data storage", "sql", "nosql"],
-      "technologies": ["MySQL", "PostgreSQL", "MongoDB", "Redis", "SQLite", "Oracle", "Cassandra", "Elasticsearch"],
+      "technologies": ["SQL", "MySQL", "PostgreSQL", "MongoDB", "Redis", "SQLite", "Oracle", "Cassandra", "Elasticsearch"],
       "aliases": ["data storage", "dbms", "database systems"]
     },
     "DevOps Tool": {
@@ -141,6 +141,15 @@
   },
   
   "technologies": {
+    "SQL": {
+      "canonical_name": "SQL",
+      "category": "Database",
+      "variants": ["SQL", "sql", "SQL", "T-SQL", "t-sql", "TSQL", "tsql", "SQL Server", "sql server", "sqlserver", "PL/SQL", "pl/sql", "plsql", "PLSQL"],
+      "abbreviations": ["sql"],
+      "context_words": ["database", "query", "tables", "database", "tsql", "plsql", "query language", "relational", "rows", "columns"],
+      "related_categories": ["Database"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
     "Python": {
       "canonical_name": "Python",
       "category": "Programming Language",
