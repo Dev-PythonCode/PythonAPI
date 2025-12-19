@@ -4,139 +4,151 @@
       "description": "Programming languages for software development",
       "keywords": ["programming", "coding", "developer", "language", "code"],
       "technologies": ["Python", "JavaScript", "TypeScript", "Java", "C++", "C#", "Ruby", "Go", "Rust", "PHP", "Swift", "Kotlin", "Scala", "R", "MATLAB"],
-      "aliases": ["programming languages", "coding languages", "dev languages"]
+      "aliases": ["programming languages", "coding languages", "dev languages", "software development languages"]
     },
     "Cloud Platform": {
       "description": "Cloud computing platforms and services",
-      "keywords": ["cloud", "platform", "infrastructure", "hosting", "serverless"],
+      "keywords": ["cloud", "platform", "infrastructure", "hosting", "serverless", "iaas", "paas", "saas"],
       "technologies": ["AWS", "Azure", "GCP"],
       "aliases": ["cloud computing", "cloud services", "cloud infrastructure"]
     },
     "Frontend Framework": {
-      "description": "Frontend web development frameworks",
-      "keywords": ["frontend", "ui", "web", "client-side", "browser"],
-      "technologies": ["React", "Angular", "Vue", "Svelte"],
-      "aliases": ["front-end", "ui framework", "web framework"]
+      "description": "Frontend web development frameworks and libraries",
+      "keywords": ["frontend", "ui", "web", "client-side", "browser", "spa", "component"],
+      "technologies": ["React", "Angular", "Vue", "Svelte", "Next.js", "Nuxt.js", "Gatsby"],
+      "aliases": ["front-end", "ui framework", "web framework", "frontend library"]
     },
     "Backend Framework": {
       "description": "Backend server-side frameworks",
-      "keywords": ["backend", "server", "api", "server-side"],
-      "technologies": ["Django", "Flask", "Spring", "Express", "FastAPI", "Laravel", "ASP.NET"],
-      "aliases": ["back-end", "server framework", "api framework"]
+      "keywords": ["backend", "server", "api", "server-side", "rest", "microservices"],
+      "technologies": ["Django", "Flask", "Spring", "Express", "FastAPI", "Laravel", "ASP.NET", "Node.js"],
+      "aliases": ["back-end", "server framework", "api framework", "backend library"]
     },
     "Database": {
       "description": "Database management systems",
-      "keywords": ["database", "db", "data storage", "sql", "nosql"],
-      "technologies": ["SQL", "MySQL", "PostgreSQL", "MongoDB", "Redis", "SQLite", "Oracle", "Cassandra", "Elasticsearch"],
-      "aliases": ["data storage", "dbms", "database systems"]
+      "keywords": ["database", "db", "data storage", "sql", "nosql", "relational", "document store"],
+      "technologies": ["SQL", "MySQL", "PostgreSQL", "MongoDB", "Redis", "SQLite", "Oracle", "Cassandra", "Elasticsearch", "SQL Server"],
+      "aliases": ["data storage", "dbms", "database systems", "data persistence"]
     },
     "DevOps Tool": {
-      "description": "DevOps and CI/CD tools",
-      "keywords": ["devops", "ci", "cd", "pipeline", "automation", "deployment"],
-      "technologies": ["Docker", "Kubernetes", "Jenkins", "Terraform", "Ansible"],
-      "aliases": ["devops", "ci/cd", "deployment tools"]
+      "description": "DevOps, CI/CD, and automation tools",
+      "keywords": ["devops", "ci", "cd", "pipeline", "automation", "deployment", "continuous integration", "continuous deployment"],
+      "technologies": ["Docker", "Kubernetes", "Jenkins", "Terraform", "Ansible", "Git", "GitHub Actions"],
+      "aliases": ["devops", "ci/cd", "deployment tools", "automation tools"]
     },
     "Version Control": {
       "description": "Version control systems and platforms",
-      "keywords": ["version control", "git", "repository", "source control"],
+      "keywords": ["version control", "git", "repository", "source control", "code management"],
       "technologies": ["Git", "GitHub", "GitLab"],
-      "aliases": ["source control", "vcs", "git"]
+      "aliases": ["source control", "vcs", "git", "code repository"]
     },
     "Mobile Framework": {
       "description": "Mobile application development frameworks",
-      "keywords": ["mobile", "ios", "android", "app", "smartphone"],
-      "technologies": ["React Native", "Flutter"],
-      "aliases": ["mobile development", "app framework"]
+      "keywords": ["mobile", "ios", "android", "app", "smartphone", "cross-platform"],
+      "technologies": ["React Native", "Flutter", "Swift", "Kotlin"],
+      "aliases": ["mobile development", "app framework", "mobile app"]
     },
     "Machine Learning": {
       "description": "Machine learning and AI frameworks",
-      "keywords": ["machine learning", "ml", "ai", "deep learning", "neural network"],
-      "technologies": ["TensorFlow", "PyTorch", "Scikit-learn"],
-      "aliases": ["ml", "ai", "artificial intelligence", "deep learning"]
+      "keywords": ["machine learning", "ml", "ai", "deep learning", "neural network", "artificial intelligence"],
+      "technologies": ["TensorFlow", "PyTorch", "Scikit-learn", "Keras"],
+      "aliases": ["ml", "ai", "artificial intelligence", "deep learning", "neural networks"]
     },
     "Data Science": {
-      "description": "Data science and analysis tools",
-      "keywords": ["data science", "data analysis", "analytics", "visualization"],
-      "technologies": ["Pandas", "NumPy", "R"],
-      "aliases": ["data analytics", "data analysis"]
+      "description": "Data science, analysis, and visualization tools",
+      "keywords": ["data science", "data analysis", "analytics", "visualization", "data processing"],
+      "technologies": ["Pandas", "NumPy", "R", "Matplotlib", "Jupyter"],
+      "aliases": ["data analytics", "data analysis", "data visualization"]
     },
     "Big Data": {
-      "description": "Big data processing frameworks",
-      "keywords": ["big data", "distributed", "processing", "streaming"],
-      "technologies": ["Hadoop", "Spark", "Kafka"],
-      "aliases": ["big data processing", "distributed computing"]
+      "description": "Big data processing and streaming frameworks",
+      "keywords": ["big data", "distributed", "processing", "streaming", "data pipeline"],
+      "technologies": ["Hadoop", "Spark", "Kafka", "Flink"],
+      "aliases": ["big data processing", "distributed computing", "stream processing"]
     },
     "Design Tool": {
       "description": "UI/UX design and graphics tools",
-      "keywords": ["design", "ui", "ux", "graphics", "mockup", "prototype"],
-      "technologies": ["Figma", "Sketch", "Adobe XD", "Photoshop", "Illustrator", "Blender"],
-      "aliases": ["ui design", "ux design", "graphics design"]
+      "keywords": ["design", "ui", "ux", "graphics", "mockup", "prototype", "wireframe"],
+      "technologies": ["Figma", "Sketch", "Adobe XD", "Photoshop", "Illustrator", "Blender", "InVision"],
+      "aliases": ["ui design", "ux design", "graphics design", "design software"]
     },
     "Testing Tool": {
-      "description": "Software testing and QA tools",
-      "keywords": ["testing", "qa", "test automation", "quality assurance"],
-      "technologies": ["Jest", "Pytest", "Selenium", "Postman"],
-      "aliases": ["qa tools", "test automation", "testing framework"]
+      "description": "Software testing, QA, and automation tools",
+      "keywords": ["testing", "qa", "test automation", "quality assurance", "unit test", "integration test"],
+      "technologies": ["Jest", "Pytest", "Selenium", "Postman", "Cypress", "JUnit", "Mocha"],
+      "aliases": ["qa tools", "test automation", "testing framework", "test tools"]
     },
     "Web Server": {
       "description": "Web and application servers",
-      "keywords": ["web server", "http server", "application server"],
-      "technologies": ["Nginx", "Apache"],
-      "aliases": ["http server", "application server"]
+      "keywords": ["web server", "http server", "application server", "proxy", "load balancer"],
+      "technologies": ["Nginx", "Apache", "Tomcat", "IIS"],
+      "aliases": ["http server", "application server", "web hosting"]
     },
     "CSS Framework": {
-      "description": "CSS frameworks and preprocessors",
-      "keywords": ["css", "styling", "styles", "frontend styling"],
-      "technologies": ["Tailwind CSS", "Bootstrap", "Material UI", "Sass", "Less"],
-      "aliases": ["css library", "styling framework"]
+      "description": "CSS frameworks, libraries, and preprocessors",
+      "keywords": ["css", "styling", "styles", "frontend styling", "ui styling", "responsive"],
+      "technologies": ["Tailwind CSS", "Bootstrap", "Material UI", "Sass", "Less", "Styled Components"],
+      "aliases": ["css library", "styling framework", "css preprocessor"]
     },
     "Game Development": {
       "description": "Game engines and development tools",
-      "keywords": ["game", "gaming", "3d", "engine", "game development"],
-      "technologies": ["Unity", "Unreal Engine", "Blender"],
-      "aliases": ["game engine", "game dev"]
+      "keywords": ["game", "gaming", "3d", "engine", "game development", "2d", "graphics"],
+      "technologies": ["Unity", "Unreal Engine", "Blender", "Godot"],
+      "aliases": ["game engine", "game dev", "game development tools"]
     },
     "JavaScript Library": {
-      "description": "JavaScript utility libraries",
-      "keywords": ["javascript", "js", "library", "utility"],
-      "technologies": ["jQuery", "Lodash", "Moment.js"],
-      "aliases": ["js library", "javascript utilities"]
-    },
-    "Runtime Environment": {
-      "description": "JavaScript runtime environments",
-      "keywords": ["runtime", "javascript", "server-side js"],
-      "technologies": ["Node.js"],
-      "aliases": ["js runtime", "node"]
+      "description": "JavaScript utility libraries and tools",
+      "keywords": ["javascript", "js", "library", "utility", "helper"],
+      "technologies": ["jQuery", "Lodash", "Moment.js", "Axios", "Underscore"],
+      "aliases": ["js library", "javascript utilities", "js tools"]
     },
     "State Management": {
-      "description": "State management libraries",
-      "keywords": ["state", "state management", "store"],
-      "technologies": ["Redux"],
-      "aliases": ["state library"]
+      "description": "State management libraries for frontend applications",
+      "keywords": ["state", "state management", "store", "flux", "redux"],
+      "technologies": ["Redux", "MobX", "Vuex", "Zustand", "Recoil"],
+      "aliases": ["state library", "state container", "flux architecture"]
     },
     "Build Tool": {
-      "description": "Build and bundling tools",
-      "keywords": ["build", "bundler", "compiler", "webpack"],
-      "technologies": ["Webpack", "Babel"],
-      "aliases": ["bundler", "build system"]
+      "description": "Build tools, bundlers, and compilers",
+      "keywords": ["build", "bundler", "compiler", "webpack", "transpiler", "module bundler"],
+      "technologies": ["Webpack", "Babel", "Vite", "Rollup", "Parcel", "esbuild"],
+      "aliases": ["bundler", "build system", "module bundler"]
     },
     "Message Broker": {
       "description": "Message queue and broker systems",
-      "keywords": ["message", "queue", "broker", "messaging"],
-      "technologies": ["Kafka", "RabbitMQ"],
-      "aliases": ["message queue", "messaging system"]
+      "keywords": ["message", "queue", "broker", "messaging", "event streaming", "pub/sub"],
+      "technologies": ["Kafka", "RabbitMQ", "ActiveMQ", "Redis"],
+      "aliases": ["message queue", "messaging system", "event broker"]
     },
     "API": {
       "description": "API technologies and architectures",
-      "keywords": ["api", "rest", "graphql", "web service"],
-      "technologies": ["REST", "GraphQL"],
-      "aliases": ["web api", "api architecture"]
+      "keywords": ["api", "rest", "graphql", "web service", "endpoint", "microservices"],
+      "technologies": ["REST", "GraphQL", "gRPC", "SOAP"],
+      "aliases": ["web api", "api architecture", "web services"]
     },
     "Project Management": {
-      "description": "Project and collaboration tools",
-      "keywords": ["project management", "agile", "scrum", "collaboration"],
-      "technologies": ["JIRA", "Confluence", "Slack"],
-      "aliases": ["collaboration tools", "pm tools"]
+      "description": "Project management and collaboration tools",
+      "keywords": ["project management", "agile", "scrum", "collaboration", "task management"],
+      "technologies": ["JIRA", "Confluence", "Slack", "Trello", "Asana", "Monday.com"],
+      "aliases": ["collaboration tools", "pm tools", "agile tools"]
+    },
+    "Containerization": {
+      "description": "Container and orchestration platforms",
+      "keywords": ["container", "containerization", "orchestration", "microservices"],
+      "technologies": ["Docker", "Kubernetes", "Podman", "OpenShift"],
+      "aliases": ["container platform", "container orchestration"]
+    },
+    "Infrastructure as Code": {
+      "description": "Infrastructure automation and provisioning tools",
+      "keywords": ["iac", "infrastructure", "automation", "provisioning", "configuration"],
+      "technologies": ["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"],
+      "aliases": ["iac", "infrastructure automation", "config management"]
+    },
+    "Monitoring & Logging": {
+      "description": "Application monitoring, logging, and observability tools",
+      "keywords": ["monitoring", "logging", "observability", "metrics", "traces"],
+      "technologies": ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic", "Splunk"],
+      "aliases": ["observability", "apm", "log management"]
     }
   },
   
@@ -144,9 +156,9 @@
     "SQL": {
       "canonical_name": "SQL",
       "category": "Database",
-      "variants": ["SQL", "sql", "SQL", "T-SQL", "t-sql", "TSQL", "tsql", "SQL Server", "sql server", "sqlserver", "PL/SQL", "pl/sql", "plsql", "PLSQL"],
+      "variants": ["SQL", "sql", "T-SQL", "t-sql", "TSQL", "tsql", "SQL Server", "sql server", "sqlserver", "PL/SQL", "pl/sql", "plsql", "PLSQL"],
       "abbreviations": ["sql"],
-      "context_words": ["database", "query", "tables", "database", "tsql", "plsql", "query language", "relational", "rows", "columns"],
+      "context_words": ["database", "query", "tables", "tsql", "plsql", "query language", "relational", "rows", "columns", "select", "insert", "update"],
       "related_categories": ["Database"],
       "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
     },
@@ -155,7 +167,7 @@
       "category": "Programming Language",
       "variants": ["Python", "python", "PYTHON", "PyThon", "phyton", "pyhton", "pythn", "pythone", "pyton", "pyth0n", "pythno", "pytohn", "pyrhon", "puthon"],
       "abbreviations": ["py", "Py", "PY"],
-      "context_words": ["django", "flask", "pandas", "numpy", "scipy", "fastapi", "pytest", "programming", "script", "code", "development"],
+      "context_words": ["django", "flask", "pandas", "numpy", "scipy", "fastapi", "pytest", "programming", "script", "code", "pip", "virtualenv"],
       "related_categories": ["Backend Framework", "Machine Learning", "Data Science"],
       "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
     },
@@ -164,8 +176,125 @@
       "category": "Programming Language",
       "variants": ["JavaScript", "javascript", "JAVASCRIPT", "Javascript", "java script", "javascrpit", "javascriopt", "javascrpt", "javasript", "javscript", "javascrip", "javacsript", "javascripts", "java-script"],
       "abbreviations": ["JS", "js", "Js"],
-      "context_words": ["react", "angular", "vue", "node", "frontend", "backend", "fullstack", "web", "browser", "es6", "typescript"],
-      "related_categories": ["Frontend Framework", "Backend Framework", "Runtime Environment"],
+      "context_words": ["react", "angular", "vue", "node", "frontend", "backend", "fullstack", "web", "browser", "es6", "typescript", "npm", "webpack"],
+      "related_categories": ["Frontend Framework", "Backend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "TypeScript": {
+      "canonical_name": "TypeScript",
+      "category": "Programming Language",
+      "variants": ["TypeScript", "typescript", "TYPESCRIPT", "type script", "typescipt", "typscript", "tyepscript", "type-script"],
+      "abbreviations": ["TS", "ts"],
+      "context_words": ["javascript", "types", "angular", "react", "node", "tsc", "interface", "type safety"],
+      "related_categories": ["Frontend Framework", "Backend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Java": {
+      "canonical_name": "Java",
+      "category": "Programming Language",
+      "variants": ["Java", "java", "JAVA", "jawa", "jav", "jaava", "jva", "javaa"],
+      "abbreviations": [],
+      "context_words": ["spring", "jvm", "maven", "gradle", "jdk", "enterprise", "android", "servlet", "j2ee"],
+      "related_categories": ["Backend Framework", "Mobile Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "C++": {
+      "canonical_name": "C++",
+      "category": "Programming Language",
+      "variants": ["C++", "c++", "CPP", "cpp", "C plus plus", "c plus plus", "cplusplus", "C ++", "c ++"],
+      "abbreviations": ["cpp"],
+      "context_words": ["programming", "system", "game", "performance", "memory", "pointer", "stl", "oop"],
+      "related_categories": ["Game Development"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "C#": {
+      "canonical_name": "C#",
+      "category": "Programming Language",
+      "variants": ["C#", "c#", "CSharp", "csharp", "C Sharp", "c sharp", "C-Sharp", "c-sharp"],
+      "abbreviations": ["cs"],
+      "context_words": [".net", "dotnet", "asp.net", "unity", "xamarin", "visual studio", "framework"],
+      "related_categories": ["Backend Framework", "Game Development"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Ruby": {
+      "canonical_name": "Ruby",
+      "category": "Programming Language",
+      "variants": ["Ruby", "ruby", "RUBY", "rubby", "rubi", "rubyy"],
+      "abbreviations": ["rb"],
+      "context_words": ["rails", "ruby on rails", "gem", "bundler", "rake", "sinatra"],
+      "related_categories": ["Backend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Go": {
+      "canonical_name": "Go",
+      "category": "Programming Language",
+      "variants": ["Go", "go", "GO", "Golang", "golang", "GoLang"],
+      "abbreviations": [],
+      "context_words": ["google", "concurrency", "goroutine", "channel", "microservices", "backend"],
+      "related_categories": ["Backend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Rust": {
+      "canonical_name": "Rust",
+      "category": "Programming Language",
+      "variants": ["Rust", "rust", "RUST", "RustLang", "rustlang"],
+      "abbreviations": ["rs"],
+      "context_words": ["memory safety", "performance", "system", "cargo", "crate"],
+      "related_categories": [],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "PHP": {
+      "canonical_name": "PHP",
+      "category": "Programming Language",
+      "variants": ["PHP", "php", "Php", "phpp"],
+      "abbreviations": [],
+      "context_words": ["laravel", "symfony", "wordpress", "web", "server-side", "composer"],
+      "related_categories": ["Backend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Swift": {
+      "canonical_name": "Swift",
+      "category": "Programming Language",
+      "variants": ["Swift", "swift", "SWIFT", "swfit", "swiift", "swiftt"],
+      "abbreviations": [],
+      "context_words": ["ios", "apple", "macos", "xcode", "mobile", "swiftui"],
+      "related_categories": ["Mobile Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Kotlin": {
+      "canonical_name": "Kotlin",
+      "category": "Programming Language",
+      "variants": ["Kotlin", "kotlin", "KOTLIN", "kotlyn", "kotline", "kotln"],
+      "abbreviations": ["kt"],
+      "context_words": ["android", "jvm", "jetbrains", "mobile", "coroutines"],
+      "related_categories": ["Mobile Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Scala": {
+      "canonical_name": "Scala",
+      "category": "Programming Language",
+      "variants": ["Scala", "scala", "SCALA", "scla", "scalaa"],
+      "abbreviations": [],
+      "context_words": ["jvm", "functional", "spark", "akka", "play framework"],
+      "related_categories": ["Big Data"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "R": {
+      "canonical_name": "R",
+      "category": "Programming Language",
+      "variants": ["R", "r", "R language", "r language", "R-lang", "r-lang"],
+      "abbreviations": [],
+      "context_words": ["statistics", "data", "analysis", "rstudio", "ggplot", "visualization"],
+      "related_categories": ["Data Science"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "MATLAB": {
+      "canonical_name": "MATLAB",
+      "category": "Programming Language",
+      "variants": ["MATLAB", "matlab", "Matlab", "mat lab", "Mat Lab", "matlabb"],
+      "abbreviations": [],
+      "context_words": ["mathematics", "simulation", "engineering", "matrix", "computation"],
+      "related_categories": ["Data Science"],
       "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
     },
     "AWS": {
@@ -173,7 +302,7 @@
       "category": "Cloud Platform",
       "variants": ["AWS", "aws", "Amazon Web Services", "amazon web services", "AmazonWebServices", "Amazon AWS", "awss"],
       "abbreviations": [],
-      "context_words": ["cloud", "ec2", "s3", "lambda", "rds", "dynamodb", "iam", "cloudformation", "amazon"],
+      "context_words": ["cloud", "ec2", "s3", "lambda", "rds", "dynamodb", "iam", "cloudformation", "amazon", "vpc", "cloudwatch"],
       "related_categories": ["DevOps Tool"],
       "proficiency_levels": ["Associate", "Professional", "Specialty"]
     },
@@ -182,7 +311,7 @@
       "category": "Cloud Platform",
       "variants": ["Azure", "azure", "AZURE", "Microsoft Azure", "microsoft azure", "MS Azure", "azur", "azrue"],
       "abbreviations": [],
-      "context_words": ["cloud", "microsoft", "vm", "devops", "functions", "cosmos", "active directory"],
+      "context_words": ["cloud", "microsoft", "vm", "devops", "functions", "cosmos", "active directory", "app service"],
       "related_categories": ["DevOps Tool"],
       "proficiency_levels": ["Fundamentals", "Associate", "Expert"]
     },
@@ -191,7 +320,7 @@
       "category": "Cloud Platform",
       "variants": ["GCP", "gcp", "Google Cloud", "google cloud", "Google Cloud Platform", "google cloud platform", "GoogleCloud", "googlecloud"],
       "abbreviations": [],
-      "context_words": ["cloud", "google", "compute engine", "app engine", "kubernetes", "bigquery", "firebase"],
+      "context_words": ["cloud", "google", "compute engine", "app engine", "kubernetes", "bigquery", "firebase", "gke"],
       "related_categories": ["DevOps Tool"],
       "proficiency_levels": ["Associate", "Professional"]
     },
@@ -200,8 +329,224 @@
       "category": "Frontend Framework",
       "variants": ["React", "react", "REACT", "ReactJS", "reactjs", "React.js", "react.js", "Reactjs", "reakt", "raect", "reat"],
       "abbreviations": [],
-      "context_words": ["javascript", "jsx", "components", "hooks", "redux", "frontend", "ui", "web", "spa", "next"],
+      "context_words": ["javascript", "jsx", "components", "hooks", "redux", "frontend", "ui", "web", "spa", "next", "virtual dom"],
       "related_categories": ["JavaScript Library", "State Management"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Angular": {
+      "canonical_name": "Angular",
+      "category": "Frontend Framework",
+      "variants": ["Angular", "angular", "ANGULAR", "AngularJS", "angularjs", "Angular.js", "angular.js", "anglar", "angualr", "agnular"],
+      "abbreviations": ["ng"],
+      "context_words": ["typescript", "frontend", "spa", "component", "directive", "rxjs", "module"],
+      "related_categories": ["JavaScript Library"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Vue": {
+      "canonical_name": "Vue",
+      "category": "Frontend Framework",
+      "variants": ["Vue", "vue", "VUE", "VueJS", "vuejs", "Vue.js", "vue.js", "veu", "vu"],
+      "abbreviations": [],
+      "context_words": ["javascript", "frontend", "component", "spa", "vuex", "nuxt"],
+      "related_categories": ["JavaScript Library", "State Management"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Svelte": {
+      "canonical_name": "Svelte",
+      "category": "Frontend Framework",
+      "variants": ["Svelte", "svelte", "SVELTE", "SvelteJS", "sveltejs", "Svelte.js", "svelte.js", "svelt", "svlete"],
+      "abbreviations": [],
+      "context_words": ["javascript", "frontend", "component", "compiler", "reactive"],
+      "related_categories": ["JavaScript Library"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Next.js": {
+      "canonical_name": "Next.js",
+      "category": "Frontend Framework",
+      "variants": ["Next.js", "next.js", "NextJS", "nextjs", "Next", "next", "NEXTJS"],
+      "abbreviations": [],
+      "context_words": ["react", "ssr", "server-side rendering", "static", "vercel", "routing"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Nuxt.js": {
+      "canonical_name": "Nuxt.js",
+      "category": "Frontend Framework",
+      "variants": ["Nuxt.js", "nuxt.js", "NuxtJS", "nuxtjs", "Nuxt", "nuxt", "NUXTJS", "nxt.js"],
+      "abbreviations": [],
+      "context_words": ["vue", "ssr", "server-side rendering", "static", "universal"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Gatsby": {
+      "canonical_name": "Gatsby",
+      "category": "Frontend Framework",
+      "variants": ["Gatsby", "gatsby", "GATSBY", "GatsbyJS", "gatsbyjs", "Gatsby.js", "gatsby.js", "gatby", "gastby"],
+      "abbreviations": [],
+      "context_words": ["react", "static site", "graphql", "jamstack", "ssg"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "jQuery": {
+      "canonical_name": "jQuery",
+      "category": "JavaScript Library",
+      "variants": ["jQuery", "jquery", "JQUERY", "JQuery", "jqery", "jquerry", "jquey"],
+      "abbreviations": [],
+      "context_words": ["javascript", "dom", "ajax", "library", "selector"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Node.js": {
+      "canonical_name": "Node.js",
+      "category": "Backend Framework",
+      "variants": ["Node.js", "node.js", "NodeJS", "nodejs", "Node", "node", "NODEJS", "nod.js", "nodjs"],
+      "abbreviations": [],
+      "context_words": ["javascript", "backend", "server", "express", "npm", "v8", "event-driven", "async"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    ".NET Core": {
+      "canonical_name": ".NET Core",
+      "category": "Backend Framework",
+      "variants": [".NET Core", ".net core", "dotnet core", "DotNet Core", "ASP.NET", "asp.net", "ASPNET", "aspnet", "ASP.NET Core", "asp.net core"],
+      "abbreviations": [],
+      "context_words": ["c#", "microsoft", "web api", "mvc", "entity framework", "backend"],
+      "related_categories": ["Programming Language"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Spring": {
+      "canonical_name": "Spring",
+      "category": "Backend Framework",
+      "variants": ["Spring", "spring", "SPRING", "Spring Boot", "spring boot", "SpringBoot", "springboot", "Spring Framework", "sprng", "sprig"],
+      "abbreviations": [],
+      "context_words": ["java", "backend", "jvm", "mvc", "dependency injection", "hibernate"],
+      "related_categories": ["Programming Language"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Django": {
+      "canonical_name": "Django",
+      "category": "Backend Framework",
+      "variants": ["Django", "django", "DJANGO", "djnago", "djanog", "djago", "djangoo"],
+      "abbreviations": [],
+      "context_words": ["python", "web", "backend", "orm", "rest", "drf", "mvc"],
+      "related_categories": ["Programming Language"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Flask": {
+      "canonical_name": "Flask",
+      "category": "Backend Framework",
+      "variants": ["Flask", "flask", "FLASK", "flsk", "falsk", "flaskk"],
+      "abbreviations": [],
+      "context_words": ["python", "web", "backend", "microframework", "api", "wsgi"],
+      "related_categories": ["Programming Language"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Express": {
+      "canonical_name": "Express",
+      "category": "Backend Framework",
+      "variants": ["Express", "express", "EXPRESS", "ExpressJS", "expressjs", "Express.js", "express.js", "expres", "expresss"],
+      "abbreviations": [],
+      "context_words": ["node", "nodejs", "javascript", "backend", "api", "middleware", "web"],
+      "related_categories": ["Backend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "FastAPI": {
+      "canonical_name": "FastAPI",
+      "category": "Backend Framework",
+      "variants": ["FastAPI", "fastapi", "FASTAPI", "Fast API", "fast api", "fastpi", "fatapi"],
+      "abbreviations": [],
+      "context_words": ["python", "api", "async", "rest", "openapi", "swagger", "backend"],
+      "related_categories": ["Programming Language"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Laravel": {
+      "canonical_name": "Laravel",
+      "category": "Backend Framework",
+      "variants": ["Laravel", "laravel", "LARAVEL", "laravell", "larval", "laravle"],
+      "abbreviations": [],
+      "context_words": ["php", "web", "backend", "eloquent", "blade", "artisan", "mvc"],
+      "related_categories": ["Programming Language"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "MySQL": {
+      "canonical_name": "MySQL",
+      "category": "Database",
+      "variants": ["MySQL", "mysql", "MYSQL", "My SQL", "my sql", "mysqll", "mysq", "MariaDB", "mariadb"],
+      "abbreviations": [],
+      "context_words": ["database", "sql", "relational", "mariadb", "phpmyadmin", "query"],
+      "related_categories": ["Database"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "PostgreSQL": {
+      "canonical_name": "PostgreSQL",
+      "category": "Database",
+      "variants": ["PostgreSQL", "postgresql", "POSTGRESQL", "Postgres", "postgres", "postgre", "postgressql", "postresql"],
+      "abbreviations": ["pg", "psql"],
+      "context_words": ["database", "sql", "relational", "pgadmin", "query"],
+      "related_categories": ["Database"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "MongoDB": {
+      "canonical_name": "MongoDB",
+      "category": "Database",
+      "variants": ["MongoDB", "mongodb", "MONGODB", "Mongo DB", "mongo db", "Mongo", "mongo", "mongdb"],
+      "abbreviations": [],
+      "context_words": ["database", "nosql", "document", "json", "atlas", "mongoose"],
+      "related_categories": ["Database"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Redis": {
+      "canonical_name": "Redis",
+      "category": "Database",
+      "variants": ["Redis", "redis", "REDIS", "reddis", "rediss", "rdis"],
+      "abbreviations": [],
+      "context_words": ["cache", "in-memory", "key-value", "nosql", "session"],
+      "related_categories": ["Database"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "SQLite": {
+      "canonical_name": "SQLite",
+      "category": "Database",
+      "variants": ["SQLite", "sqlite", "SQLITE", "SQL Lite", "sql lite", "sqllite"],
+      "abbreviations": [],
+      "context_words": ["database", "embedded", "lightweight", "file-based"],
+      "related_categories": ["Database"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Oracle": {
+      "canonical_name": "Oracle",
+      "category": "Database",
+      "variants": ["Oracle", "oracle", "ORACLE", "Oracle DB", "oracle db", "OracleDB", "oracledb", "oralce", "oracl"],
+      "abbreviations": [],
+      "context_words": ["database", "enterprise", "sql", "plsql", "relational"],
+      "related_categories": ["Database"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Cassandra": {
+      "canonical_name": "Cassandra",
+      "category": "Database",
+      "variants": ["Cassandra", "cassandra", "CASSANDRA", "casandra", "cassndra", "casssandra", "Apache Cassandra"],
+      "abbreviations": [],
+      "context_words": ["database", "nosql", "distributed", "wide-column", "big data"],
+      "related_categories": ["Big Data"],
+      "proficiency_levels": ["Intermediate", "Advanced", "Expert"]
+    },
+    "Elasticsearch": {
+      "canonical_name": "Elasticsearch",
+      "category": "Database",
+      "variants": ["Elasticsearch", "elasticsearch", "ELASTICSEARCH", "Elastic Search", "elastic search", "elastcsearch", "elasticserch"],
+      "abbreviations": ["es"],
+      "context_words": ["search", "nosql", "full-text", "lucene", "kibana", "logstash"],
+      "related_categories": ["Monitoring & Logging"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "SQL Server": {
+      "canonical_name": "SQL Server",
+      "category": "Database",
+      "variants": ["SQL Server", "sql server", "SQLSERVER", "sqlserver", "MSSQL", "mssql", "Microsoft SQL", "microsoft sql", "MS SQL"],
+      "abbreviations": [],
+      "context_words": ["database", "microsoft", "t-sql", "ssms", "relational"],
+      "related_categories": ["Database"],
       "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
     },
     "Docker": {
@@ -209,8 +554,8 @@
       "category": "DevOps Tool",
       "variants": ["Docker", "docker", "DOCKER", "dokcer", "dockerr"],
       "abbreviations": [],
-      "context_words": ["container", "containerization", "image", "devops", "kubernetes", "compose", "orchestration"],
-      "related_categories": ["Cloud Platform"],
+      "context_words": ["container", "containerization", "image", "devops", "kubernetes", "compose", "orchestration", "dockerfile"],
+      "related_categories": ["Cloud Platform", "Containerization"],
       "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
     },
     "Kubernetes": {
@@ -218,24 +563,462 @@
       "category": "DevOps Tool",
       "variants": ["Kubernetes", "kubernetes", "KUBERNETES", "K8s", "k8s", "K8S", "kube", "Kube", "kuberntes", "kubernete", "kuberentes"],
       "abbreviations": ["k8s", "K8s", "K8S"],
-      "context_words": ["container", "orchestration", "docker", "cluster", "pod", "deployment", "devops", "cloud"],
-      "related_categories": ["Cloud Platform"],
+      "context_words": ["container", "orchestration", "docker", "cluster", "pod", "deployment", "devops", "cloud", "helm"],
+      "related_categories": ["Cloud Platform", "Containerization"],
       "proficiency_levels": ["Associate", "Administrator", "Architect"]
+    },
+    "Jenkins": {
+      "canonical_name": "Jenkins",
+      "category": "DevOps Tool",
+      "variants": ["Jenkins", "jenkins", "JENKINS", "jenkin", "jenkns", "jenkinss"],
+      "abbreviations": [],
+      "context_words": ["ci", "cd", "pipeline", "automation", "devops", "build"],
+      "related_categories": ["DevOps Tool"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Terraform": {
+      "canonical_name": "Terraform",
+      "category": "Infrastructure as Code",
+      "variants": ["Terraform", "terraform", "TERRAFORM", "Terra Form", "terra form", "teraform", "terrafrm"],
+      "abbreviations": ["tf"],
+      "context_words": ["iac", "infrastructure", "cloud", "automation", "provisioning", "hcl"],
+      "related_categories": ["Cloud Platform", "DevOps Tool"],
+      "proficiency_levels": ["Associate", "Professional"]
+    },
+    "Ansible": {
+      "canonical_name": "Ansible",
+      "category": "Infrastructure as Code",
+      "variants": ["Ansible", "ansible", "ANSIBLE", "ansble", "ansibl", "ansiblee"],
+      "abbreviations": [],
+      "context_words": ["automation", "configuration", "devops", "playbook", "yaml"],
+      "related_categories": ["DevOps Tool"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Git": {
+      "canonical_name": "Git",
+      "category": "Version Control",
+      "variants": ["Git", "git", "GIT", "gitt"],
+      "abbreviations": [],
+      "context_words": ["version control", "repository", "commit", "branch", "merge", "github", "gitlab"],
+      "related_categories": ["DevOps Tool"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "GitHub": {
+      "canonical_name": "GitHub",
+      "category": "Version Control",
+      "variants": ["GitHub", "github", "GITHUB", "Git Hub", "git hub", "githb", "gitub"],
+      "abbreviations": [],
+      "context_words": ["git", "repository", "collaboration", "actions", "ci/cd", "pull request"],
+      "related_categories": ["DevOps Tool"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "GitLab": {
+      "canonical_name": "GitLab",
+      "category": "Version Control",
+      "variants": ["GitLab", "gitlab", "GITLAB", "Git Lab", "git lab", "gitlb"],
+      "abbreviations": [],
+      "context_words": ["git", "repository", "ci/cd", "devops", "pipeline"],
+      "related_categories": ["DevOps Tool"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "TensorFlow": {
+      "canonical_name": "TensorFlow",
+      "category": "Machine Learning",
+      "variants": ["TensorFlow", "tensorflow", "TENSORFLOW", "Tensor Flow", "tensor flow", "tensorflo", "tensorflw"],
+      "abbreviations": ["tf"],
+      "context_words": ["machine learning", "deep learning", "neural network", "ai", "keras", "python"],
+      "related_categories": ["Data Science"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "PyTorch": {
+      "canonical_name": "PyTorch",
+      "category": "Machine Learning",
+      "variants": ["PyTorch", "pytorch", "PYTORCH", "Py Torch", "py torch", "pytoch", "pytorh"],
+      "abbreviations": [],
+      "context_words": ["machine learning", "deep learning", "neural network", "ai", "python", "torch"],
+      "related_categories": ["Data Science"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Scikit-learn": {
+      "canonical_name": "Scikit-learn",
+      "category": "Machine Learning",
+      "variants": ["Scikit-learn", "scikit-learn", "SCIKIT-LEARN", "Scikit Learn", "scikit learn", "scikitlearn", "sklearn", "scikit", "sckit-learn"],
+      "abbreviations": ["sklearn"],
+      "context_words": ["machine learning", "python", "classification", "regression", "clustering"],
+      "related_categories": ["Data Science"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Pandas": {
+      "canonical_name": "Pandas",
+      "category": "Data Science",
+      "variants": ["Pandas", "pandas", "PANDAS", "padas", "pandass", "pands"],
+      "abbreviations": ["pd"],
+      "context_words": ["python", "data analysis", "dataframe", "numpy", "data manipulation"],
+      "related_categories": ["Data Science"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "NumPy": {
+      "canonical_name": "NumPy",
+      "category": "Data Science",
+      "variants": ["NumPy", "numpy", "NUMPY", "Num Py", "num py", "numpi", "nummy"],
+      "abbreviations": ["np"],
+      "context_words": ["python", "array", "scientific computing", "mathematics", "linear algebra"],
+      "related_categories": ["Data Science"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Hadoop": {
+      "canonical_name": "Hadoop",
+      "category": "Big Data",
+      "variants": ["Hadoop", "hadoop", "HADOOP", "hadop", "hadooop", "hadoup", "Apache Hadoop"],
+      "abbreviations": [],
+      "context_words": ["big data", "distributed", "hdfs", "mapreduce", "yarn"],
+      "related_categories": ["Data Science"],
+      "proficiency_levels": ["Intermediate", "Advanced", "Expert"]
+    },
+    "Spark": {
+      "canonical_name": "Spark",
+      "category": "Big Data",
+      "variants": ["Spark", "spark", "SPARK", "Apache Spark", "apache spark", "apachespark", "sprk", "sparkk"],
+      "abbreviations": [],
+      "context_words": ["big data", "distributed", "hadoop", "scala", "pyspark", "streaming"],
+      "related_categories": ["Data Science"],
+      "proficiency_levels": ["Intermediate", "Advanced", "Expert"]
+    },
+    "Kafka": {
+      "canonical_name": "Kafka",
+      "category": "Big Data",
+      "variants": ["Kafka", "kafka", "KAFKA", "Apache Kafka", "apache kafka", "apachekafka", "kafak", "kafkaa"],
+      "abbreviations": [],
+      "context_words": ["streaming", "message broker", "event", "distributed", "pub/sub"],
+      "related_categories": ["Message Broker"],
+      "proficiency_levels": ["Intermediate", "Advanced", "Expert"]
+    },
+    "React Native": {
+      "canonical_name": "React Native",
+      "category": "Mobile Framework",
+      "variants": ["React Native", "react native", "REACT NATIVE", "ReactNative", "reactnative", "React-Native", "react-native"],
+      "abbreviations": ["rn"],
+      "context_words": ["mobile", "ios", "android", "cross-platform", "javascript", "react"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Flutter": {
+      "canonical_name": "Flutter",
+      "category": "Mobile Framework",
+      "variants": ["Flutter", "flutter", "FLUTTER", "fluter", "fluttter", "fluttr"],
+      "abbreviations": [],
+      "context_words": ["mobile", "ios", "android", "cross-platform", "dart", "google"],
+      "related_categories": [],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Selenium": {
+      "canonical_name": "Selenium",
+      "category": "Testing Tool",
+      "variants": ["Selenium", "selenium", "SELENIUM", "selinium", "selenum", "selemium"],
+      "abbreviations": [],
+      "context_words": ["testing", "automation", "webdriver", "qa", "browser"],
+      "related_categories": ["Testing Tool"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Cypress": {
+      "canonical_name": "Cypress",
+      "category": "Testing Tool",
+      "variants": ["Cypress", "cypress", "CYPRESS", "Cypress.io", "cypress.io"],
+      "abbreviations": [],
+      "context_words": ["testing", "automation", "javascript", "e2e", "frontend"],
+      "related_categories": ["Testing Tool"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Jest": {
+      "canonical_name": "Jest",
+      "category": "Testing Tool",
+      "variants": ["Jest", "jest", "JEST", "jestt", "jst"],
+      "abbreviations": [],
+      "context_words": ["testing", "javascript", "unit test", "react", "snapshot"],
+      "related_categories": ["Testing Tool"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Pytest": {
+      "canonical_name": "Pytest",
+      "category": "Testing Tool",
+      "variants": ["Pytest", "pytest", "PYTEST", "Py.test", "py.test", "pyest", "pytst"],
+      "abbreviations": [],
+      "context_words": ["testing", "python", "unit test", "fixture", "automation"],
+      "related_categories": ["Testing Tool"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Postman": {
+      "canonical_name": "Postman",
+      "category": "Testing Tool",
+      "variants": ["Postman", "postman", "POSTMAN", "postmn", "postmann"],
+      "abbreviations": [],
+      "context_words": ["api", "testing", "rest", "http", "automation"],
+      "related_categories": ["API"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Tailwind CSS": {
+      "canonical_name": "Tailwind CSS",
+      "category": "CSS Framework",
+      "variants": ["Tailwind CSS", "tailwind css", "TAILWIND CSS", "TailwindCSS", "tailwindcss", "Tailwind", "tailwind", "tailwnd", "tailwid"],
+      "abbreviations": [],
+      "context_words": ["css", "utility", "styling", "frontend", "responsive"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Bootstrap": {
+      "canonical_name": "Bootstrap",
+      "category": "CSS Framework",
+      "variants": ["Bootstrap", "bootstrap", "BOOTSTRAP", "Boot Strap", "boot strap", "bootstrp", "boostrap"],
+      "abbreviations": ["bs"],
+      "context_words": ["css", "framework", "responsive", "grid", "component"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Material UI": {
+      "canonical_name": "Material UI",
+      "category": "CSS Framework",
+      "variants": ["Material UI", "material ui", "MATERIAL UI", "MaterialUI", "materialui", "Material-UI", "material-ui"],
+      "abbreviations": ["mui"],
+      "context_words": ["react", "component", "design", "google", "ui library"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Sass": {
+      "canonical_name": "Sass",
+      "category": "CSS Framework",
+      "variants": ["Sass", "sass", "SASS", "SCSS", "scss", "sas", "saas"],
+      "abbreviations": [],
+      "context_words": ["css", "preprocessor", "styling", "variable", "mixin"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Less": {
+      "canonical_name": "Less",
+      "category": "CSS Framework",
+      "variants": ["Less", "less", "LESS", "LessCSS", "lesscss", "Less CSS", "less css", "les"],
+      "abbreviations": [],
+      "context_words": ["css", "preprocessor", "styling", "variable"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Figma": {
+      "canonical_name": "Figma",
+      "category": "Design Tool",
+      "variants": ["Figma", "figma", "FIGMA", "figmaa", "figm"],
+      "abbreviations": [],
+      "context_words": ["design", "ui", "ux", "prototype", "mockup", "collaborative"],
+      "related_categories": [],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Sketch": {
+      "canonical_name": "Sketch",
+      "category": "Design Tool",
+      "variants": ["Sketch", "sketch", "SKETCH", "sktech", "sketc", "sketchh"],
+      "abbreviations": [],
+      "context_words": ["design", "ui", "ux", "mac", "vector"],
+      "related_categories": [],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Adobe XD": {
+      "canonical_name": "Adobe XD",
+      "category": "Design Tool",
+      "variants": ["Adobe XD", "adobe xd", "ADOBE XD", "AdobeXD", "adobexd", "Adobe Experience Design", "adobe experience design"],
+      "abbreviations": ["xd"],
+      "context_words": ["design", "ui", "ux", "prototype", "adobe"],
+      "related_categories": [],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Photoshop": {
+      "canonical_name": "Photoshop",
+      "category": "Design Tool",
+      "variants": ["Photoshop", "photoshop", "PHOTOSHOP", "Photo Shop", "photo shop", "photosop", "photoshp", "Adobe Photoshop"],
+      "abbreviations": ["ps"],
+      "context_words": ["design", "graphics", "photo", "editing", "adobe"],
+      "related_categories": [],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Illustrator": {
+      "canonical_name": "Illustrator",
+      "category": "Design Tool",
+      "variants": ["Illustrator", "illustrator", "ILLUSTRATOR", "Adobe Illustrator", "adobe illustrator", "ilustrator", "illustrtor"],
+      "abbreviations": ["ai"],
+      "context_words": ["design", "vector", "graphics", "adobe", "logo"],
+      "related_categories": [],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Blender": {
+      "canonical_name": "Blender",
+      "category": "Design Tool",
+      "variants": ["Blender", "blender", "BLENDER", "Blender3D", "blender3d", "Blender 3D", "blnder", "blendr"],
+      "abbreviations": [],
+      "context_words": ["3d", "modeling", "animation", "rendering", "open source"],
+      "related_categories": ["Game Development"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Unity": {
+      "canonical_name": "Unity",
+      "category": "Game Development",
+      "variants": ["Unity", "unity", "UNITY", "Unity3D", "unity3d", "Unity 3D", "unity 3d", "unty", "untiy"],
+      "abbreviations": [],
+      "context_words": ["game", "3d", "engine", "c#", "development"],
+      "related_categories": ["Programming Language"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Unreal Engine": {
+      "canonical_name": "Unreal Engine",
+      "category": "Game Development",
+      "variants": ["Unreal Engine", "unreal engine", "UNREAL ENGINE", "UnrealEngine", "unrealengine", "Unreal", "unreal", "unrel engine"],
+      "abbreviations": ["ue4", "ue5"],
+      "context_words": ["game", "3d", "engine", "c++", "blueprint"],
+      "related_categories": ["Programming Language"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced", "Expert"]
+    },
+    "Redux": {
+      "canonical_name": "Redux",
+      "category": "State Management",
+      "variants": ["Redux", "redux", "REDUX", "redx", "reduxx", "reduc"],
+      "abbreviations": [],
+      "context_words": ["react", "state", "store", "flux", "javascript"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Webpack": {
+      "canonical_name": "Webpack",
+      "category": "Build Tool",
+      "variants": ["Webpack", "webpack", "WEBPACK", "Web Pack", "web pack", "webpak", "wepback"],
+      "abbreviations": [],
+      "context_words": ["bundler", "javascript", "module", "build", "asset"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Babel": {
+      "canonical_name": "Babel",
+      "category": "Build Tool",
+      "variants": ["Babel", "babel", "BABEL", "BabelJS", "babeljs", "bable", "babble"],
+      "abbreviations": [],
+      "context_words": ["transpiler", "javascript", "es6", "compiler", "jsx"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "RabbitMQ": {
+      "canonical_name": "RabbitMQ",
+      "category": "Message Broker",
+      "variants": ["RabbitMQ", "rabbitmq", "RABBITMQ", "Rabbit MQ", "rabbit mq", "rabitmq"],
+      "abbreviations": [],
+      "context_words": ["message", "queue", "broker", "amqp", "messaging"],
+      "related_categories": ["Backend Framework"],
+      "proficiency_levels": ["Intermediate", "Advanced"]
+    },
+    "REST": {
+      "canonical_name": "REST",
+      "category": "API",
+      "variants": ["REST", "rest", "RESTful", "restful", "REST API", "rest api", "RESTAPI", "restapi"],
+      "abbreviations": [],
+      "context_words": ["api", "http", "web service", "json", "endpoint"],
+      "related_categories": ["Backend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "GraphQL": {
+      "canonical_name": "GraphQL",
+      "category": "API",
+      "variants": ["GraphQL", "graphql", "GRAPHQL", "Graph QL", "graph ql", "grapql", "graphl"],
+      "abbreviations": [],
+      "context_words": ["api", "query", "schema", "apollo", "mutation"],
+      "related_categories": ["Backend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Nginx": {
+      "canonical_name": "Nginx",
+      "category": "Web Server",
+      "variants": ["Nginx", "nginx", "NGINX", "nginxx", "ngnix"],
+      "abbreviations": [],
+      "context_words": ["web server", "proxy", "load balancer", "reverse proxy"],
+      "related_categories": ["DevOps Tool"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Apache": {
+      "canonical_name": "Apache",
+      "category": "Web Server",
+      "variants": ["Apache", "apache", "APACHE", "Apache HTTP Server", "apache http server", "apach", "apachee"],
+      "abbreviations": [],
+      "context_words": ["web server", "http", "server", "httpd"],
+      "related_categories": ["DevOps Tool"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "JIRA": {
+      "canonical_name": "JIRA",
+      "category": "Project Management",
+      "variants": ["JIRA", "jira", "Jira", "jra", "jiraa", "Atlassian JIRA"],
+      "abbreviations": [],
+      "context_words": ["project management", "agile", "scrum", "issue tracking", "atlassian"],
+      "related_categories": [],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Confluence": {
+      "canonical_name": "Confluence",
+      "category": "Project Management",
+      "variants": ["Confluence", "confluence", "CONFLUENCE", "confluece", "confluance", "confuence", "Atlassian Confluence"],
+      "abbreviations": [],
+      "context_words": ["documentation", "wiki", "collaboration", "atlassian", "knowledge base"],
+      "related_categories": [],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Slack": {
+      "canonical_name": "Slack",
+      "category": "Project Management",
+      "variants": ["Slack", "slack", "SLACK", "slak", "slck", "slackk"],
+      "abbreviations": [],
+      "context_words": ["messaging", "collaboration", "communication", "team", "chat"],
+      "related_categories": [],
+      "proficiency_levels": ["Beginner", "Intermediate"]
+    },
+    "Lodash": {
+      "canonical_name": "Lodash",
+      "category": "JavaScript Library",
+      "variants": ["Lodash", "lodash", "LODASH", "lodsh", "loddash"],
+      "abbreviations": [],
+      "context_words": ["javascript", "utility", "library", "functional", "helper"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "Moment.js": {
+      "canonical_name": "Moment.js",
+      "category": "JavaScript Library",
+      "variants": ["Moment.js", "moment.js", "MOMENT.JS", "MomentJS", "momentjs", "Moment", "moment", "momnt.js"],
+      "abbreviations": [],
+      "context_words": ["javascript", "date", "time", "formatting", "library"],
+      "related_categories": ["Frontend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate"]
     }
   },
   
   "category_search_patterns": {
-    "cloud engineer": ["Cloud Platform", "DevOps Tool"],
+    "cloud engineer": ["Cloud Platform", "DevOps Tool", "Containerization"],
     "cloud developer": ["Cloud Platform", "DevOps Tool"],
+    "cloud architect": ["Cloud Platform", "Infrastructure as Code", "DevOps Tool"],
     "frontend developer": ["Frontend Framework", "CSS Framework", "JavaScript Library"],
+    "frontend engineer": ["Frontend Framework", "CSS Framework", "State Management"],
     "backend developer": ["Backend Framework", "Database", "API"],
+    "backend engineer": ["Backend Framework", "Database", "Message Broker"],
     "full stack developer": ["Frontend Framework", "Backend Framework", "Database"],
-    "devops engineer": ["DevOps Tool", "Cloud Platform", "Version Control"],
+    "fullstack developer": ["Frontend Framework", "Backend Framework", "Database"],
+    "devops engineer": ["DevOps Tool", "Cloud Platform", "Version Control", "Infrastructure as Code"],
+    "site reliability engineer": ["DevOps Tool", "Monitoring & Logging", "Cloud Platform"],
+    "sre": ["DevOps Tool", "Monitoring & Logging", "Cloud Platform"],
     "data scientist": ["Machine Learning", "Data Science", "Big Data"],
-    "mobile developer": ["Mobile Framework", "Programming Language"],
+    "data engineer": ["Big Data", "Database", "Data Science"],
     "ml engineer": ["Machine Learning", "Data Science"],
+    "machine learning engineer": ["Machine Learning", "Data Science", "Big Data"],
+    "mobile developer": ["Mobile Framework", "Programming Language"],
+    "ios developer": ["Mobile Framework", "Programming Language"],
+    "android developer": ["Mobile Framework", "Programming Language"],
     "qa engineer": ["Testing Tool"],
+    "test automation engineer": ["Testing Tool"],
     "ui designer": ["Design Tool"],
-    "game developer": ["Game Development", "Programming Language"]
+    "ux designer": ["Design Tool"],
+    "ui/ux designer": ["Design Tool"],
+    "graphic designer": ["Design Tool"],
+    "game developer": ["Game Development", "Programming Language"],
+    "web developer": ["Frontend Framework", "Backend Framework", "CSS Framework"]
   }
 }

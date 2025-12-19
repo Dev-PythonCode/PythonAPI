@@ -2,36 +2,114 @@
   "skills": [
     {"name": "Python", "aliases": ["python3", "py", "python2", "cpython", "python programming"], "category": "Programming"},
     {"name": "JavaScript", "aliases": ["js", "ecmascript", "es6", "es2015", "vanilla js"], "category": "Programming"},
+    {"name": "TypeScript", "aliases": ["ts", "typescript"], "category": "Programming"},
     {"name": "C#", "aliases": ["csharp", "c-sharp", "c sharp"], "category": "Programming"},
     {"name": "Java", "aliases": ["java8", "java11", "java17", "jdk", "j2ee", "jvm"], "category": "Programming"},
+    {"name": "C++", "aliases": ["cpp", "c plus plus", "cplusplus"], "category": "Programming"},
+    {"name": "Ruby", "aliases": ["rb", "ruby on rails"], "category": "Programming"},
+    {"name": "Go", "aliases": ["golang", "go lang"], "category": "Programming"},
+    {"name": "Rust", "aliases": ["rustlang", "rs"], "category": "Programming"},
+    {"name": "PHP", "aliases": ["php7", "php8"], "category": "Programming"},
+    {"name": "Swift", "aliases": ["swift programming"], "category": "Programming"},
+    {"name": "Kotlin", "aliases": ["kt", "kotlin android"], "category": "Programming"},
+    {"name": "Scala", "aliases": ["scala programming"], "category": "Programming"},
+    {"name": "R", "aliases": ["r language", "r programming"], "category": "Programming"},
+    
     {"name": "AWS", "aliases": ["amazon web services", "ec2", "s3", "lambda", "aws cloud", "amazon cloud"], "category": "Cloud"},
     {"name": "Azure", "aliases": ["microsoft azure", "azure cloud", "azure devops", "ms azure"], "category": "Cloud"},
     {"name": "GCP", "aliases": ["google cloud", "google cloud platform", "gcloud"], "category": "Cloud"},
-    {"name": "React", "aliases": ["reactjs", "react.js", "react js", "react native"], "category": "Frontend"},
+    
+    {"name": "React", "aliases": ["reactjs", "react.js", "react js"], "category": "Frontend"},
     {"name": "Angular", "aliases": ["angularjs", "angular2", "angular js", "ng"], "category": "Frontend"},
     {"name": "Vue", "aliases": ["vuejs", "vue.js", "vue js"], "category": "Frontend"},
-    {"name": "Node.js", "aliases": ["nodejs", "node", "express", "expressjs", "node js"], "category": "Backend"},
+    {"name": "Svelte", "aliases": ["sveltejs", "svelte.js"], "category": "Frontend"},
+    {"name": "Next.js", "aliases": ["nextjs", "next"], "category": "Frontend"},
+    {"name": "Nuxt.js", "aliases": ["nuxtjs", "nuxt"], "category": "Frontend"},
+    {"name": "Gatsby", "aliases": ["gatsbyjs", "gatsby.js"], "category": "Frontend"},
+    {"name": "jQuery", "aliases": ["jquery library"], "category": "Frontend"},
+    
+    {"name": "Node.js", "aliases": ["nodejs", "node", "node js"], "category": "Backend"},
     {"name": ".NET Core", "aliases": ["dotnet core", "asp.net", "aspnet core", "asp.net core", "dotnet"], "category": "Backend"},
     {"name": "Spring", "aliases": ["spring boot", "springboot", "spring framework"], "category": "Backend"},
     {"name": "Django", "aliases": ["django rest", "drf", "django framework"], "category": "Backend"},
     {"name": "Flask", "aliases": ["flask api", "flask framework"], "category": "Backend"},
+    {"name": "Express", "aliases": ["expressjs", "express.js"], "category": "Backend"},
+    {"name": "FastAPI", "aliases": ["fast api"], "category": "Backend"},
+    {"name": "Laravel", "aliases": ["laravel php"], "category": "Backend"},
+    
     {"name": "SQL Server", "aliases": ["mssql", "t-sql", "tsql", "microsoft sql", "ms sql"], "category": "Databases"},
     {"name": "PostgreSQL", "aliases": ["postgres", "psql", "pgsql"], "category": "Databases"},
     {"name": "MongoDB", "aliases": ["mongo", "nosql", "mongodb atlas"], "category": "Databases"},
     {"name": "MySQL", "aliases": ["my sql", "mariadb"], "category": "Databases"},
     {"name": "Redis", "aliases": ["redis cache", "redis db"], "category": "Databases"},
+    {"name": "SQLite", "aliases": ["sql lite", "sqlite3"], "category": "Databases"},
+    {"name": "Oracle", "aliases": ["oracle db", "oracle database"], "category": "Databases"},
+    {"name": "Cassandra", "aliases": ["apache cassandra"], "category": "Databases"},
+    {"name": "Elasticsearch", "aliases": ["elastic search", "es"], "category": "Databases"},
+    
     {"name": "Docker", "aliases": ["containers", "containerization", "docker compose", "dockerfile"], "category": "DevOps"},
     {"name": "Kubernetes", "aliases": ["k8s", "kube", "kubectl", "k8", "kubernates"], "category": "DevOps"},
     {"name": "Jenkins", "aliases": ["jenkins ci", "jenkins pipeline"], "category": "DevOps"},
     {"name": "Terraform", "aliases": ["tf", "terraform cloud", "hcl"], "category": "DevOps"},
-    {"name": "TensorFlow", "aliases": ["tensorflow2", "keras"], "category": "Data Science"},
+    {"name": "Ansible", "aliases": ["ansible automation"], "category": "DevOps"},
+    {"name": "Git", "aliases": ["version control", "git scm"], "category": "DevOps"},
+    {"name": "GitHub", "aliases": ["git hub", "github actions"], "category": "DevOps"},
+    {"name": "GitLab", "aliases": ["git lab", "gitlab ci"], "category": "DevOps"},
+    
+    {"name": "TensorFlow", "aliases": ["tensorflow2", "keras", "tf"], "category": "Data Science"},
     {"name": "PyTorch", "aliases": ["torch", "pytorch lightning"], "category": "Data Science"},
-    {"name": "Pandas", "aliases": ["pandas python", "dataframe"], "category": "Data Science"},
+    {"name": "Pandas", "aliases": ["pandas python", "dataframe", "pd"], "category": "Data Science"},
+    {"name": "NumPy", "aliases": ["numpy python", "np"], "category": "Data Science"},
+    {"name": "Scikit-learn", "aliases": ["sklearn", "scikit learn"], "category": "Data Science"},
+    {"name": "Hadoop", "aliases": ["apache hadoop"], "category": "Data Science"},
+    {"name": "Spark", "aliases": ["apache spark", "pyspark"], "category": "Data Science"},
+    {"name": "Kafka", "aliases": ["apache kafka"], "category": "Data Science"},
+    
+    {"name": "React Native", "aliases": ["reactnative", "react-native", "rn"], "category": "Mobile"},
+    {"name": "Flutter", "aliases": ["flutter sdk", "dart flutter"], "category": "Mobile"},
+    
     {"name": "Selenium", "aliases": ["selenium webdriver", "selenium grid"], "category": "Testing"},
     {"name": "Cypress", "aliases": ["cypress.io", "cypress testing"], "category": "Testing"},
-    {"name": "Jest", "aliases": ["jest testing", "jest js"], "category": "Testing"}
+    {"name": "Jest", "aliases": ["jest testing", "jest js"], "category": "Testing"},
+    {"name": "Pytest", "aliases": ["py.test", "pytest framework"], "category": "Testing"},
+    {"name": "Postman", "aliases": ["postman api"], "category": "Testing"},
+    
+    {"name": "Tailwind CSS", "aliases": ["tailwindcss", "tailwind"], "category": "CSS"},
+    {"name": "Bootstrap", "aliases": ["bootstrap css", "bs"], "category": "CSS"},
+    {"name": "Material UI", "aliases": ["materialui", "material-ui", "mui"], "category": "CSS"},
+    {"name": "Sass", "aliases": ["scss", "sass css"], "category": "CSS"},
+    {"name": "Less", "aliases": ["less css"], "category": "CSS"},
+    
+    {"name": "Figma", "aliases": ["figma design"], "category": "Design"},
+    {"name": "Sketch", "aliases": ["sketch app"], "category": "Design"},
+    {"name": "Adobe XD", "aliases": ["adobexd", "xd", "adobe experience design"], "category": "Design"},
+    {"name": "Photoshop", "aliases": ["adobe photoshop", "ps"], "category": "Design"},
+    {"name": "Illustrator", "aliases": ["adobe illustrator", "ai"], "category": "Design"},
+    {"name": "Blender", "aliases": ["blender3d", "blender 3d"], "category": "Design"},
+    
+    {"name": "Unity", "aliases": ["unity3d", "unity 3d", "unity engine"], "category": "Game Development"},
+    {"name": "Unreal Engine", "aliases": ["unrealengine", "unreal", "ue4", "ue5"], "category": "Game Development"},
+    
+    {"name": "Redux", "aliases": ["redux toolkit"], "category": "State Management"},
+    {"name": "Webpack", "aliases": ["web pack"], "category": "Build Tools"},
+    {"name": "Babel", "aliases": ["babeljs"], "category": "Build Tools"},
+    
+    {"name": "RabbitMQ", "aliases": ["rabbit mq"], "category": "Message Broker"},
+    
+    {"name": "REST", "aliases": ["rest api", "restful", "restapi"], "category": "API"},
+    {"name": "GraphQL", "aliases": ["graph ql", "graphql api"], "category": "API"},
+    
+    {"name": "Nginx", "aliases": ["nginx server"], "category": "Web Server"},
+    {"name": "Apache", "aliases": ["apache http server"], "category": "Web Server"},
+    
+    {"name": "JIRA", "aliases": ["atlassian jira", "jira software"], "category": "Project Management"},
+    {"name": "Confluence", "aliases": ["atlassian confluence"], "category": "Project Management"},
+    {"name": "Slack", "aliases": ["slack messaging"], "category": "Project Management"},
+    
+    {"name": "Lodash", "aliases": ["lodash js"], "category": "JavaScript Library"},
+    {"name": "Moment.js", "aliases": ["momentjs", "moment"], "category": "JavaScript Library"}
   ],
-  "locations": ["Bangalore", "Chennai", "Mumbai", "Hyderabad", "Delhi", "Pune", "Kolkata", "Noida", "Gurgaon"],
+  "locations": ["Bangalore", "Chennai", "Mumbai", "Hyderabad", "Delhi", "Pune", "Kolkata", "Noida", "Gurgaon", "Trivandrum", "Manila", "Cebu", "Davao", "Quezon City", "Iloilo", "Bacolod", "Taguig", "Pasig", "Makati", "Colombo", "Kandy", "Galle", "Jaffna", "Negombo", "Batticaloa", "Trincomalee", "Anuradhapura", "Polonnaruwa", "TamilNadu", "Maharashtra", "Karnataka", "Kerala", "Telangana", "Andhra Pradesh", "Uttar Pradesh", "West Bengal", "Sri Lanka", "India", "Philippines"],
   "availability_terms": {
     "Available": [
       "available",
@@ -74,10 +152,15 @@
   ],
   "skill_categories": {
     "cloud": ["AWS", "Azure", "GCP"],
-    "frontend": ["React", "Angular", "Vue", "JavaScript"],
-    "backend": ["Node.js", ".NET Core", "Spring", "Django", "Flask"],
-    "databases": ["SQL Server", "PostgreSQL", "MongoDB", "MySQL", "Redis"],
-    "devops": ["Docker", "Kubernetes", "Jenkins", "Terraform"],
-    "data science": ["TensorFlow", "PyTorch", "Pandas", "Python"]
+    "frontend": ["React", "Angular", "Vue", "Svelte", "Next.js", "Nuxt.js", "Gatsby", "JavaScript"],
+    "backend": ["Node.js", ".NET Core", "Spring", "Django", "Flask", "Express", "FastAPI", "Laravel"],
+    "databases": ["SQL Server", "PostgreSQL", "MongoDB", "MySQL", "Redis", "SQLite", "Oracle", "Cassandra", "Elasticsearch"],
+    "devops": ["Docker", "Kubernetes", "Jenkins", "Terraform", "Ansible", "Git", "GitHub", "GitLab"],
+    "data science": ["TensorFlow", "PyTorch", "Pandas", "NumPy", "Scikit-learn", "Hadoop", "Spark", "Kafka", "Python"],
+    "mobile": ["React Native", "Flutter"],
+    "testing": ["Selenium", "Cypress", "Jest", "Pytest", "Postman"],
+    "css": ["Tailwind CSS", "Bootstrap", "Material UI", "Sass", "Less"],
+    "design": ["Figma", "Sketch", "Adobe XD", "Photoshop", "Illustrator", "Blender"],
+    "game development": ["Unity", "Unreal Engine"]
   }
 }
