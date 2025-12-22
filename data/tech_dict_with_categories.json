@@ -306,6 +306,42 @@
       "related_categories": ["DevOps Tool"],
       "proficiency_levels": ["Associate", "Professional", "Specialty"]
     },
+    "AWS Cognito": {
+      "canonical_name": "AWS Cognito",
+      "category": "Cloud Platform",
+      "variants": ["AWS Cognito", "aws cognito", "Cognito", "cognito", "AWS User Pools", "aws user pools"],
+      "abbreviations": [],
+      "context_words": ["authentication", "identity", "user management", "aws", "oauth", "sso"],
+      "related_categories": ["Cloud Platform", "Security"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "AWS Lambda": {
+      "canonical_name": "AWS Lambda",
+      "category": "Cloud Platform",
+      "variants": ["AWS Lambda", "aws lambda", "Lambda", "lambda"],
+      "abbreviations": [],
+      "context_words": ["serverless", "function", "event-driven", "aws", "compute"],
+      "related_categories": ["Cloud Platform", "Backend Framework"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
+    "AWS SageMaker": {
+      "canonical_name": "AWS SageMaker",
+      "category": "Machine Learning",
+      "variants": ["AWS SageMaker", "aws sagemaker", "SageMaker", "sagemaker"],
+      "abbreviations": [],
+      "context_words": ["machine learning", "ml", "ai", "training", "deployment", "aws"],
+      "related_categories": ["Cloud Platform", "Data Science"],
+      "proficiency_levels": ["Intermediate", "Advanced", "Expert"]
+    },
+    "AWS DynamoDB": {
+      "canonical_name": "AWS DynamoDB",
+      "category": "Database",
+      "variants": ["AWS DynamoDB", "aws dynamodb", "DynamoDB", "dynamodb"],
+      "abbreviations": [],
+      "context_words": ["nosql", "database", "serverless", "key-value", "aws"],
+      "related_categories": ["Database", "Cloud Platform"],
+      "proficiency_levels": ["Beginner", "Intermediate", "Advanced"]
+    },
     "Azure": {
       "canonical_name": "Azure",
       "category": "Cloud Platform",
@@ -993,32 +1029,104 @@
   },
   
   "category_search_patterns": {
+    "data scientist": ["Machine Learning", "Data Science", "Big Data", "Programming Language"],
+    "data science": ["Machine Learning", "Data Science", "Big Data", "Programming Language"],
+    "data engineer": ["Big Data", "Database", "Data Science", "Cloud Platform"],
+    "data analyst": ["Data Science", "Database", "Programming Language"],
+    "ml engineer": ["Machine Learning", "Data Science", "Programming Language"],
+    "machine learning engineer": ["Machine Learning", "Data Science", "Big Data", "Programming Language"],
+    "ai engineer": ["Machine Learning", "Data Science", "Programming Language"],
+    "artificial intelligence engineer": ["Machine Learning", "Data Science", "Programming Language"],
+    
     "cloud engineer": ["Cloud Platform", "DevOps Tool", "Containerization"],
-    "cloud developer": ["Cloud Platform", "DevOps Tool"],
+    "cloud developer": ["Cloud Platform", "DevOps Tool", "Backend Framework"],
     "cloud architect": ["Cloud Platform", "Infrastructure as Code", "DevOps Tool"],
-    "frontend developer": ["Frontend Framework", "CSS Framework", "JavaScript Library"],
-    "frontend engineer": ["Frontend Framework", "CSS Framework", "State Management"],
-    "backend developer": ["Backend Framework", "Database", "API"],
-    "backend engineer": ["Backend Framework", "Database", "Message Broker"],
-    "full stack developer": ["Frontend Framework", "Backend Framework", "Database"],
-    "fullstack developer": ["Frontend Framework", "Backend Framework", "Database"],
+    "aws engineer": ["Cloud Platform", "DevOps Tool"],
+    "azure engineer": ["Cloud Platform", "DevOps Tool"],
+    "gcp engineer": ["Cloud Platform", "DevOps Tool"],
+    
+    "frontend developer": ["Frontend Framework", "CSS Framework", "JavaScript Library", "Programming Language"],
+    "frontend engineer": ["Frontend Framework", "CSS Framework", "State Management", "Programming Language"],
+    "ui developer": ["Frontend Framework", "CSS Framework", "Design Tool"],
+    "react developer": ["Frontend Framework", "JavaScript Library", "State Management"],
+    "angular developer": ["Frontend Framework", "JavaScript Library", "Programming Language"],
+    "vue developer": ["Frontend Framework", "JavaScript Library", "State Management"],
+    
+    "backend developer": ["Backend Framework", "Database", "API", "Programming Language"],
+    "backend engineer": ["Backend Framework", "Database", "Message Broker", "Programming Language"],
+    "api developer": ["Backend Framework", "API", "Database"],
+    "node developer": ["Backend Framework", "JavaScript Library", "Database"],
+    "python developer": ["Backend Framework", "Programming Language", "Database"],
+    "java developer": ["Backend Framework", "Programming Language", "Database"],
+    
+    "full stack developer": ["Frontend Framework", "Backend Framework", "Database", "Programming Language"],
+    "fullstack developer": ["Frontend Framework", "Backend Framework", "Database", "Programming Language"],
+    "full stack engineer": ["Frontend Framework", "Backend Framework", "Database", "Cloud Platform"],
+    "fullstack engineer": ["Frontend Framework", "Backend Framework", "Database", "Cloud Platform"],
+    
     "devops engineer": ["DevOps Tool", "Cloud Platform", "Version Control", "Infrastructure as Code"],
+    "devops": ["DevOps Tool", "Cloud Platform", "Containerization", "Infrastructure as Code"],
     "site reliability engineer": ["DevOps Tool", "Monitoring & Logging", "Cloud Platform"],
-    "sre": ["DevOps Tool", "Monitoring & Logging", "Cloud Platform"],
-    "data scientist": ["Machine Learning", "Data Science", "Big Data"],
-    "data engineer": ["Big Data", "Database", "Data Science"],
-    "ml engineer": ["Machine Learning", "Data Science"],
-    "machine learning engineer": ["Machine Learning", "Data Science", "Big Data"],
+    "sre": ["DevOps Tool", "Monitoring & Logging", "Cloud Platform", "Containerization"],
+    "platform engineer": ["DevOps Tool", "Cloud Platform", "Containerization", "Infrastructure as Code"],
+    
     "mobile developer": ["Mobile Framework", "Programming Language"],
+    "mobile engineer": ["Mobile Framework", "Programming Language"],
     "ios developer": ["Mobile Framework", "Programming Language"],
     "android developer": ["Mobile Framework", "Programming Language"],
-    "qa engineer": ["Testing Tool"],
-    "test automation engineer": ["Testing Tool"],
+    "react native developer": ["Mobile Framework", "Frontend Framework", "Programming Language"],
+    "flutter developer": ["Mobile Framework", "Programming Language"],
+    
+    "qa engineer": ["Testing Tool", "Programming Language"],
+    "test engineer": ["Testing Tool", "Programming Language"],
+    "test automation engineer": ["Testing Tool", "Programming Language"],
+    "quality assurance engineer": ["Testing Tool", "Programming Language"],
+    "sdet": ["Testing Tool", "Programming Language", "Backend Framework"],
+    "software test engineer": ["Testing Tool", "Programming Language"],
+    "automation engineer": ["Testing Tool", "Programming Language", "DevOps Tool"],
+    
     "ui designer": ["Design Tool"],
     "ux designer": ["Design Tool"],
     "ui/ux designer": ["Design Tool"],
+    "product designer": ["Design Tool"],
     "graphic designer": ["Design Tool"],
+    "web designer": ["Design Tool", "Frontend Framework", "CSS Framework"],
+    
     "game developer": ["Game Development", "Programming Language"],
-    "web developer": ["Frontend Framework", "Backend Framework", "CSS Framework"]
+    "game engineer": ["Game Development", "Programming Language"],
+    "unity developer": ["Game Development", "Programming Language"],
+    "unreal developer": ["Game Development", "Programming Language"],
+    
+    "blockchain developer": ["Programming Language", "Backend Framework", "Database"],
+    "blockchain engineer": ["Programming Language", "Backend Framework", "Cloud Platform"],
+    "smart contract developer": ["Programming Language", "Backend Framework"],
+    
+    "security engineer": ["Cloud Platform", "Programming Language", "DevOps Tool"],
+    "cybersecurity engineer": ["Cloud Platform", "Programming Language", "DevOps Tool"],
+    "security analyst": ["Cloud Platform", "Programming Language"],
+    "penetration tester": ["Programming Language", "Cloud Platform"],
+    "ethical hacker": ["Programming Language", "Cloud Platform"],
+    
+    "software engineer": ["Programming Language", "Backend Framework", "Database"],
+    "software developer": ["Programming Language", "Backend Framework", "Database"],
+    "programmer": ["Programming Language", "Backend Framework"],
+    "coder": ["Programming Language", "Backend Framework"],
+    
+    "database administrator": ["Database", "Cloud Platform"],
+    "dba": ["Database", "Cloud Platform"],
+    "database engineer": ["Database", "Backend Framework", "Cloud Platform"],
+    
+    "business analyst": ["Data Science", "Programming Language"],
+    "product manager": ["Project Management"],
+    "project manager": ["Project Management"],
+    "scrum master": ["Project Management"],
+    
+    "technical lead": ["Programming Language", "Backend Framework", "Frontend Framework", "Cloud Platform"],
+    "tech lead": ["Programming Language", "Backend Framework", "Frontend Framework", "Cloud Platform"],
+    "engineering manager": ["Programming Language", "Backend Framework", "Cloud Platform", "DevOps Tool"],
+    "architect": ["Cloud Platform", "Backend Framework", "Database", "DevOps Tool"],
+    "solution architect": ["Cloud Platform", "Backend Framework", "Database", "Infrastructure as Code"],
+    "software architect": ["Programming Language", "Backend Framework", "Database", "Cloud Platform"],
+    "principal engineer": ["Programming Language", "Backend Framework", "Cloud Platform", "DevOps Tool"]
   }
 }
