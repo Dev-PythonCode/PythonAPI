@@ -38,11 +38,32 @@ class CareerRoadmapService:
             if key.lower() in keys:
                 return entry
 
-        # Fallback: keyword search in prompt
+        # Fallback: keyword search in prompt (more aggressive)
         prompt_lower = prompt.lower()
-        for key, entry in self.training.items():
-            if key.lower() in prompt_lower:
-                return entry
+        
+        # Define keyword aliases for better matching
+        keyword_aliases = {
+            'qa automation': ['qa automation', 'qe automation', 'qa engineer', 'automation engineer', 'test automation', 'automation tester', 'qa tester'],
+            'selenium python': ['selenium python', 'selenium', 'automation testing'],
+            'selenium testing': ['selenium testing', 'selenium test'],
+            'test automation engineer': ['test automation engineer', 'automation engineer'],
+            'data scientist': ['data scientist', 'machine learning', 'ml engineer', 'data science'],
+            'frontend developer': ['frontend', 'react', 'angular', 'vue', 'ui developer'],
+            'backend developer': ['backend', 'node.js', 'nodejs', 'server-side'],
+            'devops engineer': ['devops', 'infrastructure', 'sre engineer'],
+            'cloud engineer': ['cloud engineer', 'aws', 'azure', 'cloud', 'gcp'],
+            'ml engineer': ['ml engineer', 'machine learning engineer', 'ai engineer', 'artificial intelligence'],
+            'data engineer': ['data engineer', 'data pipeline', 'etl'],
+            'android developer': ['android', 'mobile developer', 'android app'],
+            'ios developer': ['ios', 'swift', 'iphone', 'app developer'],
+            'product manager': ['product manager', 'pm', 'product']
+        }
+        
+        for training_key, aliases in keyword_aliases.items():
+            if training_key in self.training:
+                for alias in aliases:
+                    if alias.lower() in prompt_lower:
+                        return self.training[training_key]
 
         # Last fallback: return a generic learning roadmap if available
         return self.training.get('generic', {})
