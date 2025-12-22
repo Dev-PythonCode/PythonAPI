@@ -52,7 +52,7 @@
     {"name": "FastAPI", "aliases": ["fast api"], "category": "Backend"},
     {"name": "Laravel", "aliases": ["laravel php"], "category": "Backend"},
     
-    {"name": "SQL Server", "aliases": ["mssql", "t-sql", "tsql", "microsoft sql", "ms sql"], "category": "Databases"},
+    {"name": "SQL Server", "aliases": ["sql", "sql server", "sqlserver", "ms sql server", "mssql", "t-sql", "tsql", "microsoft sql", "ms sql"], "category": "Databases"},
     {"name": "PostgreSQL", "aliases": ["postgres", "psql", "pgsql"], "category": "Databases"},
     {"name": "MongoDB", "aliases": ["mongo", "nosql", "mongodb atlas"], "category": "Databases"},
     {"name": "MySQL", "aliases": ["my sql", "mariadb"], "category": "Databases"},

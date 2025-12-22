@@ -207,7 +207,10 @@ def get_stats():
 
 @app.route('/career_roadmap', methods=['POST'])
 def career_roadmap():
-    """Generate a career roadmap/skills plan for a user prompt"""
+    """
+    Generate a career roadmap/skills plan for a user prompt.
+    Also returns a list of open requirements matching the core skills.
+    """
     try:
         data = request.get_json()
 
@@ -215,10 +218,22 @@ def career_roadmap():
             return jsonify({'error': 'Missing prompt parameter'}), 400
 
         prompt = data['prompt']
+        include_requirements = data.get('include_requirements', True)
 
         logger.info(f"Generating roadmap for prompt: {prompt}")
 
         roadmap = roadmap_service.generate_roadmap(prompt)
+        
+        # Add matching requirements info to response
+        if include_requirements and 'recommended_skills' in roadmap:
+            core_skills = roadmap.get('recommended_skills', [])
+            requirements_info = roadmap_service.get_matching_requirements_by_skills(core_skills)
+            roadmap['matching_requirements'] = {
+                'core_skills_count': len(core_skills),
+                'core_skills': core_skills,
+                'search_note': 'To fetch actual job requirements, call /requirements endpoint with these core skills',
+                'integration_hint': 'C# backend /api/requirements endpoint should filter by these skills'
+            }
 
         return jsonify(roadmap), 200
 

@@ -1,8 +1,24 @@
 {
   "data scientist": {
     "role": "Data Scientist",
-    "technologies": ["Python", "Pandas", "NumPy", "scikit-learn", "TensorFlow", "PyTorch", "SQL", "Git"],
-    "core_skills": ["Statistics", "Probability", "Data Cleaning", "Feature Engineering", "Model Evaluation", "Data Visualization"],
+    "technologies": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "scikit-learn",
+      "TensorFlow",
+      "PyTorch",
+      "SQL",
+      "Git"
+    ],
+    "core_skills": [
+      "Statistics",
+      "Probability",
+      "Data Cleaning",
+      "Feature Engineering",
+      "Model Evaluation",
+      "Data Visualization"
+    ],
     "learning_path": [
       "Fundamentals: Python programming, linear algebra, probability & statistics",
       "Data manipulation with Pandas and NumPy",
@@ -19,11 +35,23 @@
     "timeline_weeks": 24,
     "notes": "Focus on practical projects and a small portfolio to demonstrate skills."
   },
-
   ".net": {
     "role": ".NET Developer",
-    "technologies": ["C#", ".NET Core", "ASP.NET", "Entity Framework", "SQL", "Azure"],
-    "core_skills": ["OOP", "REST APIs", "Unit Testing", "Async Programming", "CI/CD"],
+    "technologies": [
+      "C#",
+      ".NET Core",
+      "ASP.NET",
+      "Entity Framework",
+      "SQL",
+      "Azure"
+    ],
+    "core_skills": [
+      "OOP",
+      "REST APIs",
+      "Unit Testing",
+      "Async Programming",
+      "CI/CD"
+    ],
     "learning_path": [
       "C# basics and OOP concepts",
       "Build web APIs with ASP.NET Core",
@@ -39,10 +67,15 @@
     "timeline_weeks": 16,
     "notes": "Map .NET knowledge to job descriptions in your region and build a deployable app."
   },
-
   "selenium python": {
     "role": "Selenium Automation Engineer",
-    "technologies": ["Python", "Selenium WebDriver", "pytest", "unittest", "Git"],
+    "technologies": [
+      "Python",
+      "Selenium WebDriver",
+      "pytest",
+      "unittest",
+      "Git"
+    ],
     "core_skills": [
       "Selenium WebDriver basics",
       "Locator strategies (CSS, XPath)",
@@ -72,17 +105,31 @@
     ],
     "timeline_weeks": 14,
     "effort_per_week": "20-25 hours",
-    "prerequisite_skills": ["Basic programming", "Understanding of software testing concepts"],
+    "prerequisite_skills": [
+      "Basic programming",
+      "Understanding of software testing concepts"
+    ],
     "career_path": "QA Automation Engineer → Test Architect → Engineering Manager",
     "job_market": "High demand (especially in fintech, e-commerce, enterprise software)",
     "salary_range_usd": "$80K - $130K (entry to senior)",
     "notes": "Focus on writing reliable, maintainable tests. Learn to diagnose and fix flaky tests. Build a GitHub portfolio with 2-3 real test projects showing POM implementation and CI integration."
   },
-
   "fullstack to data scientist": {
     "role": "Transition: Fullstack → Data Scientist",
-    "technologies": ["Python", "Pandas", "scikit-learn", "SQL", "Docker"],
-    "core_skills": ["Statistics", "Data Wrangling", "Modeling", "Model Evaluation", "Feature Engineering"],
+    "technologies": [
+      "Python",
+      "Pandas",
+      "scikit-learn",
+      "SQL",
+      "Docker"
+    ],
+    "core_skills": [
+      "Statistics",
+      "Data Wrangling",
+      "Modeling",
+      "Model Evaluation",
+      "Feature Engineering"
+    ],
     "learning_path": [
       "Leverage existing programming skills (JavaScript/Node/Backend)",
       "Learn Python for data: Pandas and NumPy",
@@ -98,11 +145,24 @@
     "timeline_weeks": 20,
     "notes": "Use your fullstack background to ship ML-enabled features quickly."
   },
-
   "frontend developer": {
     "role": "Frontend Developer (React)",
-    "technologies": ["JavaScript", "React", "TypeScript", "HTML", "CSS", "Webpack", "Git"],
-    "core_skills": ["DOM manipulation", "Component design", "State management", "Responsive design", "Testing (Jest)"],
+    "technologies": [
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "Webpack",
+      "Git"
+    ],
+    "core_skills": [
+      "DOM manipulation",
+      "Component design",
+      "State management",
+      "Responsive design",
+      "Testing (Jest)"
+    ],
     "learning_path": [
       "JavaScript fundamentals and modern ES6+ features",
       "React basics and component patterns",
@@ -118,11 +178,23 @@
     "timeline_weeks": 12,
     "notes": "Build polished UI projects and include accessibility checks."
   },
-
   "backend developer": {
     "role": "Backend Developer (Node.js)",
-    "technologies": ["Node.js", "Express", "PostgreSQL", "Redis", "Docker", "Git"],
-    "core_skills": ["API design", "Databases", "Authentication", "Testing", "Scalability"],
+    "technologies": [
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "Git"
+    ],
+    "core_skills": [
+      "API design",
+      "Databases",
+      "Authentication",
+      "Testing",
+      "Scalability"
+    ],
     "learning_path": [
       "JavaScript/Node fundamentals",
       "Build REST and GraphQL APIs",
@@ -138,11 +210,22 @@
     "timeline_weeks": 14,
     "notes": "Focus on reliable APIs and clear documentation."
   },
-
   "data engineer": {
     "role": "Data Engineer",
-    "technologies": ["Python", "SQL", "Airflow", "Spark", "Kafka", "AWS S3"],
-    "core_skills": ["ETL design", "Data modeling", "Batch and streaming", "Performance tuning"],
+    "technologies": [
+      "Python",
+      "SQL",
+      "Airflow",
+      "Spark",
+      "Kafka",
+      "AWS S3"
+    ],
+    "core_skills": [
+      "ETL design",
+      "Data modeling",
+      "Batch and streaming",
+      "Performance tuning"
+    ],
     "learning_path": [
       "SQL and data modeling",
       "Python for data pipelines",
@@ -158,11 +241,22 @@
     "timeline_weeks": 16,
     "notes": "Emphasize reliability, monitoring, and cost-aware design."
   },
-
   "ml engineer": {
     "role": "ML Engineer",
-    "technologies": ["Python", "scikit-learn", "PyTorch", "TensorFlow", "Docker", "Kubernetes"],
-    "core_skills": ["Model training at scale", "Feature engineering", "MLOps", "Model serving"],
+    "technologies": [
+      "Python",
+      "scikit-learn",
+      "PyTorch",
+      "TensorFlow",
+      "Docker",
+      "Kubernetes"
+    ],
+    "core_skills": [
+      "Model training at scale",
+      "Feature engineering",
+      "MLOps",
+      "Model serving"
+    ],
     "learning_path": [
       "Deepen ML fundamentals and production concerns",
       "Learn model packaging and serving",
@@ -177,11 +271,22 @@
     "timeline_weeks": 20,
     "notes": "Bridge ML research and production reliability."
   },
-
   "devops engineer": {
     "role": "DevOps Engineer",
-    "technologies": ["Docker", "Kubernetes", "Terraform", "Jenkins", "Prometheus", "Grafana"],
-    "core_skills": ["Infrastructure as Code", "CI/CD", "Monitoring", "Security basics"],
+    "technologies": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Jenkins",
+      "Prometheus",
+      "Grafana"
+    ],
+    "core_skills": [
+      "Infrastructure as Code",
+      "CI/CD",
+      "Monitoring",
+      "Security basics"
+    ],
     "learning_path": [
       "Learn Docker and container basics",
       "Orchestrate containers with Kubernetes",
@@ -196,11 +301,20 @@
     "timeline_weeks": 16,
     "notes": "Focus on reproducible deployments and reliability."
   },
-
   "cloud engineer": {
     "role": "Cloud Engineer (AWS)",
-    "technologies": ["AWS (EC2, S3, RDS)", "Lambda", "CloudFormation/Terraform", "VPC"],
-    "core_skills": ["Cloud architecture", "Security best practices", "Cost optimization", "Serverless basics"],
+    "technologies": [
+      "AWS (EC2, S3, RDS)",
+      "Lambda",
+      "CloudFormation/Terraform",
+      "VPC"
+    ],
+    "core_skills": [
+      "Cloud architecture",
+      "Security best practices",
+      "Cost optimization",
+      "Serverless basics"
+    ],
     "learning_path": [
       "Core AWS services and IAM",
       "Networking and VPC basics",
@@ -215,11 +329,21 @@
     "timeline_weeks": 14,
     "notes": "Prioritize security, cost, and scalability."
   },
-
   "android developer": {
     "role": "Android Developer",
-    "technologies": ["Kotlin", "Android SDK", "Jetpack", "SQL/Room", "Git"],
-    "core_skills": ["Mobile UI/UX", "Lifecycle management", "Background work", "Testing"],
+    "technologies": [
+      "Kotlin",
+      "Android SDK",
+      "Jetpack",
+      "SQL/Room",
+      "Git"
+    ],
+    "core_skills": [
+      "Mobile UI/UX",
+      "Lifecycle management",
+      "Background work",
+      "Testing"
+    ],
     "learning_path": [
       "Kotlin language fundamentals",
       "Android app architecture and Jetpack components",
@@ -234,11 +358,20 @@
     "timeline_weeks": 16,
     "notes": "Polish UX and follow platform guidelines."
   },
-
   "ios developer": {
     "role": "iOS Developer",
-    "technologies": ["Swift", "UIKit/SwiftUI", "CoreData", "Git"],
-    "core_skills": ["Mobile UI/UX", "Lifecycle management", "Networking", "Testing"],
+    "technologies": [
+      "Swift",
+      "UIKit/SwiftUI",
+      "CoreData",
+      "Git"
+    ],
+    "core_skills": [
+      "Mobile UI/UX",
+      "Lifecycle management",
+      "Networking",
+      "Testing"
+    ],
     "learning_path": [
       "Swift basics and language features",
       "Build apps with SwiftUI or UIKit",
@@ -253,11 +386,19 @@
     "timeline_weeks": 16,
     "notes": "Focus on platform conventions and performance."
   },
-
   "product manager": {
     "role": "Product Manager",
-    "technologies": ["Roadmapping tools", "Analytics tools (GA/Mixpanel)", "Aha/JIRA"],
-    "core_skills": ["Stakeholder communication", "Prioritization", "Metrics/KPIs", "User research"],
+    "technologies": [
+      "Roadmapping tools",
+      "Analytics tools (GA/Mixpanel)",
+      "Aha/JIRA"
+    ],
+    "core_skills": [
+      "Stakeholder communication",
+      "Prioritization",
+      "Metrics/KPIs",
+      "User research"
+    ],
     "learning_path": [
       "Learn product discovery and user research",
       "Understand basic analytics and data interpretation",
@@ -272,10 +413,16 @@
     "timeline_weeks": 12,
     "notes": "Build strong domain expertise and communication skills."
   },
-
   "qa automation": {
     "role": "QA Automation Engineer",
-    "technologies": ["Python", "Selenium WebDriver", "pytest", "unittest", "Git", "GitHub"],
+    "technologies": [
+      "Python",
+      "Selenium WebDriver",
+      "pytest",
+      "unittest",
+      "Git",
+      "GitHub"
+    ],
     "core_skills": [
       "Selenium WebDriver fundamentals",
       "XPath and CSS selectors",
@@ -312,17 +459,29 @@
     ],
     "timeline_weeks": 28,
     "effort_per_week": "20-30 hours (full-time commitment preferred)",
-    "prerequisite_skills": ["Basic computer skills", "Understanding of software testing basics", "No programming experience needed"],
+    "prerequisite_skills": [
+      "Basic computer skills",
+      "Understanding of software testing basics",
+      "No programming experience needed"
+    ],
     "career_path": "QA Automation Engineer → Senior Automation Engineer → Test Architect → QA Manager",
     "job_market": "High demand globally, especially in fintech, e-commerce, healthcare, and enterprise software",
     "salary_range_usd": "$70K - $140K (entry to senior), contractors earn $50-90/hour",
-    "certifications": ["ISTQB CTAL-TAE (Test Automation Engineer)", "Selenium Certification"],
+    "certifications": [
+      "ISTQB CTAL-TAE (Test Automation Engineer)",
+      "Selenium Certification"
+    ],
     "notes": "Focus on writing maintainable, reliable tests. Learn to debug flaky tests. Build a GitHub portfolio with 2-3 production-grade test projects. Key success factor: strong debugging and problem-solving skills. Employers value candidates who understand root cause of test failures and can architect scalable test frameworks."
   },
-
   "test automation engineer": {
     "role": "Test Automation Engineer",
-    "technologies": ["Python", "Selenium", "pytest", "unittest", "Git"],
+    "technologies": [
+      "Python",
+      "Selenium",
+      "pytest",
+      "unittest",
+      "Git"
+    ],
     "core_skills": [
       "Web application testing",
       "Test automation frameworks",
@@ -352,16 +511,21 @@
     ],
     "timeline_weeks": 20,
     "effort_per_week": "25 hours",
-    "prerequisite_skills": ["Basic programming knowledge or willingness to learn"],
+    "prerequisite_skills": [
+      "Basic programming knowledge or willingness to learn"
+    ],
     "career_path": "Test Automation Engineer → Senior Test Automation Engineer → QA Lead",
     "job_market": "High demand across industries",
     "salary_range_usd": "$75K - $125K",
     "notes": "Similar to QA Automation Engineer. Focus on framework design and test reliability."
   },
-
   "selenium testing": {
     "role": "Selenium Testing Engineer",
-    "technologies": ["Python", "Selenium WebDriver", "pytest"],
+    "technologies": [
+      "Python",
+      "Selenium WebDriver",
+      "pytest"
+    ],
     "core_skills": [
       "Selenium WebDriver",
       "Element locators",
@@ -389,20 +553,2110 @@
     ],
     "timeline_weeks": 16,
     "effort_per_week": "20-25 hours",
-    "prerequisite_skills": ["Basic programming understanding"],
+    "prerequisite_skills": [
+      "Basic programming understanding"
+    ],
     "career_path": "Selenium Testing Engineer → QA Automation Engineer → Test Architect",
     "job_market": "Good demand, especially for e-commerce and SaaS",
     "salary_range_usd": "$70K - $120K",
     "notes": "Specialized role focused on Selenium automation. Emphasize framework reliability and maintainability."
   },
-
+  "selenium csharp": {
+    "role": "Selenium Automation Engineer (C#)",
+    "technologies": [
+      "C#",
+      "Selenium WebDriver",
+      "NUnit",
+      "SpecFlow",
+      "Git"
+    ],
+    "core_skills": [
+      "Selenium WebDriver basics (C#)",
+      "Locator strategies (CSS, XPath)",
+      "Wait strategies (Explicit, Implicit)",
+      "Page Object Model (POM) - C#",
+      "Test automation design patterns",
+      "C# for test automation"
+    ],
+    "optional_skills": [
+      "CI/CD integration (Azure DevOps, Jenkins)",
+      "BDD with SpecFlow",
+      "Performance testing basics",
+      "API testing (RestSharp)"
+    ],
+    "learning_path": [
+      "Phase 1: C# fundamentals (4-6 weeks) - syntax, OOP, LINQ",
+      "Phase 2: Selenium WebDriver with C# (4-6 weeks) - setup, basic scripts, element interactions",
+      "Phase 3: Test frameworks (2-4 weeks) - NUnit, SpecFlow, assertions, test runners",
+      "Phase 4: Framework design (2-3 weeks) - POM, reusable helpers, reporting",
+      "Phase 5: CI/CD integration (2-3 weeks) - pipelines, scheduled runs, artifact management"
+    ],
+    "projects": [
+      "Automate 5-10 test cases using Selenium + NUnit in C#",
+      "Build POM framework in C# with SpecFlow scenarios",
+      "Integrate tests into Azure DevOps pipeline with reports"
+    ],
+    "timeline_weeks": 14,
+    "effort_per_week": "15-25 hours",
+    "prerequisite_skills": [
+      "Basic programming (any language)",
+      "Understanding of testing concepts"
+    ],
+    "career_path": "QA Automation Engineer (C#) → Senior Automation Engineer → Test Architect",
+    "notes": "For teams using Microsoft stack, C# is preferred. Emphasize strong C# fundamentals."
+  },
+  "document specialist to data analyst": {
+    "role": "Transition: Document Specialist → Data Analyst",
+    "technologies": [
+      "Excel",
+      "SQL",
+      "Python",
+      "Power BI",
+      "CSV"
+    ],
+    "core_skills": [
+      "Data cleaning",
+      "Excel (pivot tables, formulas)",
+      "SQL querying",
+      "Data visualization",
+      "Basic statistics"
+    ],
+    "learning_path": [
+      "Phase 1: Excel essentials and data cleaning (2-3 weeks)",
+      "Phase 2: SQL for data querying (3-4 weeks)",
+      "Phase 3: Python for data analysis (4-6 weeks) - pandas, numpy",
+      "Phase 4: Visualization and dashboards (2-3 weeks) - Power BI/ Tableau"
+    ],
+    "projects": [
+      "Clean and analyze a dataset in Excel and present findings",
+      "Create SQL reports from sample databases",
+      "Build a Power BI dashboard showcasing KPIs"
+    ],
+    "timeline_weeks": 12,
+    "notes": "Leverage domain knowledge from document work; focus on transferable skills like attention to detail and data quality."
+  },
+  "photo editor to frontend developer": {
+    "role": "Transition: Photo Editor → Frontend Developer",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Git"
+    ],
+    "core_skills": [
+      "HTML/CSS fundamentals",
+      "Responsive design",
+      "JavaScript basics",
+      "Component-based UI with React",
+      "Version control (Git)"
+    ],
+    "learning_path": [
+      "Phase 1: HTML & CSS and responsive design (2-3 weeks)",
+      "Phase 2: JavaScript fundamentals (3-4 weeks)",
+      "Phase 3: React basics and component patterns (4-6 weeks)",
+      "Phase 4: Build portfolio and deploy (2-3 weeks)"
+    ],
+    "projects": [
+      "Create a responsive portfolio website showcasing edited photos",
+      "Build a React gallery app with filtering and lightbox",
+      "Deploy site to Netlify or GitHub Pages"
+    ],
+    "timeline_weeks": 12,
+    "notes": "Design sensibility from photo editing is an advantage; focus on UX and polished UI."
+  },
+  "sql engineer": {
+    "role": "SQL Engineer / Database Developer",
+    "technologies": [
+      "SQL",
+      "SQL Server",
+      "PostgreSQL",
+      "MySQL",
+      "T-SQL",
+      "Stored Procedures",
+      "Indexing",
+      "Query Optimization"
+    ],
+    "core_skills": [
+      "SQL query writing and optimization",
+      "Database design and normalization",
+      "Stored procedures and triggers",
+      "Indexing and performance tuning",
+      "Backup and recovery strategies",
+      "Data integrity and constraints",
+      "Transaction management",
+      "Query execution plans",
+      "Database administration basics"
+    ],
+    "optional_skills": [
+      "Replication and clustering",
+      "ETL tools (SSIS, Talend)",
+      "NoSQL databases (MongoDB)",
+      "Data warehousing",
+      "BI tools (Power BI, Tableau)",
+      "Cloud databases (Azure SQL, AWS RDS)",
+      "Data security and encryption"
+    ],
+    "learning_path": [
+      "Phase 1 (Weeks 1-2): SQL fundamentals - SELECT, WHERE, JOIN, GROUP BY, aggregates",
+      "Phase 2 (Weeks 3-5): Advanced queries - subqueries, CTEs, window functions, complex joins",
+      "Phase 3 (Weeks 6-8): Database design - normalization, ER diagrams, constraints, relationships",
+      "Phase 4 (Weeks 9-11): Stored procedures and triggers - writing, debugging, performance",
+      "Phase 5 (Weeks 12-14): Query optimization - execution plans, indexing strategies, EXPLAIN",
+      "Phase 6 (Weeks 15-17): Database administration - backups, recovery, user management, maintenance",
+      "Phase 7 (Weeks 18-20): SQL Server/PostgreSQL specific features and cloud databases"
+    ],
+    "projects": [
+      "Project 1: Design and normalize a database for an e-commerce system (products, orders, customers, inventory)",
+      "Project 2: Write 50+ optimized queries for business analytics (sales reports, customer segmentation, trend analysis)",
+      "Project 3: Create stored procedures and triggers for order processing with transaction handling",
+      "Project 4: Build ETL pipeline extracting data from multiple sources, transforming with SQL, loading into warehouse",
+      "Project 5: Performance tuning project - analyze slow queries, identify missing indexes, optimize execution plans"
+    ],
+    "timeline_weeks": 20,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "Basic computer skills",
+      "Understanding of data and tables"
+    ],
+    "career_path": "Junior SQL Developer → Senior SQL Developer → Database Architect → Database Administrator",
+    "job_market": "Consistently high demand across all industries (finance, healthcare, e-commerce, SaaS)",
+    "salary_range_usd": "$70K - $150K (entry to senior), contractors $50-100/hour",
+    "certifications": [
+      "Microsoft SQL Server certifications",
+      "PostgreSQL certifications",
+      "Oracle Database certifications"
+    ],
+    "notes": "SQL is a cornerstone skill for data-intensive roles. Strong SQL fundamentals open doors to data engineering, analytics, and backend development. Focus on writing efficient queries and understanding execution plans. Real-world projects with 1M+ row datasets are impressive on portfolios."
+  },
   "generic": {
     "role": "Learning Roadmap (Generic)",
-    "technologies": ["Programming basics", "Git", "SQL"],
-    "core_skills": ["Problem solving", "Version control", "Basic data structures"],
-    "learning_path": ["Start with fundamentals", "Practice small projects", "Build portfolio"],
-    "projects": ["Small portfolio projects demonstrating skills"],
+    "technologies": [
+      "Programming basics",
+      "Git",
+      "SQL"
+    ],
+    "core_skills": [
+      "Problem solving",
+      "Version control",
+      "Basic data structures"
+    ],
+    "learning_path": [
+      "Start with fundamentals",
+      "Practice small projects",
+      "Build portfolio"
+    ],
+    "projects": [
+      "Small portfolio projects demonstrating skills"
+    ],
     "timeline_weeks": 12,
     "notes": "If unsure, start with fundamentals and then specialize."
+  },
+  "business analyst": {
+    "role": "Business Analyst",
+    "technologies": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "JIRA",
+      "Confluence",
+      "Requirements tools"
+    ],
+    "core_skills": [
+      "Requirements gathering and analysis",
+      "Stakeholder communication",
+      "Process mapping and documentation",
+      "Data analysis and interpretation",
+      "SQL querying for data validation",
+      "Dashboard and report creation",
+      "Problem-solving and critical thinking",
+      "Documentation and technical writing"
+    ],
+    "optional_skills": [
+      "Python for data analysis",
+      "Advanced Excel (pivot tables, VBA)",
+      "UML and system design",
+      "Agile/Scrum methodologies",
+      "Change management",
+      "Risk assessment"
+    ],
+    "learning_path": [
+      "Phase 1: Business fundamentals and process understanding (2-3 weeks)",
+      "Phase 2: Data analysis with SQL and Excel (3-4 weeks)",
+      "Phase 3: Visualization and reporting (Power BI/Tableau) (2-3 weeks)",
+      "Phase 4: Requirements elicitation and documentation (2-3 weeks)",
+      "Phase 5: Stakeholder management and communication (2-3 weeks)",
+      "Phase 6: Tools proficiency (JIRA, Confluence, UML) (1-2 weeks)"
+    ],
+    "projects": [
+      "Analyze a business process and create improvement recommendations",
+      "Build SQL queries to extract and validate business data",
+      "Create a Power BI dashboard for business metrics and KPIs",
+      "Document requirements for a software project",
+      "Conduct stakeholder interviews and synthesize findings"
+    ],
+    "timeline_weeks": 14,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Basic business understanding",
+      "Comfortable with data and spreadsheets"
+    ],
+    "career_path": "Junior BA → Business Analyst → Senior BA → Product Manager",
+    "job_market": "High demand in finance, healthcare, enterprise software",
+    "salary_range_usd": "$65K - $120K",
+    "notes": "Strong communication and analytical skills are key. Build a portfolio of analysis projects showing business impact."
+  },
+  "ui designer": {
+    "role": "UI Designer",
+    "technologies": [
+      "Figma",
+      "Sketch",
+      "Adobe XD",
+      "Prototyping tools",
+      "Design systems"
+    ],
+    "core_skills": [
+      "Visual design principles",
+      "Wireframing and prototyping",
+      "Design systems and component libraries",
+      "Typography and color theory",
+      "Responsive design thinking",
+      "User interaction design",
+      "Accessibility (WCAG) basics",
+      "Design tools proficiency"
+    ],
+    "optional_skills": [
+      "HTML/CSS basics",
+      "Illustration and iconography",
+      "Motion design and animation",
+      "User research and testing",
+      "Design thinking methodology"
+    ],
+    "learning_path": [
+      "Phase 1: Design fundamentals - color, typography, layout (2-3 weeks)",
+      "Phase 2: Figma or Sketch mastery (3-4 weeks)",
+      "Phase 3: Wireframing and prototyping (2-3 weeks)",
+      "Phase 4: Design systems and component thinking (2-3 weeks)",
+      "Phase 5: Accessibility and responsive design (1-2 weeks)",
+      "Phase 6: Portfolio and real-world projects (ongoing)"
+    ],
+    "projects": [
+      "Create a complete design system with reusable components",
+      "Design a mobile app from wireframes to high-fidelity mockups",
+      "Redesign an existing website focusing on UX improvements",
+      "Build interactive prototypes in Figma",
+      "Design icons and illustration assets for a product"
+    ],
+    "timeline_weeks": 12,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Eye for visual design",
+      "Attention to detail"
+    ],
+    "career_path": "UI Designer → Senior UI Designer → Design Lead → Design Manager",
+    "job_market": "Growing demand in tech, startups, enterprise",
+    "salary_range_usd": "$60K - $110K",
+    "notes": "Build a strong visual portfolio. Understand user-centered design. Stay updated with design trends."
+  },
+  "ux designer": {
+    "role": "UX Designer",
+    "technologies": [
+      "Figma",
+      "User research tools",
+      "Analytics",
+      "Usability testing",
+      "Prototyping"
+    ],
+    "core_skills": [
+      "User research and interviews",
+      "Wireframing and information architecture",
+      "User journey mapping",
+      "Usability testing and analysis",
+      "Interaction design",
+      "Accessibility and inclusive design",
+      "Data-driven design decisions",
+      "Prototyping and validation"
+    ],
+    "optional_skills": [
+      "HTML/CSS understanding",
+      "A/B testing and analytics",
+      "Design systems collaboration",
+      "Motion and micro-interactions",
+      "User psychology basics"
+    ],
+    "learning_path": [
+      "Phase 1: User research methodologies (2-3 weeks)",
+      "Phase 2: Information architecture and wireframing (2-3 weeks)",
+      "Phase 3: User journey and experience mapping (2-3 weeks)",
+      "Phase 4: Interaction design and prototyping (2-3 weeks)",
+      "Phase 5: Usability testing and validation (1-2 weeks)",
+      "Phase 6: Accessibility and inclusive design (1-2 weeks)"
+    ],
+    "projects": [
+      "Conduct user research and synthesize findings into personas",
+      "Create user journey maps for a complex product",
+      "Build interactive prototypes and test with users",
+      "Redesign a product based on user feedback",
+      "Analyze user behavior data and recommend improvements"
+    ],
+    "timeline_weeks": 13,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Curiosity about user behavior",
+      "Problem-solving mindset"
+    ],
+    "career_path": "UX Designer → Senior UX Designer → UX Lead → Design Manager",
+    "job_market": "Very high demand in tech, fintech, healthcare",
+    "salary_range_usd": "$70K - $130K",
+    "notes": "User empathy is fundamental. Learn to validate designs with real users. Build case studies showing impact."
+  },
+  "mobile app developer": {
+    "role": "Mobile App Developer (iOS/Android)",
+    "technologies": [
+      "Swift",
+      "Kotlin",
+      "Android SDK",
+      "iOS SDK",
+      "Firebase",
+      "REST APIs"
+    ],
+    "core_skills": [
+      "Mobile app architecture and patterns",
+      "UI/UX for mobile",
+      "Native app development",
+      "API integration",
+      "Local storage and persistence",
+      "Performance optimization",
+      "Testing for mobile",
+      "App store deployment"
+    ],
+    "optional_skills": [
+      "Cross-platform (React Native, Flutter)",
+      "Offline-first architecture",
+      "Push notifications",
+      "Analytics and crash reporting",
+      "Mobile security"
+    ],
+    "learning_path": [
+      "Phase 1: Choose platform (iOS or Android) basics (2-3 weeks)",
+      "Phase 2: Language fundamentals (3-4 weeks)",
+      "Phase 3: Mobile UI design and navigation (2-3 weeks)",
+      "Phase 4: API integration and networking (2-3 weeks)",
+      "Phase 5: Local storage and databases (1-2 weeks)",
+      "Phase 6: Publishing and app store submission (1 week)"
+    ],
+    "projects": [
+      "Build a weather app with API integration",
+      "Create a todo/notes app with local persistence",
+      "Develop a social media app with backend integration",
+      "Implement offline-first synchronization",
+      "Publish an app to Play Store or App Store"
+    ],
+    "timeline_weeks": 14,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "Programming fundamentals",
+      "Understanding of mobile ecosystems"
+    ],
+    "career_path": "Junior Mobile Dev → Mobile Developer → Senior Mobile Dev → Tech Lead",
+    "job_market": "High demand, especially for experienced developers",
+    "salary_range_usd": "$75K - $140K",
+    "notes": "Focus on writing clean, maintainable code. Understand platform guidelines. Build polished apps for your portfolio."
+  },
+  "voice ui engineer": {
+    "role": "Voice UI Engineer",
+    "technologies": [
+      "Alexa Skills Kit",
+      "Google Assistant",
+      "Dialogflow",
+      "NLP",
+      "Python"
+    ],
+    "core_skills": [
+      "Voice interaction design",
+      "Natural Language Processing basics",
+      "Intent recognition and slot filling",
+      "Conversation flow design",
+      "Voice app architecture",
+      "Testing voice applications",
+      "AWS/GCP voice services",
+      "Backend integration"
+    ],
+    "optional_skills": [
+      "TTS/STT optimization",
+      "Multilingual support",
+      "Analytics for voice apps",
+      "IoT integration",
+      "Voice biometrics"
+    ],
+    "learning_path": [
+      "Phase 1: NLP and voice basics (2-3 weeks)",
+      "Phase 2: Alexa Skills Kit or Google Actions (3-4 weeks)",
+      "Phase 3: Conversation design and UX (2-3 weeks)",
+      "Phase 4: Backend integration and database (2-3 weeks)",
+      "Phase 5: Testing and publishing voice apps (1-2 weeks)"
+    ],
+    "projects": [
+      "Build a simple Alexa skill",
+      "Create a Google Action with multiple intents",
+      "Develop a voice-powered e-commerce skill",
+      "Implement smart home voice control",
+      "Integrate voice app with backend APIs"
+    ],
+    "timeline_weeks": 12,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Programming experience",
+      "Understanding of conversational design"
+    ],
+    "career_path": "Voice UI Engineer → Senior Voice Engineer → Conversational AI Lead",
+    "job_market": "Emerging, high growth potential",
+    "salary_range_usd": "$70K - $120K",
+    "notes": "Emerging field with significant growth. Focus on natural conversation flows. Understand voice UX principles."
+  },
+  "servicenow developer": {
+    "role": "ServiceNow Developer",
+    "technologies": [
+      "ServiceNow",
+      "JavaScript",
+      "ITSM",
+      "ITIL",
+      "GlideRecord",
+      "Workflows"
+    ],
+    "core_skills": [
+      "ServiceNow platform fundamentals",
+      "JavaScript for ServiceNow",
+      "ITSM and ITIL processes",
+      "Custom forms and workflows",
+      "Database and table management",
+      "Scripting (GlideScript, GlideRecord)",
+      "REST APIs and integrations",
+      "ITSM best practices"
+    ],
+    "optional_skills": [
+      "Advanced scripting and debugging",
+      "Integration with third-party systems",
+      "Custom applications development",
+      "Security and access control",
+      "ServiceNow certifications"
+    ],
+    "learning_path": [
+      "Phase 1: ITSM and ITIL fundamentals (2 weeks)",
+      "Phase 2: ServiceNow platform basics (2-3 weeks)",
+      "Phase 3: JavaScript for ServiceNow (2-3 weeks)",
+      "Phase 4: Custom forms, tables, and workflows (2-3 weeks)",
+      "Phase 5: APIs and integrations (1-2 weeks)",
+      "Phase 6: Advanced customization and scripting (1-2 weeks)"
+    ],
+    "projects": [
+      "Configure incident management workflow",
+      "Create custom forms and field rules",
+      "Develop integration between ServiceNow and external systems",
+      "Build custom ServiceNow application",
+      "Optimize ITSM processes in ServiceNow"
+    ],
+    "timeline_weeks": 12,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "JavaScript knowledge",
+      "Understanding of IT processes"
+    ],
+    "career_path": "ServiceNow Developer → Senior ServiceNow Dev → ServiceNow Architect",
+    "job_market": "Very high demand, especially for enterprise",
+    "salary_range_usd": "$80K - $140K",
+    "notes": "High-paying specialization. ServiceNow is critical in enterprises. Certification is valuable."
+  },
+  "it helpdesk to sysadmin": {
+    "role": "IT Helpdesk / System Administrator",
+    "technologies": [
+      "Windows",
+      "Linux",
+      "Active Directory",
+      "Networking",
+      "Cloud platforms"
+    ],
+    "core_skills": [
+      "User support and troubleshooting",
+      "Operating systems (Windows, Linux)",
+      "Active Directory and user management",
+      "Networking fundamentals",
+      "Hardware and device management",
+      "Ticketing systems (ServiceNow, Jira)",
+      "Backup and recovery",
+      "Security basics"
+    ],
+    "optional_skills": [
+      "Cloud infrastructure (AWS, Azure)",
+      "Virtualization (VMware, Hyper-V)",
+      "Server administration",
+      "Network security",
+      "Scripting (PowerShell, Bash)",
+      "IT certifications (CompTIA, Microsoft)"
+    ],
+    "learning_path": [
+      "Phase 1: IT fundamentals and support processes (1-2 weeks)",
+      "Phase 2: Operating systems and user support (2-3 weeks)",
+      "Phase 3: Active Directory and user management (2 weeks)",
+      "Phase 4: Networking fundamentals (2-3 weeks)",
+      "Phase 5: Server administration basics (2-3 weeks)",
+      "Phase 6: Cloud infrastructure basics (1-2 weeks)"
+    ],
+    "projects": [
+      "Set up and manage Active Directory domain",
+      "Configure user accounts and permissions",
+      "Troubleshoot network connectivity issues",
+      "Plan backup and disaster recovery",
+      "Migrate workloads to cloud platforms"
+    ],
+    "timeline_weeks": 12,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Customer service mindset",
+      "Problem-solving ability"
+    ],
+    "career_path": "IT Helpdesk → System Administrator → System Engineer → Infrastructure Lead",
+    "job_market": "Steady demand across all industries",
+    "salary_range_usd": "$50K - $100K",
+    "notes": "Good entry point into IT. Focus on continuous learning. Certifications (CompTIA+, MCSA) boost career."
+  },
+  "web3 developer": {
+    "role": "Web3 / Blockchain Developer",
+    "technologies": [
+      "Solidity",
+      "Ethereum",
+      "Smart Contracts",
+      "JavaScript",
+      "Web3.js"
+    ],
+    "core_skills": [
+      "Blockchain fundamentals and consensus",
+      "Smart contract development",
+      "Solidity programming",
+      "Decentralized application architecture",
+      "Cryptography basics",
+      "Token standards (ERC-20, ERC-721)",
+      "Testing and security auditing",
+      "Gas optimization"
+    ],
+    "optional_skills": [
+      "Multiple blockchain platforms (Polygon, Solana)",
+      "DeFi protocols",
+      "NFT standards",
+      "Security best practices",
+      "Web3 frontend libraries"
+    ],
+    "learning_path": [
+      "Phase 1: Blockchain and cryptocurrency basics (2-3 weeks)",
+      "Phase 2: Solidity fundamentals (3-4 weeks)",
+      "Phase 3: Smart contract development and testing (3-4 weeks)",
+      "Phase 4: DApp architecture and integration (2-3 weeks)",
+      "Phase 5: Security and auditing (1-2 weeks)",
+      "Phase 6: Production deployment and optimization (1 week)"
+    ],
+    "projects": [
+      "Write and deploy a simple smart contract",
+      "Develop an ERC-20 token",
+      "Build a decentralized application (DApp)",
+      "Implement a simple DeFi protocol",
+      "Conduct security audit of smart contract"
+    ],
+    "timeline_weeks": 14,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "Programming experience",
+      "Understanding of cryptography basics"
+    ],
+    "career_path": "Web3 Developer → Senior Smart Contract Engineer → Protocol Architect",
+    "job_market": "High demand, volatile but growing",
+    "salary_range_usd": "$80K - $180K",
+    "notes": "Fast-moving field. Security is critical. Follow industry best practices and stay updated."
+  },
+  "cybersecurity engineer": {
+    "role": "Cybersecurity Engineer",
+    "technologies": [
+      "Security tools",
+      "Penetration testing",
+      "Compliance",
+      "SIEM",
+      "Firewalls"
+    ],
+    "core_skills": [
+      "Security fundamentals and principles",
+      "Vulnerability assessment and management",
+      "Penetration testing basics",
+      "Network security",
+      "Application security",
+      "Incident response and forensics",
+      "Compliance and regulations (HIPAA, GDPR)",
+      "Security tools and technologies"
+    ],
+    "optional_skills": [
+      "Ethical hacking (CEH)",
+      "Cloud security",
+      "Cryptography and encryption",
+      "Secure coding practices",
+      "Security architecture",
+      "Threat modeling"
+    ],
+    "learning_path": [
+      "Phase 1: Security fundamentals and risk management (2-3 weeks)",
+      "Phase 2: Network and application security (3-4 weeks)",
+      "Phase 3: Vulnerability management and testing (2-3 weeks)",
+      "Phase 4: Incident response and forensics (2 weeks)",
+      "Phase 5: Compliance and governance (1-2 weeks)",
+      "Phase 6: Advanced tools and techniques (1-2 weeks)"
+    ],
+    "projects": [
+      "Conduct vulnerability assessment of a system",
+      "Perform penetration test and document findings",
+      "Design secure network architecture",
+      "Implement incident response plan",
+      "Audit compliance with security standards"
+    ],
+    "timeline_weeks": 13,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Networking knowledge",
+      "System administration basics"
+    ],
+    "career_path": "Security Analyst → Cybersecurity Engineer → Senior Security Engineer → CISO",
+    "job_market": "Very high demand, critical for all industries",
+    "salary_range_usd": "$75K - $150K",
+    "notes": "High-demand field with critical importance. Certifications (Security+, CEH) are valuable."
+  },
+  "staff engineer": {
+    "role": "Staff Engineer",
+    "technologies": [
+      "System design",
+      "Distributed systems",
+      "Databases",
+      "Cloud platforms"
+    ],
+    "core_skills": [
+      "System design and architecture",
+      "Technical leadership",
+      "Mentoring and code review",
+      "Performance optimization",
+      "Scalability design",
+      "Technology evaluation and selection",
+      "Cross-team collaboration",
+      "Strategic thinking"
+    ],
+    "optional_skills": [
+      "People management",
+      "Organizational impact",
+      "Product thinking",
+      "Long-term vision and strategy"
+    ],
+    "learning_path": [
+      "Phase 1: Master system design patterns (3-4 weeks)",
+      "Phase 2: Deep dive into distributed systems (3-4 weeks)",
+      "Phase 3: Database architecture and optimization (2-3 weeks)",
+      "Phase 4: Technical leadership skills (2-3 weeks)",
+      "Phase 5: Organizational and strategic thinking (ongoing)",
+      "Phase 6: Mentoring and impact amplification (ongoing)"
+    ],
+    "projects": [
+      "Design scalable architecture for high-traffic application",
+      "Conduct technology audit and recommendations",
+      "Lead system redesign or major refactoring",
+      "Mentor junior engineers and lead architecture reviews",
+      "Influence technical strategy across organization"
+    ],
+    "timeline_weeks": 0,
+    "effort_per_week": "N/A - Requires 10+ years experience",
+    "prerequisite_skills": [
+      "10+ years software engineering",
+      "Proven track record of impact",
+      "Technical depth"
+    ],
+    "career_path": "Senior Engineer → Staff Engineer → Principal Engineer → Distinguished Engineer",
+    "job_market": "Limited roles, high competition, very high compensation",
+    "salary_range_usd": "$180K - $400K+",
+    "notes": "Requires significant experience. Focus on technical depth, leadership, and organizational impact. This is a specialization, not an entry point."
+  },
+  "sdet": {
+    "role": "SDET (Software Development Engineer in Test)",
+    "technologies": [
+      "Selenium",
+      "Python",
+      "Java",
+      "CI/CD",
+      "Docker",
+      "REST APIs"
+    ],
+    "core_skills": [
+      "Test automation frameworks",
+      "Programming for QA",
+      "Test infrastructure design",
+      "API testing",
+      "CI/CD pipeline integration",
+      "Performance testing",
+      "Debugging test failures",
+      "Test analytics and reporting"
+    ],
+    "optional_skills": [
+      "Advanced testing patterns",
+      "BDD frameworks",
+      "Mobile testing (Appium)",
+      "Load testing tools",
+      "Test data management"
+    ],
+    "learning_path": [
+      "Phase 1: Strong programming fundamentals (4-6 weeks)",
+      "Phase 2: Test automation framework design (3-4 weeks)",
+      "Phase 3: API testing and integration (2-3 weeks)",
+      "Phase 4: CI/CD and infrastructure (2-3 weeks)",
+      "Phase 5: Performance testing and optimization (1-2 weeks)",
+      "Phase 6: Advanced patterns and architecture (ongoing)"
+    ],
+    "projects": [
+      "Design and build scalable test automation framework",
+      "Implement API testing suite with comprehensive coverage",
+      "Set up CI/CD pipeline with automated tests",
+      "Design test infrastructure for distributed systems",
+      "Implement load and performance testing"
+    ],
+    "timeline_weeks": 16,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "Strong programming background",
+      "Software engineering fundamentals"
+    ],
+    "career_path": "QA Engineer → SDET → Senior SDET → Test Engineering Lead",
+    "job_market": "Very high demand in tech companies",
+    "salary_range_usd": "$90K - $160K",
+    "notes": "Requires software engineering mindset, not just QA. Build infrastructure, not just tests. Focus on scalability and reliability."
+  },
+  "fintech engineer": {
+    "role": "FinTech Software Engineer",
+    "technologies": [
+      "Python",
+      "Java",
+      "Trading systems",
+      "SQL",
+      "Cloud platforms",
+      "APIs"
+    ],
+    "core_skills": [
+      "Financial systems understanding",
+      "Trading platforms and algorithms",
+      "Compliance and regulations",
+      "Payment systems and protocols",
+      "High-performance computing",
+      "Security and encryption",
+      "Data integrity and auditing",
+      "API design for financial services"
+    ],
+    "optional_skills": [
+      "Blockchain and cryptocurrency",
+      "Machine learning for trading",
+      "Microservices architecture",
+      "Real-time systems"
+    ],
+    "learning_path": [
+      "Phase 1: Financial systems and trading basics (2-3 weeks)",
+      "Phase 2: Compliance and regulations (GDPR, PCI-DSS) (1-2 weeks)",
+      "Phase 3: Payment systems and protocols (2-3 weeks)",
+      "Phase 4: Trading systems and algorithms (3-4 weeks)",
+      "Phase 5: High-performance optimization (2-3 weeks)",
+      "Phase 6: Security and fraud detection (1-2 weeks)"
+    ],
+    "projects": [
+      "Build order management system for trading",
+      "Implement payment processing pipeline",
+      "Design trading algorithm and backtest",
+      "Create compliance monitoring system",
+      "Optimize for low-latency financial transactions"
+    ],
+    "timeline_weeks": 14,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "Strong programming background",
+      "Interest in financial markets"
+    ],
+    "career_path": "Software Engineer → FinTech Engineer → Senior Engineer → Architect",
+    "job_market": "High demand, especially in trading and payments",
+    "salary_range_usd": "$100K - $200K+",
+    "notes": "Complex domain requiring both technical and financial knowledge. Security and reliability are critical."
+  },
+  "healthcare software engineer": {
+    "role": "Healthcare Software Engineer",
+    "technologies": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "HIPAA",
+      "HL7",
+      "FHIR",
+      "Healthcare APIs"
+    ],
+    "core_skills": [
+      "Healthcare domain knowledge",
+      "HIPAA compliance and security",
+      "Patient data handling",
+      "Healthcare standards (HL7, FHIR)",
+      "Interoperability and integration",
+      "Data privacy and encryption",
+      "FDA regulations basics",
+      "Electronic Health Records (EHR) systems"
+    ],
+    "optional_skills": [
+      "Medical device programming",
+      "Real-time health monitoring systems",
+      "Health analytics and reporting",
+      "Telemedicine platforms"
+    ],
+    "learning_path": [
+      "Phase 1: Healthcare domain fundamentals (1-2 weeks)",
+      "Phase 2: HIPAA and health data privacy (1-2 weeks)",
+      "Phase 3: Healthcare standards and interoperability (2-3 weeks)",
+      "Phase 4: EHR systems and health IT (2-3 weeks)",
+      "Phase 5: Secure healthcare application development (2-3 weeks)",
+      "Phase 6: Real-world healthcare projects (ongoing)"
+    ],
+    "projects": [
+      "Build patient record system with HIPAA compliance",
+      "Implement HL7/FHIR integration",
+      "Design secure patient portal",
+      "Create health data analytics dashboard",
+      "Implement telemedicine platform"
+    ],
+    "timeline_weeks": 10,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Programming background",
+      "Interest in healthcare"
+    ],
+    "career_path": "Software Engineer → Healthcare Engineer → Senior Healthcare Architect",
+    "job_market": "High demand, stable and growing",
+    "salary_range_usd": "$85K - $150K",
+    "notes": "Highly specialized with good job security. Domain knowledge is valuable."
+  },
+  "game developer": {
+    "role": "Game Developer",
+    "technologies": [
+      "Unity",
+      "Unreal Engine",
+      "C#",
+      "C++",
+      "Game physics",
+      "Graphics"
+    ],
+    "core_skills": [
+      "Game engine mastery (Unity/Unreal)",
+      "Game programming and mechanics",
+      "3D graphics and rendering",
+      "Physics simulation",
+      "Performance optimization",
+      "Game design thinking",
+      "Multiplayer architecture",
+      "Player psychology and balance"
+    ],
+    "optional_skills": [
+      "Mobile game development",
+      "VR/AR game development",
+      "Networking and server architecture",
+      "Game monetization",
+      "Live operations"
+    ],
+    "learning_path": [
+      "Phase 1: Game engine basics (2-3 weeks)",
+      "Phase 2: Game programming fundamentals (3-4 weeks)",
+      "Phase 3: 3D graphics and physics (3-4 weeks)",
+      "Phase 4: Game design and mechanics (2-3 weeks)",
+      "Phase 5: Performance optimization (1-2 weeks)",
+      "Phase 6: Multiplayer and shipping (2-3 weeks)"
+    ],
+    "projects": [
+      "Build 2D game (platformer, puzzle)",
+      "Develop 3D game with physics",
+      "Implement multiplayer features",
+      "Optimize game performance",
+      "Publish game on platform (Steam, Epic)"
+    ],
+    "timeline_weeks": 16,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "Programming background",
+      "Passion for games"
+    ],
+    "career_path": "Game Programmer → Senior Game Programmer → Technical Lead → Game Director",
+    "job_market": "Competitive but growing, studios worldwide",
+    "salary_range_usd": "$70K - $130K",
+    "notes": "Passionate community. Focus on shipping. Portfolio should include playable games."
+  },
+  "ar vr developer": {
+    "role": "AR/VR Developer",
+    "technologies": [
+      "Unity",
+      "Unreal",
+      "ARKit",
+      "ARCore",
+      "WebXR",
+      "C#",
+      "C++"
+    ],
+    "core_skills": [
+      "VR/AR fundamentals and concepts",
+      "Motion sickness and UX principles",
+      "Spatial computing and 3D interaction",
+      "AR frameworks (ARKit, ARCore)",
+      "VR platform development",
+      "Performance optimization for VR",
+      "Hand tracking and gesture recognition",
+      "Real-world anchoring and mapping"
+    ],
+    "optional_skills": [
+      "Enterprise VR applications",
+      "Training simulations",
+      "Metaverse development",
+      "Haptic feedback integration"
+    ],
+    "learning_path": [
+      "Phase 1: VR/AR fundamentals and UX (2-3 weeks)",
+      "Phase 2: Unity/Unreal for XR (2-3 weeks)",
+      "Phase 3: ARKit and ARCore development (2-3 weeks)",
+      "Phase 4: VR platform development (Meta Quest, HTC Vive) (2-3 weeks)",
+      "Phase 5: Spatial interactions and hand tracking (1-2 weeks)",
+      "Phase 6: Performance optimization (1-2 weeks)"
+    ],
+    "projects": [
+      "Build AR application with real-world objects",
+      "Develop VR game or experience",
+      "Create training simulation in VR",
+      "Implement hand gesture recognition",
+      "Publish app on Meta Quest or Apple Vision Pro"
+    ],
+    "timeline_weeks": 12,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "Game development or 3D graphics experience"
+    ],
+    "career_path": "VR/AR Developer → Senior XR Developer → XR Architect",
+    "job_market": "Growing rapidly, emerging market",
+    "salary_range_usd": "$80K - $140K",
+    "notes": "Emerging field with significant growth potential. Test on actual hardware."
+  },
+  "devops to site reliability engineer": {
+    "role": "Site Reliability Engineer (SRE)",
+    "technologies": [
+      "Kubernetes",
+      "Docker",
+      "Terraform",
+      "Monitoring",
+      "Go",
+      "Python"
+    ],
+    "core_skills": [
+      "Infrastructure as code and automation",
+      "Kubernetes and container orchestration",
+      "Monitoring, logging, and observability",
+      "Incident response and on-call",
+      "Capacity planning and scalability",
+      "Reliability engineering principles",
+      "Performance optimization",
+      "Cost optimization"
+    ],
+    "optional_skills": [
+      "Chaos engineering and resilience",
+      "Advanced networking",
+      "Security and access control",
+      "Machine learning for ops"
+    ],
+    "learning_path": [
+      "Phase 1: DevOps fundamentals (2-3 weeks)",
+      "Phase 2: Kubernetes mastery (3-4 weeks)",
+      "Phase 3: Observability and monitoring (2-3 weeks)",
+      "Phase 4: SRE principles and practices (2-3 weeks)",
+      "Phase 5: Incident response and automation (2-3 weeks)",
+      "Phase 6: Advanced resilience and optimization (ongoing)"
+    ],
+    "projects": [
+      "Build Kubernetes cluster with HA setup",
+      "Implement comprehensive monitoring and alerting",
+      "Design incident response procedures",
+      "Automate deployment pipelines",
+      "Implement chaos engineering exercises"
+    ],
+    "timeline_weeks": 14,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "DevOps or system administration background"
+    ],
+    "career_path": "DevOps Engineer → SRE → Senior SRE → SRE Manager",
+    "job_market": "Very high demand, especially at scale",
+    "salary_range_usd": "$100K - $170K",
+    "notes": "SRE combines development and operations. Focus on automation and reliability. On-call work expected."
+  },
+  "machine learning engineer": {
+    "role": "Machine Learning Engineer",
+    "technologies": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Scikit-learn",
+      "MLOps",
+      "Kubernetes"
+    ],
+    "core_skills": [
+      "ML fundamentals and theory",
+      "Deep learning architectures",
+      "Model training and optimization",
+      "Feature engineering",
+      "MLOps and model deployment",
+      "Model monitoring and drift detection",
+      "Experiment tracking",
+      "Performance tuning"
+    ],
+    "optional_skills": [
+      "Computer vision",
+      "Natural language processing",
+      "Reinforcement learning",
+      "Federated learning",
+      "Graph neural networks"
+    ],
+    "learning_path": [
+      "Phase 1: ML fundamentals and math (3-4 weeks)",
+      "Phase 2: Supervised and unsupervised learning (3-4 weeks)",
+      "Phase 3: Deep learning (TensorFlow/PyTorch) (4-5 weeks)",
+      "Phase 4: Feature engineering and preprocessing (2-3 weeks)",
+      "Phase 5: MLOps and model deployment (2-3 weeks)",
+      "Phase 6: Advanced specialization (ongoing)"
+    ],
+    "projects": [
+      "End-to-end ML project from data to deployment",
+      "Build deep learning model for image or text",
+      "Implement MLOps pipeline",
+      "Deploy model with monitoring",
+      "Optimize model for production constraints"
+    ],
+    "timeline_weeks": 18,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "Programming and math background",
+      "Statistics knowledge"
+    ],
+    "career_path": "ML Engineer → Senior ML Engineer → ML Architect → ML Research Lead",
+    "job_market": "Very high demand, competitive roles",
+    "salary_range_usd": "$110K - $180K",
+    "notes": "Focus on production readiness and real-world impact. Theory and practice both important."
+  },
+  "full stack developer": {
+    "role": "Full Stack Developer",
+    "technologies": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "core_skills": [
+      "Frontend development (React/Vue/Angular)",
+      "Backend development (Node/Python/Java)",
+      "Database design and optimization",
+      "API design and REST principles",
+      "Full application lifecycle",
+      "DevOps basics (Docker, deployment)",
+      "Security best practices",
+      "Performance optimization"
+    ],
+    "optional_skills": [
+      "Mobile development",
+      "GraphQL",
+      "Microservices architecture",
+      "Real-time applications"
+    ],
+    "learning_path": [
+      "Phase 1: JavaScript and frontend (React) (4-5 weeks)",
+      "Phase 2: Backend (Node.js/Express) (3-4 weeks)",
+      "Phase 3: Database and SQL (2-3 weeks)",
+      "Phase 4: Full application architecture (2-3 weeks)",
+      "Phase 5: DevOps basics and deployment (1-2 weeks)",
+      "Phase 6: Optimization and production (1-2 weeks)"
+    ],
+    "projects": [
+      "Build complete web application end-to-end",
+      "Implement real-time features",
+      "Design scalable architecture",
+      "Deploy and monitor production application",
+      "Implement security and performance"
+    ],
+    "timeline_weeks": 16,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "Programming fundamentals"
+    ],
+    "career_path": "Full Stack Developer → Senior Full Stack → Tech Lead → Architect",
+    "job_market": "Very high demand, versatile skills",
+    "salary_range_usd": "$85K - $160K",
+    "notes": "Versatile role but requires depth in multiple areas. Build impressive portfolio projects."
+  },
+  "quality assurance engineer": {
+    "role": "Quality Assurance Engineer",
+    "technologies": [
+      "Testing frameworks",
+      "Bug tracking",
+      "Automation basics",
+      "SQL"
+    ],
+    "core_skills": [
+      "Test case design and execution",
+      "Bug identification and documentation",
+      "Regression testing",
+      "Performance testing basics",
+      "Test organization and planning",
+      "Requirements understanding",
+      "Defect lifecycle management",
+      "Communication and reporting"
+    ],
+    "optional_skills": [
+      "Test automation (Selenium)",
+      "API testing",
+      "Performance testing tools",
+      "Mobile testing"
+    ],
+    "learning_path": [
+      "Phase 1: QA fundamentals and processes (1-2 weeks)",
+      "Phase 2: Test case design and execution (2-3 weeks)",
+      "Phase 3: Bug lifecycle and documentation (1-2 weeks)",
+      "Phase 4: Testing types and strategies (2-3 weeks)",
+      "Phase 5: Automation basics (if pursuing SDET) (2-3 weeks)"
+    ],
+    "projects": [
+      "Execute comprehensive test suite",
+      "Design test cases for complex features",
+      "Perform regression testing",
+      "Conduct performance testing",
+      "Create bug reports and track issues"
+    ],
+    "timeline_weeks": 9,
+    "effort_per_week": "20 hours",
+    "prerequisite_skills": [
+      "Attention to detail",
+      "Problem-solving mindset"
+    ],
+    "career_path": "QA Engineer → Senior QA → QA Lead → Test Manager → SDET",
+    "job_market": "Solid demand across industries",
+    "salary_range_usd": "$55K - $90K",
+    "notes": "Good entry point into tech. Path to SDET for automation focus. Domain knowledge valuable."
+  },
+  "solutions architect": {
+    "role": "Solutions Architect",
+    "technologies": [
+      "System design",
+      "Cloud platforms",
+      "Enterprise architecture",
+      "Project management"
+    ],
+    "core_skills": [
+      "Enterprise architecture principles",
+      "Solution design and planning",
+      "Technology evaluation",
+      "Stakeholder management",
+      "Project oversight",
+      "Business acumen",
+      "Technical communication",
+      "Risk management"
+    ],
+    "optional_skills": [
+      "Cloud architecture (AWS, Azure)",
+      "Microservices design",
+      "Cost optimization",
+      "Security architecture",
+      "People leadership"
+    ],
+    "learning_path": [
+      "Phase 1: System design and architecture patterns (3-4 weeks)",
+      "Phase 2: Enterprise architecture principles (2-3 weeks)",
+      "Phase 3: Cloud platforms deep dive (3-4 weeks)",
+      "Phase 4: Business and stakeholder management (2-3 weeks)",
+      "Phase 5: Solution design methodologies (1-2 weeks)",
+      "Phase 6: Real-world architecture projects (ongoing)"
+    ],
+    "projects": [
+      "Design enterprise solution for complex requirement",
+      "Evaluate and select technology stack",
+      "Create architecture documentation",
+      "Manage technology migration",
+      "Optimize costs and performance"
+    ],
+    "timeline_weeks": 0,
+    "effort_per_week": "N/A - Requires 8+ years experience",
+    "prerequisite_skills": [
+      "8+ years software development",
+      "Architecture experience",
+      "Business understanding"
+    ],
+    "career_path": "Senior Engineer → Architect → Solutions Architect → Chief Architect",
+    "job_market": "Limited but high-value roles",
+    "salary_range_usd": "$150K - $300K",
+    "notes": "Requires significant experience and technical depth. Strategic thinking essential."
+  },
+  "prompt engineer": {
+    "role": "Prompt Engineer / AI Specialist",
+    "technologies": [
+      "ChatGPT",
+      "Claude",
+      "LangChain",
+      "OpenAI API",
+      "Prompt optimization"
+    ],
+    "core_skills": [
+      "Prompt crafting and optimization",
+      "Understanding LLM behavior and limitations",
+      "Prompt chaining and orchestration",
+      "Few-shot and zero-shot learning",
+      "Retrieval-augmented generation (RAG)",
+      "Fine-tuning LLMs",
+      "Evaluation and testing of prompts",
+      "API integration with LLMs"
+    ],
+    "optional_skills": [
+      "Python for LLM integration",
+      "Vector databases (Pinecone, Weaviate)",
+      "LLM security and prompt injection prevention",
+      "Multi-modal models (vision + text)",
+      "Custom model training"
+    ],
+    "learning_path": [
+      "Phase 1: LLM fundamentals and capabilities (1-2 weeks)",
+      "Phase 2: Prompt engineering best practices (2-3 weeks)",
+      "Phase 3: Advanced prompt techniques (2-3 weeks)",
+      "Phase 4: API integration and automation (2-3 weeks)",
+      "Phase 5: RAG and context management (1-2 weeks)",
+      "Phase 6: Production LLM applications (ongoing)"
+    ],
+    "projects": [
+      "Build a custom chatbot with optimized prompts",
+      "Implement RAG system for document Q&A",
+      "Create prompt templates for various use cases",
+      "Build LLM-powered API wrapper",
+      "Evaluate and benchmark different prompts"
+    ],
+    "timeline_weeks": 10,
+    "effort_per_week": "15-20 hours",
+    "prerequisite_skills": [
+      "Familiarity with AI/ML concepts",
+      "Programming basics helpful"
+    ],
+    "career_path": "Prompt Engineer → AI Specialist → AI Product Manager → AI Strategy Lead",
+    "job_market": "Rapidly growing, high demand in 2024-2025",
+    "salary_range_usd": "$75K - $140K",
+    "notes": "Fast-moving field. Stay updated on new models. Experimentation is key. No deep ML required."
+  },
+  "playwright automation engineer": {
+    "role": "Playwright Test Automation Engineer",
+    "technologies": [
+      "Playwright",
+      "JavaScript",
+      "TypeScript",
+      "Chromium",
+      "WebKit",
+      "Firefox"
+    ],
+    "core_skills": [
+      "Playwright framework mastery",
+      "Web element location strategies",
+      "Synchronization and waiting",
+      "Cross-browser testing",
+      "API testing with Playwright",
+      "Visual regression testing",
+      "Performance testing",
+      "CI/CD integration"
+    ],
+    "optional_skills": [
+      "Advanced JavaScript/TypeScript",
+      "Mobile web testing",
+      "Accessibility testing",
+      "Load testing",
+      "Video and screenshot capture"
+    ],
+    "learning_path": [
+      "Phase 1: JavaScript/TypeScript fundamentals (2-3 weeks)",
+      "Phase 2: Playwright basics (2-3 weeks)",
+      "Phase 3: Element location and interaction (2 weeks)",
+      "Phase 4: Synchronization and waits (1-2 weeks)",
+      "Phase 5: Cross-browser and API testing (2-3 weeks)",
+      "Phase 6: CI/CD and advanced features (1-2 weeks)"
+    ],
+    "projects": [
+      "Build cross-browser test suite with Playwright",
+      "Implement API testing alongside UI tests",
+      "Set up visual regression testing",
+      "Configure parallel test execution",
+      "Integrate with CI/CD pipeline (GitHub Actions, Jenkins)"
+    ],
+    "timeline_weeks": 12,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Programming basics",
+      "Testing knowledge"
+    ],
+    "career_path": "QA Engineer → Playwright Specialist → Test Architect → QA Lead",
+    "job_market": "Growing rapidly, replacing Selenium in many organizations",
+    "salary_range_usd": "$75K - $130K",
+    "notes": "Modern alternative to Selenium. Faster, more reliable. Great for modern web apps."
+  },
+  "rpa developer": {
+    "role": "RPA Developer (Robotic Process Automation)",
+    "technologies": [
+      "Blue Prism",
+      "UiPath",
+      "Automation Anywhere",
+      "Python",
+      "OCR"
+    ],
+    "core_skills": [
+      "RPA platform mastery (Blue Prism, UiPath, etc.)",
+      "Process mining and analysis",
+      "Bot development and deployment",
+      "Exception handling and error recovery",
+      "Credential management",
+      "Process documentation",
+      "Testing and quality assurance",
+      "Process optimization"
+    ],
+    "optional_skills": [
+      "Machine learning integration",
+      "Advanced Python scripting",
+      "Database automation",
+      "Email and file automation",
+      "API integration"
+    ],
+    "learning_path": [
+      "Phase 1: RPA concepts and platforms (1-2 weeks)",
+      "Phase 2: Process mining and identification (1-2 weeks)",
+      "Phase 3: Bot development (Blue Prism/UiPath) (3-4 weeks)",
+      "Phase 4: Advanced automation techniques (2-3 weeks)",
+      "Phase 5: Testing and deployment (1-2 weeks)",
+      "Phase 6: Complex process automation (ongoing)"
+    ],
+    "projects": [
+      "Automate data entry workflow",
+      "Build invoice processing bot",
+      "Develop order-to-cash automation",
+      "Create HR onboarding automation",
+      "Implement exception handling and monitoring"
+    ],
+    "timeline_weeks": 11,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Process understanding",
+      "Logical thinking"
+    ],
+    "career_path": "RPA Developer → Senior RPA Developer → RPA Architect → Automation Manager",
+    "job_market": "Very high demand in finance, banking, shared services",
+    "salary_range_usd": "$80K - $150K",
+    "notes": "Enterprise-heavy. High ROI automation projects. Strong business process knowledge valued."
+  },
+  "low code no code developer": {
+    "role": "Low-Code/No-Code Developer",
+    "technologies": [
+      "Zapier",
+      "Make",
+      "OutSystems",
+      "Mendix",
+      "Microsoft Power Platform"
+    ],
+    "core_skills": [
+      "Low-code platform mastery",
+      "Visual application development",
+      "Business logic design without code",
+      "API integration and webhooks",
+      "Database design within platform",
+      "User interface design",
+      "Workflow automation",
+      "Deployment and monitoring"
+    ],
+    "optional_skills": [
+      "Custom code extensions (JavaScript, Python)",
+      "Advanced API workflows",
+      "Multi-platform integration",
+      "Mobile app development (no-code)",
+      "Advanced security and governance"
+    ],
+    "learning_path": [
+      "Phase 1: Low-code platform fundamentals (1-2 weeks)",
+      "Phase 2: Visual app builder mastery (2-3 weeks)",
+      "Phase 3: Database and data modeling (2 weeks)",
+      "Phase 4: API and integration design (2-3 weeks)",
+      "Phase 5: Advanced workflows and automation (1-2 weeks)",
+      "Phase 6: Enterprise applications (ongoing)"
+    ],
+    "projects": [
+      "Build CRUD application in low-code platform",
+      "Create workflow automation with integrations",
+      "Design mobile app without coding",
+      "Implement business process automation",
+      "Deploy to production with monitoring"
+    ],
+    "timeline_weeks": 10,
+    "effort_per_week": "15-20 hours",
+    "prerequisite_skills": [
+      "Business logic understanding",
+      "No programming required"
+    ],
+    "career_path": "Citizen Developer → Low-Code Developer → Enterprise Architect",
+    "job_market": "Explosive growth, democratizing development",
+    "salary_range_usd": "$60K - $120K",
+    "notes": "Future of business application development. Great for career switchers. Speed-to-market is key."
+  },
+  "ai agent creator": {
+    "role": "AI Agent Developer / Autonomous AI Specialist",
+    "technologies": [
+      "LangChain",
+      "Crew AI",
+      "AutoGPT",
+      "Agent frameworks",
+      "Tool integration"
+    ],
+    "core_skills": [
+      "AI agent architecture and design",
+      "Tool and function definition",
+      "Memory and context management",
+      "Decision-making and reasoning",
+      "Multi-step task orchestration",
+      "Agent testing and evaluation",
+      "Integration with external systems",
+      "Safety and control mechanisms"
+    ],
+    "optional_skills": [
+      "Reinforcement learning basics",
+      "Vector databases and embeddings",
+      "Knowledge graphs",
+      "Multi-agent systems",
+      "Agent security and alignment"
+    ],
+    "learning_path": [
+      "Phase 1: AI agent fundamentals (2-3 weeks)",
+      "Phase 2: LangChain and frameworks (2-3 weeks)",
+      "Phase 3: Tool integration and APIs (2-3 weeks)",
+      "Phase 4: Memory and context design (2 weeks)",
+      "Phase 5: Multi-step reasoning and planning (2-3 weeks)",
+      "Phase 6: Production agents (ongoing)"
+    ],
+    "projects": [
+      "Build research assistant agent",
+      "Create customer service agent",
+      "Develop code generation agent",
+      "Implement multi-step task automation",
+      "Build agent with memory and learning"
+    ],
+    "timeline_weeks": 13,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Python programming",
+      "Understanding of AI/LLMs"
+    ],
+    "career_path": "AI Agent Developer → Senior Agent Architect → AI Systems Lead",
+    "job_market": "Emerging, very high growth potential 2024+",
+    "salary_range_usd": "$100K - $180K",
+    "notes": "Cutting-edge field. Combines prompt engineering + software design. Future is agent-based."
+  },
+  "fintech architect": {
+    "role": "FinTech Architect / Financial Systems Architect",
+    "technologies": [
+      "Microservices",
+      "Distributed ledger",
+      "Cloud (AWS/Azure)",
+      "Payment APIs"
+    ],
+    "core_skills": [
+      "Financial systems architecture",
+      "Payment settlement systems",
+      "Compliance and regulatory frameworks",
+      "Distributed systems design",
+      "Security and encryption",
+      "Scalability and high-availability",
+      "Trading systems design",
+      "Risk management systems"
+    ],
+    "optional_skills": [
+      "Blockchain and cryptocurrencies",
+      "Real-time processing",
+      "Microservices patterns",
+      "Regulatory reporting systems"
+    ],
+    "learning_path": [
+      "Phase 1: Financial domain deep dive (2-3 weeks)",
+      "Phase 2: Payment and settlement systems (2-3 weeks)",
+      "Phase 3: Compliance and regulations (2 weeks)",
+      "Phase 4: Distributed systems architecture (3-4 weeks)",
+      "Phase 5: Security and risk (2 weeks)",
+      "Phase 6: Real-world fintech projects (ongoing)"
+    ],
+    "projects": [
+      "Design payment processing architecture",
+      "Create settlement system design",
+      "Build compliance monitoring system",
+      "Design trading platform architecture",
+      "Implement distributed ledger solution"
+    ],
+    "timeline_weeks": 0,
+    "effort_per_week": "N/A - Requires 8+ years",
+    "prerequisite_skills": [
+      "Senior engineering experience",
+      "Financial systems knowledge"
+    ],
+    "career_path": "Senior FinTech Engineer → FinTech Architect → Principal Architect",
+    "job_market": "Limited but high-value roles",
+    "salary_range_usd": "$150K - $300K",
+    "notes": "Requires significant FinTech experience. Strategic thinking and domain expertise essential."
+  },
+  "hr tech specialist": {
+    "role": "HR Tech Specialist / HR Systems Engineer",
+    "technologies": [
+      "Workday",
+      "SAP SuccessFactors",
+      "BambooHR",
+      "HRIS",
+      "Analytics"
+    ],
+    "core_skills": [
+      "HRIS platform expertise",
+      "HR business processes",
+      "Data analytics for HR",
+      "Compliance and labor laws",
+      "Talent management systems",
+      "Payroll system integration",
+      "Reporting and dashboards",
+      "User adoption and training"
+    ],
+    "optional_skills": [
+      "Advanced analytics and AI for HR",
+      "Workforce planning",
+      "Succession planning automation",
+      "Employee engagement platforms",
+      "Learning management systems (LMS)"
+    ],
+    "learning_path": [
+      "Phase 1: HR fundamentals and processes (1-2 weeks)",
+      "Phase 2: HRIS platform training (Workday/SAP) (3-4 weeks)",
+      "Phase 3: HR analytics and reporting (2-3 weeks)",
+      "Phase 4: Compliance and legal aspects (1-2 weeks)",
+      "Phase 5: Integration and customization (2-3 weeks)",
+      "Phase 6: Complex HR projects (ongoing)"
+    ],
+    "projects": [
+      "Implement HRIS module",
+      "Create talent analytics dashboards",
+      "Design compensation management system",
+      "Build recruitment automation",
+      "Implement performance management system"
+    ],
+    "timeline_weeks": 11,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "HR domain knowledge or interest",
+      "Technical aptitude"
+    ],
+    "career_path": "HR Analyst → HR Tech Specialist → HR Systems Manager → HR Director",
+    "job_market": "Growing demand as HR becomes more data-driven",
+    "salary_range_usd": "$70K - $130K",
+    "notes": "Combines HR and technology. People skills important. Enterprise systems focused."
+  },
+  "product analytics engineer": {
+    "role": "Product Analytics Engineer",
+    "technologies": [
+      "SQL",
+      "Python",
+      "Analytics tools",
+      "BI platforms",
+      "Event tracking"
+    ],
+    "core_skills": [
+      "Analytics database design",
+      "Event tracking and instrumentation",
+      "SQL optimization for analytics",
+      "A/B testing design and analysis",
+      "Funnel and cohort analysis",
+      "Product metrics and KPIs",
+      "Data visualization",
+      "Statistical analysis"
+    ],
+    "optional_skills": [
+      "Advanced statistics and ML",
+      "Data engineering",
+      "Real-time analytics",
+      "CDP integration"
+    ],
+    "learning_path": [
+      "Phase 1: Product fundamentals (1-2 weeks)",
+      "Phase 2: SQL for analytics (2-3 weeks)",
+      "Phase 3: Analytics architecture (2-3 weeks)",
+      "Phase 4: A/B testing and experimentation (2-3 weeks)",
+      "Phase 5: Metrics and dashboards (1-2 weeks)",
+      "Phase 6: Advanced analytics (ongoing)"
+    ],
+    "projects": [
+      "Design analytics warehouse schema",
+      "Implement event tracking system",
+      "Create product metrics dashboard",
+      "Design A/B testing framework",
+      "Build funnel and cohort analysis"
+    ],
+    "timeline_weeks": 11,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "SQL knowledge",
+      "Product thinking"
+    ],
+    "career_path": "Analyst → Product Analytics Engineer → Analytics Manager",
+    "job_market": "High demand in tech and e-commerce",
+    "salary_range_usd": "$85K - $140K",
+    "notes": "Bridge between engineering and product. Data-driven decision making focus."
+  },
+  "ai operations engineer": {
+    "role": "AI Operations Engineer (MLOps/AIOps)",
+    "technologies": [
+      "Kubernetes",
+      "Docker",
+      "MLflow",
+      "Airflow",
+      "Monitoring",
+      "Python"
+    ],
+    "core_skills": [
+      "ML model lifecycle management",
+      "Model deployment and serving",
+      "Experiment tracking",
+      "Model monitoring and retraining",
+      "Feature engineering pipelines",
+      "Data versioning",
+      "A/B testing for models",
+      "Cost optimization for ML"
+    ],
+    "optional_skills": [
+      "Kubernetes ML operators",
+      "Distributed training",
+      "Edge deployment",
+      "Model compression and optimization"
+    ],
+    "learning_path": [
+      "Phase 1: ML fundamentals (2-3 weeks)",
+      "Phase 2: Model development and frameworks (2-3 weeks)",
+      "Phase 3: Deployment strategies (2-3 weeks)",
+      "Phase 4: Monitoring and retraining (2-3 weeks)",
+      "Phase 5: MLOps platforms and tools (1-2 weeks)",
+      "Phase 6: Production ML systems (ongoing)"
+    ],
+    "projects": [
+      "Build ML model deployment pipeline",
+      "Implement model monitoring system",
+      "Design feature engineering infrastructure",
+      "Create experiment tracking system",
+      "Build automated retraining pipeline"
+    ],
+    "timeline_weeks": 13,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "ML knowledge",
+      "DevOps/SRE background"
+    ],
+    "career_path": "ML Engineer → MLOps Engineer → ML Infrastructure Lead",
+    "job_market": "Very high demand, emerging specialization",
+    "salary_range_usd": "$120K - $180K",
+    "notes": "Bridges ML and operations. Growing field. High compensation."
+  },
+  "compliance risk officer": {
+    "role": "Compliance & Risk Officer",
+    "technologies": [
+      "Risk management platforms",
+      "Compliance tools",
+      "Governance frameworks"
+    ],
+    "core_skills": [
+      "Risk assessment and management",
+      "Compliance frameworks (SOX, GDPR, HIPAA)",
+      "Internal controls design",
+      "Regulatory reporting",
+      "Audit preparation",
+      "Compliance monitoring systems",
+      "Policy documentation",
+      "Incident response"
+    ],
+    "optional_skills": [
+      "Governance platforms",
+      "Compliance automation",
+      "Third-party risk management",
+      "Data privacy (GDPR, CCPA)"
+    ],
+    "learning_path": [
+      "Phase 1: Compliance fundamentals (2 weeks)",
+      "Phase 2: Regulatory frameworks (3-4 weeks)",
+      "Phase 3: Risk management processes (2-3 weeks)",
+      "Phase 4: Compliance systems and tools (2-3 weeks)",
+      "Phase 5: Audit and reporting (1-2 weeks)"
+    ],
+    "projects": [
+      "Design compliance program",
+      "Implement internal control framework",
+      "Create risk assessment matrix",
+      "Document regulatory mappings",
+      "Audit readiness preparation"
+    ],
+    "timeline_weeks": 12,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Regulatory interest",
+      "Detail-oriented"
+    ],
+    "career_path": "Compliance Analyst → Compliance Officer → Chief Compliance Officer",
+    "job_market": "Steady demand, especially in regulated industries",
+    "salary_range_usd": "$80K - $150K",
+    "notes": "Critical role in regulated industries. Continuous learning required."
+  },
+  "data privacy engineer": {
+    "role": "Data Privacy Engineer / DPO",
+    "technologies": [
+      "Privacy tools",
+      "Data cataloging",
+      "Encryption",
+      "Compliance platforms"
+    ],
+    "core_skills": [
+      "GDPR and privacy regulations",
+      "Data classification",
+      "Privacy impact assessments",
+      "Data minimization strategies",
+      "Encryption and anonymization",
+      "Consent management",
+      "Privacy by design",
+      "Breach response protocols"
+    ],
+    "optional_skills": [
+      "Privacy-enhancing technologies",
+      "Differential privacy",
+      "Secure multi-party computation",
+      "Privacy automation"
+    ],
+    "learning_path": [
+      "Phase 1: Data privacy regulations (2-3 weeks)",
+      "Phase 2: Privacy engineering (2-3 weeks)",
+      "Phase 3: Technical privacy solutions (2-3 weeks)",
+      "Phase 4: Privacy architecture (1-2 weeks)",
+      "Phase 5: Privacy governance (1-2 weeks)"
+    ],
+    "projects": [
+      "Conduct privacy impact assessment",
+      "Implement data minimization",
+      "Design privacy-first architecture",
+      "Build consent management system",
+      "Create privacy training program"
+    ],
+    "timeline_weeks": 11,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Regulatory understanding",
+      "Technical background"
+    ],
+    "career_path": "Privacy Engineer → Senior Privacy Engineer → DPO",
+    "job_market": "High demand, growing rapidly",
+    "salary_range_usd": "$90K - $160K",
+    "notes": "Specialized field. Combines legal and technical expertise."
+  },
+  "enterprise architect": {
+    "role": "Enterprise Architect",
+    "technologies": [
+      "Architecture frameworks",
+      "Cloud platforms",
+      "Integration patterns"
+    ],
+    "core_skills": [
+      "Enterprise architecture frameworks (TOGAF)",
+      "Business-technology alignment",
+      "Enterprise integration patterns",
+      "Cloud strategy and architecture",
+      "Digital transformation",
+      "Technology roadmapping",
+      "Stakeholder management",
+      "Enterprise governance"
+    ],
+    "optional_skills": [
+      "Microservices architecture",
+      "API management",
+      "Data architecture",
+      "Security architecture"
+    ],
+    "learning_path": [
+      "Phase 1: Enterprise architecture basics (2 weeks)",
+      "Phase 2: TOGAF and frameworks (3-4 weeks)",
+      "Phase 3: Cloud and integration (2-3 weeks)",
+      "Phase 4: Governance and strategy (2 weeks)",
+      "Phase 5: Real-world transformation (ongoing)"
+    ],
+    "projects": [
+      "Design enterprise technology strategy",
+      "Architect digital transformation",
+      "Create enterprise integration blueprint",
+      "Assess and rationalize applications",
+      "Design cloud migration strategy"
+    ],
+    "timeline_weeks": 0,
+    "effort_per_week": "N/A - Requires 10+ years experience",
+    "prerequisite_skills": [
+      "Senior architect experience",
+      "Business acumen"
+    ],
+    "career_path": "Senior Architect → Enterprise Architect → Chief Architect",
+    "job_market": "Limited roles, high value",
+    "salary_range_usd": "$160K - $280K",
+    "notes": "Strategic role. Requires broad experience and business understanding."
+  },
+  "platform engineer": {
+    "role": "Platform Engineer",
+    "technologies": [
+      "Kubernetes",
+      "Docker",
+      "Infrastructure as Code",
+      "Developer tooling"
+    ],
+    "core_skills": [
+      "Platform design for developers",
+      "Container orchestration",
+      "Infrastructure automation",
+      "Developer experience optimization",
+      "Internal developer tools",
+      "CI/CD pipeline design",
+      "Observability and monitoring",
+      "Cloud infrastructure"
+    ],
+    "optional_skills": [
+      "GitOps practices",
+      "Service mesh",
+      "API gateway design",
+      "Developer portal creation"
+    ],
+    "learning_path": [
+      "Phase 1: Kubernetes and containers (3-4 weeks)",
+      "Phase 2: Infrastructure as code (2-3 weeks)",
+      "Phase 3: CI/CD and automation (2-3 weeks)",
+      "Phase 4: Developer experience design (2 weeks)",
+      "Phase 5: Platform operations (ongoing)"
+    ],
+    "projects": [
+      "Build Kubernetes platform",
+      "Design developer self-service portal",
+      "Create CI/CD infrastructure",
+      "Implement observability stack",
+      "Build internal developer platform"
+    ],
+    "timeline_weeks": 13,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "DevOps background",
+      "Software engineering mindset"
+    ],
+    "career_path": "DevOps Engineer → Platform Engineer → Platform Lead",
+    "job_market": "Very high demand in tech companies",
+    "salary_range_usd": "$120K - $180K",
+    "notes": "Growing specialization. Focus on developer experience and DX."
+  },
+  "cloud architect aws azure gcp": {
+    "role": "Cloud Architect (AWS/Azure/GCP)",
+    "technologies": [
+      "AWS",
+      "Azure",
+      "Google Cloud",
+      "Terraform",
+      "Cloud services"
+    ],
+    "core_skills": [
+      "Cloud platform mastery",
+      "Scalable architecture design",
+      "Cost optimization",
+      "Security and compliance",
+      "Multi-cloud strategies",
+      "Migration planning",
+      "Serverless design patterns",
+      "High availability design"
+    ],
+    "optional_skills": [
+      "AI/ML on cloud",
+      "Analytics architecture",
+      "Disaster recovery",
+      "Hybrid cloud"
+    ],
+    "learning_path": [
+      "Phase 1: Core cloud services (3-4 weeks)",
+      "Phase 2: Architecture and design patterns (3-4 weeks)",
+      "Phase 3: Security and compliance (2-3 weeks)",
+      "Phase 4: Cost optimization (1-2 weeks)",
+      "Phase 5: Advanced specializations (ongoing)"
+    ],
+    "projects": [
+      "Design cloud infrastructure",
+      "Plan cloud migration",
+      "Architect serverless application",
+      "Design disaster recovery",
+      "Implement cost optimization"
+    ],
+    "timeline_weeks": 13,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "Infrastructure knowledge",
+      "Hands-on cloud experience"
+    ],
+    "career_path": "Cloud Engineer → Cloud Architect → Principal Architect",
+    "job_market": "Very high demand, competitive compensation",
+    "salary_range_usd": "$130K - $200K",
+    "notes": "Master one cloud deeply first. Cloud certifications valuable."
+  },
+  "integration architect": {
+    "role": "Integration Architect",
+    "technologies": [
+      "API gateway",
+      "Message queues",
+      "ESB",
+      "Middleware"
+    ],
+    "core_skills": [
+      "Integration pattern design",
+      "API-first architecture",
+      "Event-driven systems",
+      "Message brokers and queues",
+      "Enterprise service bus",
+      "Data integration",
+      "System interoperability",
+      "Error handling and resilience"
+    ],
+    "optional_skills": [
+      "iPaaS platforms",
+      "Event streaming",
+      "Workflow orchestration",
+      "Real-time integration"
+    ],
+    "learning_path": [
+      "Phase 1: Integration patterns (2-3 weeks)",
+      "Phase 2: API design and management (2-3 weeks)",
+      "Phase 3: Message-driven architecture (2-3 weeks)",
+      "Phase 4: Enterprise integration tools (2-3 weeks)",
+      "Phase 5: Complex integrations (ongoing)"
+    ],
+    "projects": [
+      "Design API-driven architecture",
+      "Build event streaming pipeline",
+      "Implement enterprise integration",
+      "Design system interoperability",
+      "Create integration best practices"
+    ],
+    "timeline_weeks": 12,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Backend experience",
+      "Systems thinking"
+    ],
+    "career_path": "Integration Engineer → Integration Architect → Enterprise Architect",
+    "job_market": "High demand in large enterprises",
+    "salary_range_usd": "$110K - $170K",
+    "notes": "Critical for enterprise systems. Complex systems experience valued."
+  },
+  "python developer": {
+    "role": "Python Developer",
+    "technologies": [
+      "Python",
+      "Flask",
+      "Django",
+      "FastAPI",
+      "SQLAlchemy",
+      "Git",
+      "Docker"
+    ],
+    "core_skills": [
+      "Python fundamentals",
+      "Object-oriented programming",
+      "Web frameworks (Django/Flask)",
+      "RESTful API design",
+      "Database design",
+      "Version control (Git)",
+      "Testing (unittest/pytest)"
+    ],
+    "optional_skills": [
+      "Async programming (asyncio)",
+      "API documentation (FastAPI/Swagger)",
+      "Microservices architecture",
+      "Containerization (Docker)",
+      "CI/CD pipelines"
+    ],
+    "learning_path": [
+      "Python basics: syntax, data structures, OOP",
+      "Web framework fundamentals (Flask or Django)",
+      "Database design and SQLAlchemy",
+      "RESTful API design patterns",
+      "Testing and debugging",
+      "Deployment and DevOps basics"
+    ],
+    "projects": [
+      "Build a RESTful API with Flask/Django",
+      "Create a full-stack Python web application",
+      "Implement authentication and authorization",
+      "Database migration and management project"
+    ],
+    "timeline_weeks": 16,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Programming fundamentals",
+      "Command-line basics"
+    ],
+    "career_path": "Python Developer → Senior Python Developer → Tech Lead",
+    "job_market": "Very high demand across startups and enterprises",
+    "salary_range_usd": "$90K - $150K",
+    "notes": "Python is versatile - used in web, data, automation, and scripting."
+  },
+  "angular developer": {
+    "role": "Angular Developer",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "RxJS",
+      "Angular Material",
+      "Karma/Jasmine",
+      "Node.js",
+      "Git"
+    ],
+    "core_skills": [
+      "Angular framework",
+      "TypeScript fundamentals",
+      "Component-based architecture",
+      "Reactive programming (RxJS)",
+      "Angular routing and forms",
+      "HTTP client and services",
+      "Testing (Unit and E2E)"
+    ],
+    "optional_skills": [
+      "Angular Material design system",
+      "State management (NgRx, Akita)",
+      "Performance optimization",
+      "Accessibility (a11y)",
+      "Progressive Web Apps (PWA)"
+    ],
+    "learning_path": [
+      "TypeScript fundamentals and concepts",
+      "Angular basics: components, templates, directives",
+      "Services and dependency injection",
+      "Reactive programming with RxJS",
+      "Routing and lazy loading",
+      "State management and advanced patterns"
+    ],
+    "projects": [
+      "Build a complete Angular application with routing",
+      "Implement a real-time data dashboard",
+      "Create a responsive Angular material interface",
+      "Implement authentication and authorization"
+    ],
+    "timeline_weeks": 14,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "JavaScript fundamentals",
+      "HTML/CSS knowledge",
+      "Basic command-line skills"
+    ],
+    "career_path": "Angular Developer → Senior Angular Developer → Frontend Tech Lead",
+    "job_market": "High demand in enterprise environments",
+    "salary_range_usd": "$85K - $145K",
+    "notes": "Angular dominates in enterprise frontend development."
   }
 }
