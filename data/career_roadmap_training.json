@@ -1,0 +1,266 @@
+{
+  "data scientist": {
+    "role": "Data Scientist",
+    "technologies": ["Python", "Pandas", "NumPy", "scikit-learn", "TensorFlow", "PyTorch", "SQL", "Git"],
+    "core_skills": ["Statistics", "Probability", "Data Cleaning", "Feature Engineering", "Model Evaluation", "Data Visualization"],
+    "learning_path": [
+      "Fundamentals: Python programming, linear algebra, probability & statistics",
+      "Data manipulation with Pandas and NumPy",
+      "SQL for data querying",
+      "Supervised and unsupervised learning with scikit-learn",
+      "Deep learning basics with TensorFlow or PyTorch",
+      "Model deployment basics (Flask/FastAPI, Docker)"
+    ],
+    "projects": [
+      "End-to-end Kaggle-style project: dataset cleaning → modeling → deployment",
+      "Time-series forecasting project",
+      "Classification problem with explainability (SHAP/LIME)"
+    ],
+    "timeline_weeks": 24,
+    "notes": "Focus on practical projects and a small portfolio to demonstrate skills."
+  },
+
+  ".net": {
+    "role": ".NET Developer",
+    "technologies": ["C#", ".NET Core", "ASP.NET", "Entity Framework", "SQL", "Azure"],
+    "core_skills": ["OOP", "REST APIs", "Unit Testing", "Async Programming", "CI/CD"],
+    "learning_path": [
+      "C# basics and OOP concepts",
+      "Build web APIs with ASP.NET Core",
+      "Work with databases using Entity Framework",
+      "Learn unit/integration testing (xUnit)",
+      "Deploy to Azure and learn CI/CD pipelines"
+    ],
+    "projects": [
+      "CRUD web API with authentication",
+      "Microservice that integrates with SQL and exposes endpoints",
+      "Deploy an app to Azure App Service with CI/CD"
+    ],
+    "timeline_weeks": 16,
+    "notes": "Map .NET knowledge to job descriptions in your region and build a deployable app."
+  },
+
+  "selenium python": {
+    "role": "Selenium Automation Engineer",
+    "technologies": ["Python", "Selenium", "pytest", "CI tools (Jenkins/GitHub Actions)", "Browser DevTools"],
+    "core_skills": ["Test automation design", "Page Object Model", "Locators and waits", "CI/CD integration"],
+    "learning_path": [
+      "Python fundamentals",
+      "Selenium basics (locators, navigation, waits)",
+      "Design patterns for tests (POM)",
+      "Use pytest for test runners and reporting",
+      "Integrate tests into CI pipelines"
+    ],
+    "projects": [
+      "Automate end-to-end scenario for a sample web app",
+      "Create a regression test suite run in CI",
+      "Build reliable selectors and resiliency strategies"
+    ],
+    "timeline_weeks": 8,
+    "notes": "Start with functional tests, then add cross-browser and CI coverage."
+  },
+
+  "fullstack to data scientist": {
+    "role": "Transition: Fullstack → Data Scientist",
+    "technologies": ["Python", "Pandas", "scikit-learn", "SQL", "Docker"],
+    "core_skills": ["Statistics", "Data Wrangling", "Modeling", "Model Evaluation", "Feature Engineering"],
+    "learning_path": [
+      "Leverage existing programming skills (JavaScript/Node/Backend)",
+      "Learn Python for data: Pandas and NumPy",
+      "Study statistics and ML fundamentals",
+      "Build 2-3 ML projects showing business impact",
+      "Learn model deployment and monitoring"
+    ],
+    "projects": [
+      "Build a product recommendation model using backend data",
+      "Deploy a simple ML model behind an API",
+      "Create dashboards showing model metrics"
+    ],
+    "timeline_weeks": 20,
+    "notes": "Use your fullstack background to ship ML-enabled features quickly."
+  },
+
+  "frontend developer": {
+    "role": "Frontend Developer (React)",
+    "technologies": ["JavaScript", "React", "TypeScript", "HTML", "CSS", "Webpack", "Git"],
+    "core_skills": ["DOM manipulation", "Component design", "State management", "Responsive design", "Testing (Jest)"],
+    "learning_path": [
+      "JavaScript fundamentals and modern ES6+ features",
+      "React basics and component patterns",
+      "State management with Redux or Context",
+      "TypeScript for safer code",
+      "Frontend testing and performance optimization"
+    ],
+    "projects": [
+      "Single-page application with routing and state",
+      "Component library and design system",
+      "Deploy static site with CI/CD"
+    ],
+    "timeline_weeks": 12,
+    "notes": "Build polished UI projects and include accessibility checks."
+  },
+
+  "backend developer": {
+    "role": "Backend Developer (Node.js)",
+    "technologies": ["Node.js", "Express", "PostgreSQL", "Redis", "Docker", "Git"],
+    "core_skills": ["API design", "Databases", "Authentication", "Testing", "Scalability"],
+    "learning_path": [
+      "JavaScript/Node fundamentals",
+      "Build REST and GraphQL APIs",
+      "Database modeling with SQL",
+      "Caching and background jobs",
+      "Containerize and deploy services"
+    ],
+    "projects": [
+      "RESTful API with auth and DB",
+      "Background worker processing jobs",
+      "Deploy using Docker and a cloud provider"
+    ],
+    "timeline_weeks": 14,
+    "notes": "Focus on reliable APIs and clear documentation."
+  },
+
+  "data engineer": {
+    "role": "Data Engineer",
+    "technologies": ["Python", "SQL", "Airflow", "Spark", "Kafka", "AWS S3"],
+    "core_skills": ["ETL design", "Data modeling", "Batch and streaming", "Performance tuning"],
+    "learning_path": [
+      "SQL and data modeling",
+      "Python for data pipelines",
+      "Build ETL with Airflow",
+      "Process large datasets with Spark",
+      "Streaming basics with Kafka"
+    ],
+    "projects": [
+      "End-to-end ETL pipeline into a data warehouse",
+      "Build streaming ingest into analytics store",
+      "Data quality checks and monitoring"
+    ],
+    "timeline_weeks": 16,
+    "notes": "Emphasize reliability, monitoring, and cost-aware design."
+  },
+
+  "ml engineer": {
+    "role": "ML Engineer",
+    "technologies": ["Python", "scikit-learn", "PyTorch", "TensorFlow", "Docker", "Kubernetes"],
+    "core_skills": ["Model training at scale", "Feature engineering", "MLOps", "Model serving"],
+    "learning_path": [
+      "Deepen ML fundamentals and production concerns",
+      "Learn model packaging and serving",
+      "Work with Docker and Kubernetes",
+      "Implement CI for ML and monitoring"
+    ],
+    "projects": [
+      "Deploy an ML model with autoscaling",
+      "Implement end-to-end ML pipeline with monitoring",
+      "Benchmark and optimize model performance"
+    ],
+    "timeline_weeks": 20,
+    "notes": "Bridge ML research and production reliability."
+  },
+
+  "devops engineer": {
+    "role": "DevOps Engineer",
+    "technologies": ["Docker", "Kubernetes", "Terraform", "Jenkins", "Prometheus", "Grafana"],
+    "core_skills": ["Infrastructure as Code", "CI/CD", "Monitoring", "Security basics"],
+    "learning_path": [
+      "Learn Docker and container basics",
+      "Orchestrate containers with Kubernetes",
+      "Automate infra with Terraform",
+      "Set up CI/CD and monitoring"
+    ],
+    "projects": [
+      "Containerize an app and run on Kubernetes",
+      "Provision infra with Terraform",
+      "Create observability dashboards"
+    ],
+    "timeline_weeks": 16,
+    "notes": "Focus on reproducible deployments and reliability."
+  },
+
+  "cloud engineer": {
+    "role": "Cloud Engineer (AWS)",
+    "technologies": ["AWS (EC2, S3, RDS)", "Lambda", "CloudFormation/Terraform", "VPC"],
+    "core_skills": ["Cloud architecture", "Security best practices", "Cost optimization", "Serverless basics"],
+    "learning_path": [
+      "Core AWS services and IAM",
+      "Networking and VPC basics",
+      "Serverless with Lambda",
+      "Infra as code and automation"
+    ],
+    "projects": [
+      "Host a scalable web service on AWS",
+      "Build serverless data processing with Lambda",
+      "Automate infra with CloudFormation/Terraform"
+    ],
+    "timeline_weeks": 14,
+    "notes": "Prioritize security, cost, and scalability."
+  },
+
+  "android developer": {
+    "role": "Android Developer",
+    "technologies": ["Kotlin", "Android SDK", "Jetpack", "SQL/Room", "Git"],
+    "core_skills": ["Mobile UI/UX", "Lifecycle management", "Background work", "Testing"],
+    "learning_path": [
+      "Kotlin language fundamentals",
+      "Android app architecture and Jetpack components",
+      "Persistent storage and networking",
+      "Testing and play store deployment"
+    ],
+    "projects": [
+      "Build and publish a simple Android app",
+      "Implement offline caching and sync",
+      "Add analytics and crash reporting"
+    ],
+    "timeline_weeks": 16,
+    "notes": "Polish UX and follow platform guidelines."
+  },
+
+  "ios developer": {
+    "role": "iOS Developer",
+    "technologies": ["Swift", "UIKit/SwiftUI", "CoreData", "Git"],
+    "core_skills": ["Mobile UI/UX", "Lifecycle management", "Networking", "Testing"],
+    "learning_path": [
+      "Swift basics and language features",
+      "Build apps with SwiftUI or UIKit",
+      "Persistence and networking",
+      "Test and distribute via App Store"
+    ],
+    "projects": [
+      "Build and publish an iOS app",
+      "Implement offline-first features",
+      "Integrate analytics and CI/CD"
+    ],
+    "timeline_weeks": 16,
+    "notes": "Focus on platform conventions and performance."
+  },
+
+  "product manager": {
+    "role": "Product Manager",
+    "technologies": ["Roadmapping tools", "Analytics tools (GA/Mixpanel)", "Aha/JIRA"],
+    "core_skills": ["Stakeholder communication", "Prioritization", "Metrics/KPIs", "User research"],
+    "learning_path": [
+      "Learn product discovery and user research",
+      "Understand basic analytics and data interpretation",
+      "Run experiments and measure outcomes",
+      "Write clear PRDs and work with engineering"
+    ],
+    "projects": [
+      "Define and run an A/B test",
+      "Create a product roadmap aligned to metrics",
+      "Run customer interviews and synthesize insights"
+    ],
+    "timeline_weeks": 12,
+    "notes": "Build strong domain expertise and communication skills."
+  },
+
+  "generic": {
+    "role": "Learning Roadmap (Generic)",
+    "technologies": ["Programming basics", "Git", "SQL"],
+    "core_skills": ["Problem solving", "Version control", "Basic data structures"],
+    "learning_path": ["Start with fundamentals", "Practice small projects", "Build portfolio"],
+    "projects": ["Small portfolio projects demonstrating skills"],
+    "timeline_weeks": 12,
+    "notes": "If unsure, start with fundamentals and then specialize."
+  }
+}

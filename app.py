@@ -6,6 +6,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from services.query_parser import get_parser
 from services.database import DatabaseService
+from services.career_roadmap import get_roadmap_service
 import logging
 
 # Initialize Flask app
@@ -22,6 +23,7 @@ logger = logging.getLogger(__name__)
 # Initialize services
 parser = get_parser()
 db_service = DatabaseService()
+roadmap_service = get_roadmap_service()
 
 
 @app.route('/health', methods=['GET'])
@@ -183,15 +185,63 @@ def get_stats():
     try:
         parser_stats = parser.get_stats()
         db_stats = db_service.get_stats()
+        # Roadmap stats (training size)
+        roadmap_stats = {}
+        try:
+            rs = roadmap_service
+            roadmap_stats = {'training_entries': len(rs.training) if hasattr(rs, 'training') else 0}
+        except Exception:
+            roadmap_stats = {'training_entries': 0}
 
         return jsonify({
             'parser': parser_stats,
             'database': db_stats
+            , 'career_roadmap': roadmap_stats
         }), 200
     except Exception as e:
         logger.error(f"Error getting stats: {e}")
         return jsonify({
             'error': str(e)
+        }), 500
+
+
+@app.route('/career_roadmap', methods=['POST'])
+def career_roadmap():
+    """Generate a career roadmap/skills plan for a user prompt"""
+    try:
+        data = request.get_json()
+
+        if not data or 'prompt' not in data:
+            return jsonify({'error': 'Missing prompt parameter'}), 400
+
+        prompt = data['prompt']
+
+        logger.info(f"Generating roadmap for prompt: {prompt}")
+
+        roadmap = roadmap_service.generate_roadmap(prompt)
+
+        return jsonify(roadmap), 200
+
+    except Exception as e:
+        logger.error(f"Error generating roadmap: {e}", exc_info=True)
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/skills', methods=['GET'])
+def get_skills():
+    """Get all available skills/technologies from training data"""
+    try:
+        skills_data = roadmap_service.get_all_skills()
+        
+        return jsonify(skills_data), 200
+
+    except Exception as e:
+        logger.error(f"Error getting skills: {e}", exc_info=True)
+        return jsonify({
+            'error': str(e),
+            'total_skills': 0,
+            'skills': [],
+            'categories': []
         }), 500
 
 
