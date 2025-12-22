@@ -55,14 +55,30 @@ class CareerRoadmapService:
 
         matched = self._match_by_role_or_category(prompt, parsed)
 
-        # Build roadmap output
+        # Separate mandatory (core_skills + technologies) from optional
+        core_skills = matched.get('core_skills', [])
+        technologies = matched.get('technologies', [])
+        optional_skills = matched.get('optional_skills', [])
+        
+        # Build recommended skills: core + technologies (mandatory), then optional
+        mandatory_skills = core_skills + technologies
+        
+        # Build roadmap output with clear categorization
         roadmap = {
             'original_prompt': prompt,
             'matched_profile': matched.get('role', 'Generic'),
-            'recommended_skills': matched.get('core_skills', []) + matched.get('technologies', []),
+            'recommended_skills': mandatory_skills,
+            'optional_skills': optional_skills,
+            'mandatory_skills_count': len(mandatory_skills),
+            'optional_skills_count': len(optional_skills),
             'learning_path': matched.get('learning_path', []),
             'projects': matched.get('projects', []),
             'timeline_weeks': matched.get('timeline_weeks', None),
+            'effort_per_week': matched.get('effort_per_week', ''),
+            'prerequisite_skills': matched.get('prerequisite_skills', []),
+            'career_path': matched.get('career_path', ''),
+            'job_market': matched.get('job_market', ''),
+            'salary_range_usd': matched.get('salary_range_usd', ''),
             'notes': matched.get('notes', ''),
             'parsed': parsed.get('parsed', {})
         }
@@ -76,6 +92,16 @@ class CareerRoadmapService:
                 seen.add(key)
                 dedup_skills.append(s)
         roadmap['recommended_skills'] = dedup_skills
+
+        # De-duplicate optional_skills while preserving order
+        seen = set([s.lower() for s in dedup_skills])
+        dedup_optional = []
+        for s in roadmap['optional_skills']:
+            key = s.lower()
+            if key not in seen:
+                seen.add(key)
+                dedup_optional.append(s)
+        roadmap['optional_skills'] = dedup_optional
 
         return roadmap
 

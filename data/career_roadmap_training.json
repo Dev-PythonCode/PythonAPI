@@ -42,22 +42,41 @@
 
   "selenium python": {
     "role": "Selenium Automation Engineer",
-    "technologies": ["Python", "Selenium", "pytest", "CI tools (Jenkins/GitHub Actions)", "Browser DevTools"],
-    "core_skills": ["Test automation design", "Page Object Model", "Locators and waits", "CI/CD integration"],
+    "technologies": ["Python", "Selenium WebDriver", "pytest", "unittest", "Git"],
+    "core_skills": [
+      "Selenium WebDriver basics",
+      "Locator strategies (CSS, XPath)",
+      "Wait strategies (Explicit, Implicit)",
+      "Page Object Model (POM)",
+      "Test automation design patterns",
+      "Python for test scripts"
+    ],
+    "optional_skills": [
+      "CI/CD integration (Jenkins, GitHub Actions)",
+      "BDD frameworks (Behave, Cucumber)",
+      "Performance testing basics",
+      "API testing (requests library)"
+    ],
     "learning_path": [
-      "Python fundamentals",
-      "Selenium basics (locators, navigation, waits)",
-      "Design patterns for tests (POM)",
-      "Use pytest for test runners and reporting",
-      "Integrate tests into CI pipelines"
+      "Phase 1: Python fundamentals (6-8 weeks) - variables, loops, functions, OOP basics",
+      "Phase 2: Selenium WebDriver (4-6 weeks) - installation, basic script, element interactions, waits",
+      "Phase 3: Test Design Patterns (3-4 weeks) - Page Object Model, identifying flaky tests, best practices",
+      "Phase 4: pytest and Test Organization (2-3 weeks) - runners, fixtures, reporting, test suites",
+      "Phase 5: CI/CD Integration (2-3 weeks) - running tests in pipelines, parallel execution, artifacts"
     ],
     "projects": [
-      "Automate end-to-end scenario for a sample web app",
-      "Create a regression test suite run in CI",
-      "Build reliable selectors and resiliency strategies"
+      "Project 1 (Weeks 1-3): Automate 5-10 test cases on a public website using Selenium + pytest",
+      "Project 2 (Weeks 4-6): Build a Page Object Model framework with 20+ test cases",
+      "Project 3 (Weeks 7-10): Create a regression test suite for an e-commerce app (login, search, checkout)",
+      "Project 4 (Weeks 11-14): Integrate tests into CI pipeline with parallel execution and HTML reports"
     ],
-    "timeline_weeks": 8,
-    "notes": "Start with functional tests, then add cross-browser and CI coverage."
+    "timeline_weeks": 14,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": ["Basic programming", "Understanding of software testing concepts"],
+    "career_path": "QA Automation Engineer → Test Architect → Engineering Manager",
+    "job_market": "High demand (especially in fintech, e-commerce, enterprise software)",
+    "salary_range_usd": "$80K - $130K (entry to senior)",
+    "notes": "Focus on writing reliable, maintainable tests. Learn to diagnose and fix flaky tests. Build a GitHub portfolio with 2-3 real test projects showing POM implementation and CI integration."
   },
 
   "fullstack to data scientist": {
@@ -252,6 +271,129 @@
     ],
     "timeline_weeks": 12,
     "notes": "Build strong domain expertise and communication skills."
+  },
+
+  "qa automation": {
+    "role": "QA Automation Engineer",
+    "technologies": ["Python", "Selenium WebDriver", "pytest", "unittest", "Git", "GitHub"],
+    "core_skills": [
+      "Selenium WebDriver fundamentals",
+      "XPath and CSS selectors",
+      "Explicit and implicit waits",
+      "Page Object Model pattern",
+      "Test case design and automation",
+      "Python scripting for QA",
+      "Test reporting and logging",
+      "Bug identification and documentation"
+    ],
+    "optional_skills": [
+      "BDD frameworks (Behave, Cucumber)",
+      "API testing (requests, REST Assured)",
+      "Performance testing",
+      "Mobile app testing (Appium)",
+      "Cross-browser testing",
+      "Jenkins CI/CD integration",
+      "TestNG framework"
+    ],
+    "learning_path": [
+      "Phase 1 (Weeks 1-2): Software Testing Fundamentals - types of testing, test cases, SDLC",
+      "Phase 2 (Weeks 3-6): Python Basics - variables, loops, functions, OOP, file handling",
+      "Phase 3 (Weeks 7-12): Selenium WebDriver - installation, element identification, navigation, interactions",
+      "Phase 4 (Weeks 13-16): Wait Strategies - implicit waits, explicit waits, handling timeouts",
+      "Phase 5 (Weeks 17-20): Page Object Model - framework design, test organization, best practices",
+      "Phase 6 (Weeks 21-24): pytest & Test Management - fixtures, runners, reports, parallel execution",
+      "Phase 7 (Weeks 25-28): CI/CD Integration - Jenkins/GitHub Actions, automated test execution, artifact generation"
+    ],
+    "projects": [
+      "Project 1 (Week 8): Automate 10 test cases on demo.opencart.com (login, search, add to cart)",
+      "Project 2 (Week 14): Build POM framework with 30+ test cases for e-commerce site",
+      "Project 3 (Week 20): Complete regression suite (UI + API smoke tests) with cross-browser support",
+      "Project 4 (Week 28): Integrate tests into GitHub Actions with scheduled execution, Slack notifications, HTML reports"
+    ],
+    "timeline_weeks": 28,
+    "effort_per_week": "20-30 hours (full-time commitment preferred)",
+    "prerequisite_skills": ["Basic computer skills", "Understanding of software testing basics", "No programming experience needed"],
+    "career_path": "QA Automation Engineer → Senior Automation Engineer → Test Architect → QA Manager",
+    "job_market": "High demand globally, especially in fintech, e-commerce, healthcare, and enterprise software",
+    "salary_range_usd": "$70K - $140K (entry to senior), contractors earn $50-90/hour",
+    "certifications": ["ISTQB CTAL-TAE (Test Automation Engineer)", "Selenium Certification"],
+    "notes": "Focus on writing maintainable, reliable tests. Learn to debug flaky tests. Build a GitHub portfolio with 2-3 production-grade test projects. Key success factor: strong debugging and problem-solving skills. Employers value candidates who understand root cause of test failures and can architect scalable test frameworks."
+  },
+
+  "test automation engineer": {
+    "role": "Test Automation Engineer",
+    "technologies": ["Python", "Selenium", "pytest", "unittest", "Git"],
+    "core_skills": [
+      "Web application testing",
+      "Test automation frameworks",
+      "Locator strategies",
+      "Wait mechanisms",
+      "Test design patterns",
+      "Python programming"
+    ],
+    "optional_skills": [
+      "API testing",
+      "Performance testing",
+      "CI/CD pipelines",
+      "BDD frameworks"
+    ],
+    "learning_path": [
+      "Learn Python fundamentals for QA",
+      "Master Selenium WebDriver",
+      "Understand wait strategies and synchronization",
+      "Implement Page Object Model",
+      "Design and execute automated test suites",
+      "Integrate with CI/CD pipelines"
+    ],
+    "projects": [
+      "Build automated test suite for a web application",
+      "Create reusable test framework with POM",
+      "Set up automated tests in CI pipeline"
+    ],
+    "timeline_weeks": 20,
+    "effort_per_week": "25 hours",
+    "prerequisite_skills": ["Basic programming knowledge or willingness to learn"],
+    "career_path": "Test Automation Engineer → Senior Test Automation Engineer → QA Lead",
+    "job_market": "High demand across industries",
+    "salary_range_usd": "$75K - $125K",
+    "notes": "Similar to QA Automation Engineer. Focus on framework design and test reliability."
+  },
+
+  "selenium testing": {
+    "role": "Selenium Testing Engineer",
+    "technologies": ["Python", "Selenium WebDriver", "pytest"],
+    "core_skills": [
+      "Selenium WebDriver",
+      "Element locators",
+      "Waits and synchronization",
+      "Test automation",
+      "Python"
+    ],
+    "optional_skills": [
+      "Cross-browser testing",
+      "CI integration",
+      "BDD frameworks"
+    ],
+    "learning_path": [
+      "Python programming basics",
+      "Selenium WebDriver fundamentals",
+      "Element identification and interaction",
+      "Wait strategies",
+      "Building test cases with pytest",
+      "CI/CD integration"
+    ],
+    "projects": [
+      "Automate critical user workflows",
+      "Build comprehensive test suite",
+      "Set up continuous test execution"
+    ],
+    "timeline_weeks": 16,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": ["Basic programming understanding"],
+    "career_path": "Selenium Testing Engineer → QA Automation Engineer → Test Architect",
+    "job_market": "Good demand, especially for e-commerce and SaaS",
+    "salary_range_usd": "$70K - $120K",
+    "notes": "Specialized role focused on Selenium automation. Emphasize framework reliability and maintainability."
   },
 
   "generic": {
