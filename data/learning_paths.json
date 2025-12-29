@@ -1,0 +1,952 @@
+{
+  "title": "Technology Learning Paths",
+  "description": "Comprehensive learning resources for technologies with links to courses and tutorials",
+  "version": "1.0",
+  "last_updated": "2025-12-30",
+  "metadata": {
+    "source": "Internal Talent Marketplace",
+    "extensible": true,
+    "note": "Can be extended with external learning portal APIs (Coursera, Udemy, LinkedIn Learning, etc.)"
+  },
+  "technologies": {
+    "Python": {
+      "display_name": "Python",
+      "category": "Programming Language",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "Python for Everybody",
+            "provider": "Coursera",
+            "url": "https://www.coursera.org/specializations/python",
+            "duration": "8 weeks",
+            "level": "Beginner",
+            "cost": "Free (audit) / $39+ (certificate)",
+            "rating": 4.8,
+            "description": "Learn Python basics, data structures, and web development"
+          },
+          {
+            "title": "Introduction to Python Programming",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/python-programming-beginners/",
+            "duration": "22 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.6,
+            "description": "Complete Python basics from zero to hero"
+          },
+          {
+            "title": "Python Documentation",
+            "provider": "Official",
+            "url": "https://docs.python.org/3/tutorial/",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free",
+            "rating": 4.9,
+            "description": "Official Python tutorial and documentation"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "Advanced Python Programming",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/advanced-python-programming/",
+            "duration": "12 hours",
+            "level": "Intermediate",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "Object-oriented programming, decorators, generators, and more"
+          },
+          {
+            "title": "Python for Data Analysis",
+            "provider": "LinkedIn Learning",
+            "url": "https://www.linkedin.com/learning/python-for-data-analysis/",
+            "duration": "4.5 hours",
+            "level": "Intermediate",
+            "cost": "LinkedIn Learning subscription",
+            "rating": 4.5,
+            "description": "Data analysis with Pandas and NumPy"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "Python Deep Learning Specialization",
+            "provider": "Coursera",
+            "url": "https://www.coursera.org/specializations/deep-learning",
+            "duration": "5 months",
+            "level": "Advanced",
+            "cost": "$39-$49/month",
+            "rating": 4.8,
+            "description": "Deep learning with TensorFlow and PyTorch"
+          }
+        ]
+      }
+    },
+    "JavaScript": {
+      "display_name": "JavaScript",
+      "category": "Programming Language",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "The Complete JavaScript Course 2024",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/the-complete-javascript-course/",
+            "duration": "69 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "Complete JavaScript fundamentals and modern features"
+          },
+          {
+            "title": "JavaScript Basics",
+            "provider": "Codecademy",
+            "url": "https://www.codecademy.com/learn/introduction-to-javascript",
+            "duration": "5 hours",
+            "level": "Beginner",
+            "cost": "Free / Codecademy Pro",
+            "rating": 4.5,
+            "description": "Interactive JavaScript basics course"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "JavaScript: The Weird Parts",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/javascript-weird-parts/",
+            "duration": "11.5 hours",
+            "level": "Intermediate",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "Understanding JavaScript's quirks and advanced concepts"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "Advanced JavaScript Concepts",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/advanced-javascript-concepts/",
+            "duration": "15 hours",
+            "level": "Advanced",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "Closures, async/await, event loop, and advanced patterns"
+          }
+        ]
+      }
+    },
+    "React": {
+      "display_name": "React",
+      "category": "Frontend Framework",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "React - The Complete Guide 2024",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
+            "duration": "48 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "Complete React with hooks, routing, and Redux"
+          },
+          {
+            "title": "React Official Tutorial",
+            "provider": "Official",
+            "url": "https://react.dev/learn",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free",
+            "rating": 4.9,
+            "description": "Official React documentation and interactive tutorials"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "Advanced React Patterns",
+            "provider": "Frontend Masters",
+            "url": "https://frontendmasters.com/courses/advanced-react/",
+            "duration": "6 hours",
+            "level": "Intermediate",
+            "cost": "Frontend Masters subscription",
+            "rating": 4.9,
+            "description": "Render props, compound components, and performance optimization"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "React Architecture & Best Practices",
+            "provider": "Egghead",
+            "url": "https://egghead.io/courses/react-testing-library",
+            "duration": "8 hours",
+            "level": "Advanced",
+            "cost": "Egghead subscription",
+            "rating": 4.7,
+            "description": "Testing, performance, and architectural patterns"
+          }
+        ]
+      }
+    },
+    "Node.js": {
+      "display_name": "Node.js",
+      "category": "Backend Runtime",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "The Complete Node.js Developer Course",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/the-complete-nodejs-developer-course-2/",
+            "duration": "31 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "Complete Node.js with Express, MongoDB, and APIs"
+          },
+          {
+            "title": "Node.js Official Documentation",
+            "provider": "Official",
+            "url": "https://nodejs.org/docs/",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free",
+            "rating": 4.9,
+            "description": "Official Node.js documentation and guides"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "Advanced Node.js",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/advanced-nodejs/",
+            "duration": "13 hours",
+            "level": "Intermediate",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "Streams, clusters, performance optimization"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "Node.js: Scaling Applications",
+            "provider": "Frontend Masters",
+            "url": "https://frontendmasters.com/courses/production-nodejs/",
+            "duration": "5 hours",
+            "level": "Advanced",
+            "cost": "Frontend Masters subscription",
+            "rating": 4.8,
+            "description": "Production-ready Node.js applications"
+          }
+        ]
+      }
+    },
+    "Java": {
+      "display_name": "Java",
+      "category": "Programming Language",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "Java Programming Masterclass",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/java-the-complete-java-developer-course/",
+            "duration": "60 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "Complete Java from basics to advanced OOP"
+          },
+          {
+            "title": "Oracle Java Tutorials",
+            "provider": "Official",
+            "url": "https://docs.oracle.com/javase/tutorial/",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free",
+            "rating": 4.9,
+            "description": "Official Java documentation and tutorials"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "Java for Enterprise",
+            "provider": "Coursera",
+            "url": "https://www.coursera.org/courses?query=java%20enterprise",
+            "duration": "Varies",
+            "level": "Intermediate",
+            "cost": "Free (audit) / $39+",
+            "rating": 4.6,
+            "description": "Enterprise Java and Spring Framework"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "Advanced Java Concurrency",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/java-concurrency/",
+            "duration": "20 hours",
+            "level": "Advanced",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "Threading, concurrency, and parallel programming"
+          }
+        ]
+      }
+    },
+    "SQL": {
+      "display_name": "SQL",
+      "category": "Database",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "The Complete SQL Bootcamp",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/the-complete-sql-bootcamp/",
+            "duration": "13.5 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "Complete SQL fundamentals with PostgreSQL"
+          },
+          {
+            "title": "SQL Tutorial",
+            "provider": "W3Schools",
+            "url": "https://www.w3schools.com/sql/",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free",
+            "rating": 4.7,
+            "description": "Interactive SQL tutorial and reference"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "Advanced SQL",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/advanced-sql-tutorial/",
+            "duration": "12 hours",
+            "level": "Intermediate",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "Window functions, CTEs, optimization"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "SQL Performance Tuning",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/sql-performance-tuning/",
+            "duration": "8 hours",
+            "level": "Advanced",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "Query optimization, indexing, execution plans"
+          }
+        ]
+      }
+    },
+    "Docker": {
+      "display_name": "Docker",
+      "category": "DevOps",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "Docker Mastery: with Kubernetes +Swarm",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/docker-mastery/",
+            "duration": "22 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "Complete Docker with best practices"
+          },
+          {
+            "title": "Docker Documentation",
+            "provider": "Official",
+            "url": "https://docs.docker.com/get-started/",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free",
+            "rating": 4.9,
+            "description": "Official Docker getting started guide"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "Docker Compose & Networking",
+            "provider": "Linux Academy",
+            "url": "https://www.linuxacademy.com/courses/docker",
+            "duration": "8 hours",
+            "level": "Intermediate",
+            "cost": "Subscription",
+            "rating": 4.6,
+            "description": "Multi-container applications with Docker Compose"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "Docker Security & Advanced Topics",
+            "provider": "Frontend Masters",
+            "url": "https://frontendmasters.com/courses/docker/",
+            "duration": "4 hours",
+            "level": "Advanced",
+            "cost": "Frontend Masters subscription",
+            "rating": 4.7,
+            "description": "Production Docker security and optimization"
+          }
+        ]
+      }
+    },
+    "Kubernetes": {
+      "display_name": "Kubernetes",
+      "category": "Orchestration",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "Kubernetes for the Absolute Beginners",
+            "provider": "KodeKloud",
+            "url": "https://www.udemy.com/course/learn-kubernetes/",
+            "duration": "3 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "Kubernetes fundamentals and core concepts"
+          },
+          {
+            "title": "Kubernetes Official Documentation",
+            "provider": "Official",
+            "url": "https://kubernetes.io/docs/",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free",
+            "rating": 4.9,
+            "description": "Official Kubernetes documentation"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "Kubernetes Advanced Concepts",
+            "provider": "Linux Academy",
+            "url": "https://www.linuxacademy.com/courses/kubernetes-advanced",
+            "duration": "12 hours",
+            "level": "Intermediate",
+            "cost": "Subscription",
+            "rating": 4.6,
+            "description": "Deployment strategies, networking, storage"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "Kubernetes for Developers",
+            "provider": "Linux Academy",
+            "url": "https://www.linuxacademy.com/courses/ckad-certification-course",
+            "duration": "15 hours",
+            "level": "Advanced",
+            "cost": "Subscription",
+            "rating": 4.8,
+            "description": "CKAD certification preparation"
+          }
+        ]
+      }
+    },
+    "AWS": {
+      "display_name": "AWS (Amazon Web Services)",
+      "category": "Cloud Platform",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "AWS Certified Cloud Practitioner",
+            "provider": "A Cloud Guru",
+            "url": "https://www.udemy.com/course/aws-certified-cloud-practitioner-new/",
+            "duration": "20 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "AWS fundamentals and cloud concepts"
+          },
+          {
+            "title": "AWS Getting Started",
+            "provider": "Official",
+            "url": "https://aws.amazon.com/getting-started/",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free (with AWS Free Tier)",
+            "rating": 4.9,
+            "description": "Official AWS learning resources"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "AWS Solutions Architect Associate",
+            "provider": "A Cloud Guru",
+            "url": "https://www.udemy.com/course/aws-solutions-architect-associate/",
+            "duration": "25 hours",
+            "level": "Intermediate",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "AWS architecture and design principles"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "AWS Solutions Architect Professional",
+            "provider": "Linux Academy",
+            "url": "https://www.linuxacademy.com/courses/aws-solutions-architect-professional",
+            "duration": "40 hours",
+            "level": "Advanced",
+            "cost": "Subscription",
+            "rating": 4.7,
+            "description": "Advanced AWS architecture and optimization"
+          }
+        ]
+      }
+    },
+    "Git": {
+      "display_name": "Git & Version Control",
+      "category": "Development Tools",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "Git Complete: The Definitive Guide",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/git-complete/",
+            "duration": "12 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "Complete Git and GitHub mastery"
+          },
+          {
+            "title": "GitHub Skills",
+            "provider": "GitHub",
+            "url": "https://skills.github.com/",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free",
+            "rating": 4.8,
+            "description": "Interactive GitHub learning"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "Advanced Git",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/git-advanced/",
+            "duration": "6 hours",
+            "level": "Intermediate",
+            "cost": "$14.99",
+            "rating": 4.6,
+            "description": "Advanced Git workflows and branching strategies"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "Pro Git (Book)",
+            "provider": "Official",
+            "url": "https://git-scm.com/book/en/v2",
+            "duration": "Self-paced",
+            "level": "Advanced",
+            "cost": "Free",
+            "rating": 4.9,
+            "description": "Comprehensive Pro Git book"
+          }
+        ]
+      }
+    },
+    "Selenium": {
+      "display_name": "Selenium",
+      "category": "Test Automation",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "Selenium WebDriver with Java",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/selenium-real-time-examplesinterview-questions/",
+            "duration": "30 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "Selenium WebDriver automation with Java"
+          },
+          {
+            "title": "Selenium Documentation",
+            "provider": "Official",
+            "url": "https://www.selenium.dev/documentation/",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free",
+            "rating": 4.9,
+            "description": "Official Selenium documentation"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "Advanced Selenium",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/advanced-selenium-automation/",
+            "duration": "15 hours",
+            "level": "Intermediate",
+            "cost": "$14.99",
+            "rating": 4.6,
+            "description": "Page Object Model, TestNG, parallel execution"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "Selenium Framework Design",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/selenium-framework-design/",
+            "duration": "20 hours",
+            "level": "Advanced",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "Building enterprise automation frameworks"
+          }
+        ]
+      }
+    },
+    "TypeScript": {
+      "display_name": "TypeScript",
+      "category": "Programming Language",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "Understanding TypeScript",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/understanding-typescript/",
+            "duration": "16 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "Complete TypeScript fundamentals"
+          },
+          {
+            "title": "TypeScript Handbook",
+            "provider": "Official",
+            "url": "https://www.typescriptlang.org/docs/",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free",
+            "rating": 4.9,
+            "description": "Official TypeScript documentation"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "Advanced TypeScript",
+            "provider": "Frontend Masters",
+            "url": "https://frontendmasters.com/courses/advanced-typescript/",
+            "duration": "5 hours",
+            "level": "Intermediate",
+            "cost": "Frontend Masters subscription",
+            "rating": 4.8,
+            "description": "Generics, utility types, advanced patterns"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "TypeScript for Large Scale Applications",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/typescript-advanced/",
+            "duration": "12 hours",
+            "level": "Advanced",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "Architecture and patterns for enterprise TypeScript"
+          }
+        ]
+      }
+    },
+    "C#": {
+      "display_name": "C#",
+      "category": "Programming Language",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "C# Players Guide",
+            "provider": "RB Whitaker",
+            "url": "https://csharpplayersguide.com/",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free (online)",
+            "rating": 4.9,
+            "description": "Interactive C# learning guide"
+          },
+          {
+            "title": "The Complete C# Unity Game Developer",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/unitycourse/",
+            "duration": "30 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "C# fundamentals with practical projects"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "C# Intermediate: Classes, Interfaces and OOP",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/csharp-intermediate-classes-interfaces-and-oop/",
+            "duration": "15 hours",
+            "level": "Intermediate",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "Advanced OOP with C#"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "Advanced C# Concepts",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/advanced-c-skills/",
+            "duration": "20 hours",
+            "level": "Advanced",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "LINQ, async/await, reflection, and design patterns"
+          }
+        ]
+      }
+    },
+    "React": {
+      "display_name": "React",
+      "category": "Frontend Framework",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "React - The Complete Guide 2024",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
+            "duration": "48 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "Complete React with hooks, routing, and Redux"
+          },
+          {
+            "title": "React Official Tutorial",
+            "provider": "Official",
+            "url": "https://react.dev/learn",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free",
+            "rating": 4.9,
+            "description": "Official React documentation and interactive tutorials"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "Advanced React Patterns",
+            "provider": "Frontend Masters",
+            "url": "https://frontendmasters.com/courses/advanced-react/",
+            "duration": "6 hours",
+            "level": "Intermediate",
+            "cost": "Frontend Masters subscription",
+            "rating": 4.9,
+            "description": "Render props, compound components, and performance"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "React Architecture & Best Practices",
+            "provider": "Egghead",
+            "url": "https://egghead.io/courses/react-testing-library",
+            "duration": "8 hours",
+            "level": "Advanced",
+            "cost": "Egghead subscription",
+            "rating": 4.7,
+            "description": "Testing, performance, and architectural patterns"
+          }
+        ]
+      }
+    },
+    "JMeter": {
+      "display_name": "Apache JMeter",
+      "category": "Performance Testing",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "JMeter Tutorial For Beginners",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/learn-jmeter-from-scratch/",
+            "duration": "10 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.6,
+            "description": "JMeter fundamentals and load testing basics"
+          },
+          {
+            "title": "Apache JMeter Official Documentation",
+            "provider": "Official",
+            "url": "https://jmeter.apache.org/usermanual/",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free",
+            "rating": 4.7,
+            "description": "Official JMeter documentation and guides"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "Advanced JMeter Performance Testing",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/advanced-jmeter/",
+            "duration": "12 hours",
+            "level": "Intermediate",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "Advanced scenarios, scripting, and analysis"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "JMeter Master Class",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/jmeter-masterclass/",
+            "duration": "15 hours",
+            "level": "Advanced",
+            "cost": "$14.99",
+            "rating": 4.8,
+            "description": "Enterprise-level performance testing with JMeter"
+          }
+        ]
+      }
+    },
+    "Postman": {
+      "display_name": "Postman",
+      "category": "API Testing",
+      "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+      "learning_resources": {
+        "Beginner": [
+          {
+            "title": "API Testing with Postman",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/api-testing-with-postman/",
+            "duration": "5 hours",
+            "level": "Beginner",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "REST API testing fundamentals with Postman"
+          },
+          {
+            "title": "Postman Official Learning Center",
+            "provider": "Official",
+            "url": "https://learning.postman.com/",
+            "duration": "Self-paced",
+            "level": "Beginner",
+            "cost": "Free",
+            "rating": 4.8,
+            "description": "Official Postman learning resources"
+          }
+        ],
+        "Intermediate": [
+          {
+            "title": "Advanced Postman",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/postman-advanced/",
+            "duration": "8 hours",
+            "level": "Intermediate",
+            "cost": "$14.99",
+            "rating": 4.6,
+            "description": "Scripting, collections, and automation"
+          }
+        ],
+        "Advanced": [
+          {
+            "title": "Enterprise API Testing with Postman",
+            "provider": "Udemy",
+            "url": "https://www.udemy.com/course/postman-enterprise/",
+            "duration": "12 hours",
+            "level": "Advanced",
+            "cost": "$14.99",
+            "rating": 4.7,
+            "description": "Mock servers, CI/CD integration, and enterprise patterns"
+          }
+        ]
+      }
+    }
+  },
+  "sources": {
+    "internal": {
+      "name": "Internal Training",
+      "type": "internal",
+      "api_available": false,
+      "description": "Internal company training resources"
+    },
+    "udemy": {
+      "name": "Udemy",
+      "type": "external",
+      "api_available": true,
+      "description": "Online learning platform with paid courses",
+      "api_docs": "https://www.udemy.com/developer/",
+      "note": "API integration can be added in future"
+    },
+    "coursera": {
+      "name": "Coursera",
+      "type": "external",
+      "api_available": true,
+      "description": "Online learning platform with verified certificates",
+      "api_docs": "https://www.coursera.org/",
+      "note": "API integration can be added in future"
+    },
+    "linkedin_learning": {
+      "name": "LinkedIn Learning",
+      "type": "external",
+      "api_available": true,
+      "description": "Professional development platform",
+      "api_docs": "https://www.linkedin.com/learning/api",
+      "note": "API integration can be added in future"
+    },
+    "pluralsight": {
+      "name": "Pluralsight",
+      "type": "external",
+      "api_available": true,
+      "description": "Technology skill development platform",
+      "api_docs": "https://www.pluralsight.com/developers",
+      "note": "API integration can be added in future"
+    }
+  },
+  "integration_notes": {
+    "extensibility": "This learning paths file is designed to be extended with external API integrations",
+    "future_integrations": [
+      "Coursera API for dynamic course listings",
+      "Udemy API for real-time pricing and availability",
+      "LinkedIn Learning API for corporate learning paths",
+      "Pluralsight API for skill assessments",
+      "Internal company training system API"
+    ],
+    "structure": {
+      "technology": {
+        "display_name": "Human-readable name",
+        "category": "Technology category",
+        "difficulty_levels": ["Beginner", "Intermediate", "Advanced"],
+        "learning_resources": {
+          "difficulty_level": [
+            {
+              "title": "Course title",
+              "provider": "Course provider",
+              "url": "Direct course link",
+              "duration": "Course duration",
+              "level": "Skill level",
+              "cost": "Price information",
+              "rating": "Average rating (1-5)",
+              "description": "Course description"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

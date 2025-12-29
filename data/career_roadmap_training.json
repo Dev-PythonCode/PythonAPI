@@ -28,7 +28,7 @@
       "Model deployment basics (Flask/FastAPI, Docker)"
     ],
     "projects": [
-      "End-to-end Kaggle-style project: dataset cleaning → modeling → deployment",
+      "End-to-end Kaggle-style project: dataset cleaning \u2192 modeling \u2192 deployment",
       "Time-series forecasting project",
       "Classification problem with explainability (SHAP/LIME)"
     ],
@@ -109,13 +109,13 @@
       "Basic programming",
       "Understanding of software testing concepts"
     ],
-    "career_path": "QA Automation Engineer → Test Architect → Engineering Manager",
+    "career_path": "QA Automation Engineer \u2192 Test Architect \u2192 Engineering Manager",
     "job_market": "High demand (especially in fintech, e-commerce, enterprise software)",
     "salary_range_usd": "$80K - $130K (entry to senior)",
     "notes": "Focus on writing reliable, maintainable tests. Learn to diagnose and fix flaky tests. Build a GitHub portfolio with 2-3 real test projects showing POM implementation and CI integration."
   },
   "fullstack to data scientist": {
-    "role": "Transition: Fullstack → Data Scientist",
+    "role": "Transition: Fullstack \u2192 Data Scientist",
     "technologies": [
       "Python",
       "Pandas",
@@ -389,29 +389,53 @@
   "product manager": {
     "role": "Product Manager",
     "technologies": [
-      "Roadmapping tools",
-      "Analytics tools (GA/Mixpanel)",
-      "Aha/JIRA"
+      "Product Management Tools (Jira, Asana, Monday.com)",
+      "Analytics",
+      "SQL",
+      "Figma/Design Tools",
+      "Data Visualization",
+      "A/B Testing Platforms"
     ],
     "core_skills": [
-      "Stakeholder communication",
-      "Prioritization",
-      "Metrics/KPIs",
-      "User research"
+      "Product Vision",
+      "Market Analysis",
+      "User Research",
+      "Roadmap Planning",
+      "Stakeholder Management",
+      "Data-Driven Decision Making"
+    ],
+    "optional_skills": [
+      "Agile Methodology",
+      "User Interview Techniques",
+      "Competitive Analysis",
+      "Pricing Strategy",
+      "Go-to-Market Strategy"
     ],
     "learning_path": [
-      "Learn product discovery and user research",
-      "Understand basic analytics and data interpretation",
-      "Run experiments and measure outcomes",
-      "Write clear PRDs and work with engineering"
+      "Fundamentals: Product management principles, user-centric thinking",
+      "Discovery: Market research, user research, competitive analysis",
+      "Definition: Requirements gathering, product roadmapping, PRD writing",
+      "Development: Agile collaboration, technical understanding basics",
+      "Launch: Go-to-market strategy, metrics definition, feedback loops",
+      "Growth: Data analysis, optimization, scaling, business strategy"
     ],
     "projects": [
-      "Define and run an A/B test",
-      "Create a product roadmap aligned to metrics",
-      "Run customer interviews and synthesize insights"
+      "Product roadmap creation for new feature",
+      "User research and persona development",
+      "Product Requirements Document (PRD)",
+      "Market analysis and competitive positioning",
+      "Go-to-market strategy presentation"
     ],
-    "timeline_weeks": 12,
-    "notes": "Build strong domain expertise and communication skills."
+    "timeline_weeks": 24,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Business acumen",
+      "Communication skills"
+    ],
+    "career_path": "Associate Product Manager \u2192 Product Manager \u2192 Senior Product Manager \u2192 Director of Product",
+    "job_market": "Very high demand; companies need PMs for growth and product development",
+    "salary_range_usd": "$120,000-$200,000+ (with equity)",
+    "notes": "Critical business role that bridges engineering, design, and business teams"
   },
   "qa automation": {
     "role": "QA Automation Engineer",
@@ -464,7 +488,7 @@
       "Understanding of software testing basics",
       "No programming experience needed"
     ],
-    "career_path": "QA Automation Engineer → Senior Automation Engineer → Test Architect → QA Manager",
+    "career_path": "QA Automation Engineer \u2192 Senior Automation Engineer \u2192 Test Architect \u2192 QA Manager",
     "job_market": "High demand globally, especially in fintech, e-commerce, healthcare, and enterprise software",
     "salary_range_usd": "$70K - $140K (entry to senior), contractors earn $50-90/hour",
     "certifications": [
@@ -514,7 +538,7 @@
     "prerequisite_skills": [
       "Basic programming knowledge or willingness to learn"
     ],
-    "career_path": "Test Automation Engineer → Senior Test Automation Engineer → QA Lead",
+    "career_path": "Test Automation Engineer \u2192 Senior Test Automation Engineer \u2192 QA Lead",
     "job_market": "High demand across industries",
     "salary_range_usd": "$75K - $125K",
     "notes": "Similar to QA Automation Engineer. Focus on framework design and test reliability."
@@ -556,7 +580,7 @@
     "prerequisite_skills": [
       "Basic programming understanding"
     ],
-    "career_path": "Selenium Testing Engineer → QA Automation Engineer → Test Architect",
+    "career_path": "Selenium Testing Engineer \u2192 QA Automation Engineer \u2192 Test Architect",
     "job_market": "Good demand, especially for e-commerce and SaaS",
     "salary_range_usd": "$70K - $120K",
     "notes": "Specialized role focused on Selenium automation. Emphasize framework reliability and maintainability."
@@ -602,11 +626,11 @@
       "Basic programming (any language)",
       "Understanding of testing concepts"
     ],
-    "career_path": "QA Automation Engineer (C#) → Senior Automation Engineer → Test Architect",
+    "career_path": "QA Automation Engineer (C#) \u2192 Senior Automation Engineer \u2192 Test Architect",
     "notes": "For teams using Microsoft stack, C# is preferred. Emphasize strong C# fundamentals."
   },
   "document specialist to data analyst": {
-    "role": "Transition: Document Specialist → Data Analyst",
+    "role": "Transition: Document Specialist \u2192 Data Analyst",
     "technologies": [
       "Excel",
       "SQL",
@@ -636,7 +660,7 @@
     "notes": "Leverage domain knowledge from document work; focus on transferable skills like attention to detail and data quality."
   },
   "photo editor to frontend developer": {
-    "role": "Transition: Photo Editor → Frontend Developer",
+    "role": "Transition: Photo Editor \u2192 Frontend Developer",
     "technologies": [
       "HTML",
       "CSS",
@@ -719,7 +743,7 @@
       "Basic computer skills",
       "Understanding of data and tables"
     ],
-    "career_path": "Junior SQL Developer → Senior SQL Developer → Database Architect → Database Administrator",
+    "career_path": "Junior SQL Developer \u2192 Senior SQL Developer \u2192 Database Architect \u2192 Database Administrator",
     "job_market": "Consistently high demand across all industries (finance, healthcare, e-commerce, SaaS)",
     "salary_range_usd": "$70K - $150K (entry to senior), contractors $50-100/hour",
     "certifications": [
@@ -757,55 +781,52 @@
     "technologies": [
       "SQL",
       "Excel",
-      "Power BI",
       "Tableau",
-      "JIRA",
+      "Power BI",
+      "Jira",
       "Confluence",
-      "Requirements tools"
+      "UML Diagramming Tools"
     ],
     "core_skills": [
-      "Requirements gathering and analysis",
-      "Stakeholder communication",
-      "Process mapping and documentation",
-      "Data analysis and interpretation",
-      "SQL querying for data validation",
-      "Dashboard and report creation",
-      "Problem-solving and critical thinking",
-      "Documentation and technical writing"
+      "Requirements Gathering",
+      "Process Modeling",
+      "Communication",
+      "Data Analysis",
+      "Problem Solving",
+      "Documentation"
     ],
     "optional_skills": [
-      "Python for data analysis",
-      "Advanced Excel (pivot tables, VBA)",
-      "UML and system design",
-      "Agile/Scrum methodologies",
-      "Change management",
-      "Risk assessment"
+      "User Story Mapping",
+      "Prototyping",
+      "User Testing",
+      "SQL Advanced",
+      "Business Process Improvement"
     ],
     "learning_path": [
-      "Phase 1: Business fundamentals and process understanding (2-3 weeks)",
-      "Phase 2: Data analysis with SQL and Excel (3-4 weeks)",
-      "Phase 3: Visualization and reporting (Power BI/Tableau) (2-3 weeks)",
-      "Phase 4: Requirements elicitation and documentation (2-3 weeks)",
-      "Phase 5: Stakeholder management and communication (2-3 weeks)",
-      "Phase 6: Tools proficiency (JIRA, Confluence, UML) (1-2 weeks)"
+      "Fundamentals: Business analysis principles, SDLC understanding",
+      "Requirements: Elicitation techniques, documentation, validation",
+      "Modeling: Process diagrams, data flows, use cases, user stories",
+      "Analysis: Gap analysis, impact assessment, solution design",
+      "Communication: Stakeholder interviews, presentation, documentation",
+      "Tools: Jira, diagramming tools, BI tools, SQL for data validation"
     ],
     "projects": [
-      "Analyze a business process and create improvement recommendations",
-      "Build SQL queries to extract and validate business data",
-      "Create a Power BI dashboard for business metrics and KPIs",
-      "Document requirements for a software project",
-      "Conduct stakeholder interviews and synthesize findings"
+      "Business requirements specification document",
+      "Process flow diagram and current state analysis",
+      "Gap analysis report",
+      "User story creation and mapping",
+      "Solution design document"
     ],
-    "timeline_weeks": 14,
-    "effort_per_week": "20-25 hours",
+    "timeline_weeks": 18,
+    "effort_per_week": "15-20 hours",
     "prerequisite_skills": [
-      "Basic business understanding",
-      "Comfortable with data and spreadsheets"
+      "Excel",
+      "Basic SQL knowledge"
     ],
-    "career_path": "Junior BA → Business Analyst → Senior BA → Product Manager",
-    "job_market": "High demand in finance, healthcare, enterprise software",
-    "salary_range_usd": "$65K - $120K",
-    "notes": "Strong communication and analytical skills are key. Build a portfolio of analysis projects showing business impact."
+    "career_path": "Junior Business Analyst \u2192 Business Analyst \u2192 Senior BA \u2192 Business Analysis Manager \u2192 Director of BA",
+    "job_market": "Consistent high demand; essential for project delivery",
+    "salary_range_usd": "$75,000-$130,000+",
+    "notes": "Bridge between business stakeholders and technical teams"
   },
   "ui designer": {
     "role": "UI Designer",
@@ -854,7 +875,7 @@
       "Eye for visual design",
       "Attention to detail"
     ],
-    "career_path": "UI Designer → Senior UI Designer → Design Lead → Design Manager",
+    "career_path": "UI Designer \u2192 Senior UI Designer \u2192 Design Lead \u2192 Design Manager",
     "job_market": "Growing demand in tech, startups, enterprise",
     "salary_range_usd": "$60K - $110K",
     "notes": "Build a strong visual portfolio. Understand user-centered design. Stay updated with design trends."
@@ -906,7 +927,7 @@
       "Curiosity about user behavior",
       "Problem-solving mindset"
     ],
-    "career_path": "UX Designer → Senior UX Designer → UX Lead → Design Manager",
+    "career_path": "UX Designer \u2192 Senior UX Designer \u2192 UX Lead \u2192 Design Manager",
     "job_market": "Very high demand in tech, fintech, healthcare",
     "salary_range_usd": "$70K - $130K",
     "notes": "User empathy is fundamental. Learn to validate designs with real users. Build case studies showing impact."
@@ -959,7 +980,7 @@
       "Programming fundamentals",
       "Understanding of mobile ecosystems"
     ],
-    "career_path": "Junior Mobile Dev → Mobile Developer → Senior Mobile Dev → Tech Lead",
+    "career_path": "Junior Mobile Dev \u2192 Mobile Developer \u2192 Senior Mobile Dev \u2192 Tech Lead",
     "job_market": "High demand, especially for experienced developers",
     "salary_range_usd": "$75K - $140K",
     "notes": "Focus on writing clean, maintainable code. Understand platform guidelines. Build polished apps for your portfolio."
@@ -1010,7 +1031,7 @@
       "Programming experience",
       "Understanding of conversational design"
     ],
-    "career_path": "Voice UI Engineer → Senior Voice Engineer → Conversational AI Lead",
+    "career_path": "Voice UI Engineer \u2192 Senior Voice Engineer \u2192 Conversational AI Lead",
     "job_market": "Emerging, high growth potential",
     "salary_range_usd": "$70K - $120K",
     "notes": "Emerging field with significant growth. Focus on natural conversation flows. Understand voice UX principles."
@@ -1063,7 +1084,7 @@
       "JavaScript knowledge",
       "Understanding of IT processes"
     ],
-    "career_path": "ServiceNow Developer → Senior ServiceNow Dev → ServiceNow Architect",
+    "career_path": "ServiceNow Developer \u2192 Senior ServiceNow Dev \u2192 ServiceNow Architect",
     "job_market": "Very high demand, especially for enterprise",
     "salary_range_usd": "$80K - $140K",
     "notes": "High-paying specialization. ServiceNow is critical in enterprises. Certification is valuable."
@@ -1116,7 +1137,7 @@
       "Customer service mindset",
       "Problem-solving ability"
     ],
-    "career_path": "IT Helpdesk → System Administrator → System Engineer → Infrastructure Lead",
+    "career_path": "IT Helpdesk \u2192 System Administrator \u2192 System Engineer \u2192 Infrastructure Lead",
     "job_market": "Steady demand across all industries",
     "salary_range_usd": "$50K - $100K",
     "notes": "Good entry point into IT. Focus on continuous learning. Certifications (CompTIA+, MCSA) boost career."
@@ -1168,7 +1189,7 @@
       "Programming experience",
       "Understanding of cryptography basics"
     ],
-    "career_path": "Web3 Developer → Senior Smart Contract Engineer → Protocol Architect",
+    "career_path": "Web3 Developer \u2192 Senior Smart Contract Engineer \u2192 Protocol Architect",
     "job_market": "High demand, volatile but growing",
     "salary_range_usd": "$80K - $180K",
     "notes": "Fast-moving field. Security is critical. Follow industry best practices and stay updated."
@@ -1221,7 +1242,7 @@
       "Networking knowledge",
       "System administration basics"
     ],
-    "career_path": "Security Analyst → Cybersecurity Engineer → Senior Security Engineer → CISO",
+    "career_path": "Security Analyst \u2192 Cybersecurity Engineer \u2192 Senior Security Engineer \u2192 CISO",
     "job_market": "Very high demand, critical for all industries",
     "salary_range_usd": "$75K - $150K",
     "notes": "High-demand field with critical importance. Certifications (Security+, CEH) are valuable."
@@ -1272,7 +1293,7 @@
       "Proven track record of impact",
       "Technical depth"
     ],
-    "career_path": "Senior Engineer → Staff Engineer → Principal Engineer → Distinguished Engineer",
+    "career_path": "Senior Engineer \u2192 Staff Engineer \u2192 Principal Engineer \u2192 Distinguished Engineer",
     "job_market": "Limited roles, high competition, very high compensation",
     "salary_range_usd": "$180K - $400K+",
     "notes": "Requires significant experience. Focus on technical depth, leadership, and organizational impact. This is a specialization, not an entry point."
@@ -1325,7 +1346,7 @@
       "Strong programming background",
       "Software engineering fundamentals"
     ],
-    "career_path": "QA Engineer → SDET → Senior SDET → Test Engineering Lead",
+    "career_path": "QA Engineer \u2192 SDET \u2192 Senior SDET \u2192 Test Engineering Lead",
     "job_market": "Very high demand in tech companies",
     "salary_range_usd": "$90K - $160K",
     "notes": "Requires software engineering mindset, not just QA. Build infrastructure, not just tests. Focus on scalability and reliability."
@@ -1377,7 +1398,7 @@
       "Strong programming background",
       "Interest in financial markets"
     ],
-    "career_path": "Software Engineer → FinTech Engineer → Senior Engineer → Architect",
+    "career_path": "Software Engineer \u2192 FinTech Engineer \u2192 Senior Engineer \u2192 Architect",
     "job_market": "High demand, especially in trading and payments",
     "salary_range_usd": "$100K - $200K+",
     "notes": "Complex domain requiring both technical and financial knowledge. Security and reliability are critical."
@@ -1430,7 +1451,7 @@
       "Programming background",
       "Interest in healthcare"
     ],
-    "career_path": "Software Engineer → Healthcare Engineer → Senior Healthcare Architect",
+    "career_path": "Software Engineer \u2192 Healthcare Engineer \u2192 Senior Healthcare Architect",
     "job_market": "High demand, stable and growing",
     "salary_range_usd": "$85K - $150K",
     "notes": "Highly specialized with good job security. Domain knowledge is valuable."
@@ -1483,7 +1504,7 @@
       "Programming background",
       "Passion for games"
     ],
-    "career_path": "Game Programmer → Senior Game Programmer → Technical Lead → Game Director",
+    "career_path": "Game Programmer \u2192 Senior Game Programmer \u2192 Technical Lead \u2192 Game Director",
     "job_market": "Competitive but growing, studios worldwide",
     "salary_range_usd": "$70K - $130K",
     "notes": "Passionate community. Focus on shipping. Portfolio should include playable games."
@@ -1535,7 +1556,7 @@
     "prerequisite_skills": [
       "Game development or 3D graphics experience"
     ],
-    "career_path": "VR/AR Developer → Senior XR Developer → XR Architect",
+    "career_path": "VR/AR Developer \u2192 Senior XR Developer \u2192 XR Architect",
     "job_market": "Growing rapidly, emerging market",
     "salary_range_usd": "$80K - $140K",
     "notes": "Emerging field with significant growth potential. Test on actual hardware."
@@ -1586,7 +1607,7 @@
     "prerequisite_skills": [
       "DevOps or system administration background"
     ],
-    "career_path": "DevOps Engineer → SRE → Senior SRE → SRE Manager",
+    "career_path": "DevOps Engineer \u2192 SRE \u2192 Senior SRE \u2192 SRE Manager",
     "job_market": "Very high demand, especially at scale",
     "salary_range_usd": "$100K - $170K",
     "notes": "SRE combines development and operations. Focus on automation and reliability. On-call work expected."
@@ -1639,7 +1660,7 @@
       "Programming and math background",
       "Statistics knowledge"
     ],
-    "career_path": "ML Engineer → Senior ML Engineer → ML Architect → ML Research Lead",
+    "career_path": "ML Engineer \u2192 Senior ML Engineer \u2192 ML Architect \u2192 ML Research Lead",
     "job_market": "Very high demand, competitive roles",
     "salary_range_usd": "$110K - $180K",
     "notes": "Focus on production readiness and real-world impact. Theory and practice both important."
@@ -1689,7 +1710,7 @@
     "prerequisite_skills": [
       "Programming fundamentals"
     ],
-    "career_path": "Full Stack Developer → Senior Full Stack → Tech Lead → Architect",
+    "career_path": "Full Stack Developer \u2192 Senior Full Stack \u2192 Tech Lead \u2192 Architect",
     "job_market": "Very high demand, versatile skills",
     "salary_range_usd": "$85K - $160K",
     "notes": "Versatile role but requires depth in multiple areas. Build impressive portfolio projects."
@@ -1738,7 +1759,7 @@
       "Attention to detail",
       "Problem-solving mindset"
     ],
-    "career_path": "QA Engineer → Senior QA → QA Lead → Test Manager → SDET",
+    "career_path": "QA Engineer \u2192 Senior QA \u2192 QA Lead \u2192 Test Manager \u2192 SDET",
     "job_market": "Solid demand across industries",
     "salary_range_usd": "$55K - $90K",
     "notes": "Good entry point into tech. Path to SDET for automation focus. Domain knowledge valuable."
@@ -1790,7 +1811,7 @@
       "Architecture experience",
       "Business understanding"
     ],
-    "career_path": "Senior Engineer → Architect → Solutions Architect → Chief Architect",
+    "career_path": "Senior Engineer \u2192 Architect \u2192 Solutions Architect \u2192 Chief Architect",
     "job_market": "Limited but high-value roles",
     "salary_range_usd": "$150K - $300K",
     "notes": "Requires significant experience and technical depth. Strategic thinking essential."
@@ -1842,7 +1863,7 @@
       "Familiarity with AI/ML concepts",
       "Programming basics helpful"
     ],
-    "career_path": "Prompt Engineer → AI Specialist → AI Product Manager → AI Strategy Lead",
+    "career_path": "Prompt Engineer \u2192 AI Specialist \u2192 AI Product Manager \u2192 AI Strategy Lead",
     "job_market": "Rapidly growing, high demand in 2024-2025",
     "salary_range_usd": "$75K - $140K",
     "notes": "Fast-moving field. Stay updated on new models. Experimentation is key. No deep ML required."
@@ -1895,7 +1916,7 @@
       "Programming basics",
       "Testing knowledge"
     ],
-    "career_path": "QA Engineer → Playwright Specialist → Test Architect → QA Lead",
+    "career_path": "QA Engineer \u2192 Playwright Specialist \u2192 Test Architect \u2192 QA Lead",
     "job_market": "Growing rapidly, replacing Selenium in many organizations",
     "salary_range_usd": "$75K - $130K",
     "notes": "Modern alternative to Selenium. Faster, more reliable. Great for modern web apps."
@@ -1947,7 +1968,7 @@
       "Process understanding",
       "Logical thinking"
     ],
-    "career_path": "RPA Developer → Senior RPA Developer → RPA Architect → Automation Manager",
+    "career_path": "RPA Developer \u2192 Senior RPA Developer \u2192 RPA Architect \u2192 Automation Manager",
     "job_market": "Very high demand in finance, banking, shared services",
     "salary_range_usd": "$80K - $150K",
     "notes": "Enterprise-heavy. High ROI automation projects. Strong business process knowledge valued."
@@ -1999,7 +2020,7 @@
       "Business logic understanding",
       "No programming required"
     ],
-    "career_path": "Citizen Developer → Low-Code Developer → Enterprise Architect",
+    "career_path": "Citizen Developer \u2192 Low-Code Developer \u2192 Enterprise Architect",
     "job_market": "Explosive growth, democratizing development",
     "salary_range_usd": "$60K - $120K",
     "notes": "Future of business application development. Great for career switchers. Speed-to-market is key."
@@ -2051,7 +2072,7 @@
       "Python programming",
       "Understanding of AI/LLMs"
     ],
-    "career_path": "AI Agent Developer → Senior Agent Architect → AI Systems Lead",
+    "career_path": "AI Agent Developer \u2192 Senior Agent Architect \u2192 AI Systems Lead",
     "job_market": "Emerging, very high growth potential 2024+",
     "salary_range_usd": "$100K - $180K",
     "notes": "Cutting-edge field. Combines prompt engineering + software design. Future is agent-based."
@@ -2101,7 +2122,7 @@
       "Senior engineering experience",
       "Financial systems knowledge"
     ],
-    "career_path": "Senior FinTech Engineer → FinTech Architect → Principal Architect",
+    "career_path": "Senior FinTech Engineer \u2192 FinTech Architect \u2192 Principal Architect",
     "job_market": "Limited but high-value roles",
     "salary_range_usd": "$150K - $300K",
     "notes": "Requires significant FinTech experience. Strategic thinking and domain expertise essential."
@@ -2153,7 +2174,7 @@
       "HR domain knowledge or interest",
       "Technical aptitude"
     ],
-    "career_path": "HR Analyst → HR Tech Specialist → HR Systems Manager → HR Director",
+    "career_path": "HR Analyst \u2192 HR Tech Specialist \u2192 HR Systems Manager \u2192 HR Director",
     "job_market": "Growing demand as HR becomes more data-driven",
     "salary_range_usd": "$70K - $130K",
     "notes": "Combines HR and technology. People skills important. Enterprise systems focused."
@@ -2204,7 +2225,7 @@
       "SQL knowledge",
       "Product thinking"
     ],
-    "career_path": "Analyst → Product Analytics Engineer → Analytics Manager",
+    "career_path": "Analyst \u2192 Product Analytics Engineer \u2192 Analytics Manager",
     "job_market": "High demand in tech and e-commerce",
     "salary_range_usd": "$85K - $140K",
     "notes": "Bridge between engineering and product. Data-driven decision making focus."
@@ -2256,7 +2277,7 @@
       "ML knowledge",
       "DevOps/SRE background"
     ],
-    "career_path": "ML Engineer → MLOps Engineer → ML Infrastructure Lead",
+    "career_path": "ML Engineer \u2192 MLOps Engineer \u2192 ML Infrastructure Lead",
     "job_market": "Very high demand, emerging specialization",
     "salary_range_usd": "$120K - $180K",
     "notes": "Bridges ML and operations. Growing field. High compensation."
@@ -2304,7 +2325,7 @@
       "Regulatory interest",
       "Detail-oriented"
     ],
-    "career_path": "Compliance Analyst → Compliance Officer → Chief Compliance Officer",
+    "career_path": "Compliance Analyst \u2192 Compliance Officer \u2192 Chief Compliance Officer",
     "job_market": "Steady demand, especially in regulated industries",
     "salary_range_usd": "$80K - $150K",
     "notes": "Critical role in regulated industries. Continuous learning required."
@@ -2353,7 +2374,7 @@
       "Regulatory understanding",
       "Technical background"
     ],
-    "career_path": "Privacy Engineer → Senior Privacy Engineer → DPO",
+    "career_path": "Privacy Engineer \u2192 Senior Privacy Engineer \u2192 DPO",
     "job_market": "High demand, growing rapidly",
     "salary_range_usd": "$90K - $160K",
     "notes": "Specialized field. Combines legal and technical expertise."
@@ -2401,7 +2422,7 @@
       "Senior architect experience",
       "Business acumen"
     ],
-    "career_path": "Senior Architect → Enterprise Architect → Chief Architect",
+    "career_path": "Senior Architect \u2192 Enterprise Architect \u2192 Chief Architect",
     "job_market": "Limited roles, high value",
     "salary_range_usd": "$160K - $280K",
     "notes": "Strategic role. Requires broad experience and business understanding."
@@ -2450,7 +2471,7 @@
       "DevOps background",
       "Software engineering mindset"
     ],
-    "career_path": "DevOps Engineer → Platform Engineer → Platform Lead",
+    "career_path": "DevOps Engineer \u2192 Platform Engineer \u2192 Platform Lead",
     "job_market": "Very high demand in tech companies",
     "salary_range_usd": "$120K - $180K",
     "notes": "Growing specialization. Focus on developer experience and DX."
@@ -2500,7 +2521,7 @@
       "Infrastructure knowledge",
       "Hands-on cloud experience"
     ],
-    "career_path": "Cloud Engineer → Cloud Architect → Principal Architect",
+    "career_path": "Cloud Engineer \u2192 Cloud Architect \u2192 Principal Architect",
     "job_market": "Very high demand, competitive compensation",
     "salary_range_usd": "$130K - $200K",
     "notes": "Master one cloud deeply first. Cloud certifications valuable."
@@ -2549,7 +2570,7 @@
       "Backend experience",
       "Systems thinking"
     ],
-    "career_path": "Integration Engineer → Integration Architect → Enterprise Architect",
+    "career_path": "Integration Engineer \u2192 Integration Architect \u2192 Enterprise Architect",
     "job_market": "High demand in large enterprises",
     "salary_range_usd": "$110K - $170K",
     "notes": "Critical for enterprise systems. Complex systems experience valued."
@@ -2601,7 +2622,7 @@
       "Programming fundamentals",
       "Command-line basics"
     ],
-    "career_path": "Python Developer → Senior Python Developer → Tech Lead",
+    "career_path": "Python Developer \u2192 Senior Python Developer \u2192 Tech Lead",
     "job_market": "Very high demand across startups and enterprises",
     "salary_range_usd": "$90K - $150K",
     "notes": "Python is versatile - used in web, data, automation, and scripting."
@@ -2654,9 +2675,634 @@
       "HTML/CSS knowledge",
       "Basic command-line skills"
     ],
-    "career_path": "Angular Developer → Senior Angular Developer → Frontend Tech Lead",
+    "career_path": "Angular Developer \u2192 Senior Angular Developer \u2192 Frontend Tech Lead",
     "job_market": "High demand in enterprise environments",
     "salary_range_usd": "$85K - $145K",
     "notes": "Angular dominates in enterprise frontend development."
+  },
+  "software testing engineer": {
+    "role": "Software Testing Engineer",
+    "technologies": [
+      "Selenium WebDriver",
+      "Appium",
+      "JMeter",
+      "Postman",
+      "Git",
+      "Jenkins",
+      "Docker",
+      "TestNG",
+      "JUnit",
+      "Python",
+      "Java"
+    ],
+    "core_skills": [
+      "Test case design and execution",
+      "Automated test scripting",
+      "Manual testing methodology",
+      "Bug reporting and tracking",
+      "Test framework design",
+      "API testing",
+      "Performance testing",
+      "Regression testing",
+      "Test automation frameworks"
+    ],
+    "learning_path": [
+      "Phase 1: Testing fundamentals - SDLC, testing types, documentation",
+      "Phase 2: Manual testing - Test cases, execution, defect reporting",
+      "Phase 3: Automation basics - Selenium, element locators, waits",
+      "Phase 4: Advanced automation - Page Object Model, frameworks, CI/CD",
+      "Phase 5: Performance and API testing - JMeter, Postman",
+      "Phase 6: DevOps integration - Jenkins, Docker, test pipelines"
+    ],
+    "projects": [
+      "Build automated test suite for e-commerce website (10+ test cases)",
+      "Create Page Object Model framework with multiple test scenarios",
+      "Develop API test automation using Postman and Newman",
+      "Setup CI/CD pipeline with Jenkins for automated test execution"
+    ],
+    "timeline_weeks": 16,
+    "effort_per_week": "20-25 hours",
+    "prerequisite_skills": [
+      "Basic understanding of software development",
+      "Attention to detail",
+      "Problem-solving skills",
+      "Basic programming knowledge (optional but helpful)"
+    ],
+    "career_path": "QA Engineer \u2192 Automation Engineer \u2192 QA Lead \u2192 QA Manager",
+    "job_market": "Very high demand, growing with DevOps and continuous testing",
+    "salary_range_usd": "$70K - $130K",
+    "notes": "Automation testing is increasingly critical in agile development. Strong demand for SDET (Software Development Engineer in Test) roles."
+  },
+  "qa engineer": {
+    "role": "QA Engineer",
+    "technologies": [
+      "Selenium",
+      "TestNG",
+      "JUnit",
+      "pytest",
+      "Git",
+      "JIRA",
+      "Postman",
+      "SoapUI",
+      "Python",
+      "Java"
+    ],
+    "core_skills": [
+      "Test planning and strategy",
+      "Test case creation",
+      "Manual and automated testing",
+      "Defect lifecycle management",
+      "Functional testing",
+      "Regression testing",
+      "Smoke testing",
+      "UAT coordination"
+    ],
+    "learning_path": [
+      "Phase 1: QA fundamentals - SDLC, QA roles, test planning",
+      "Phase 2: Manual testing - Test case design, bug reporting",
+      "Phase 3: Testing tools - JIRA, TestRail, documentation tools",
+      "Phase 4: Automation introduction - Selenium basics",
+      "Phase 5: Automation frameworks - TestNG, data-driven testing",
+      "Phase 6: Mobile and API testing"
+    ],
+    "projects": [
+      "Create comprehensive test plan for web application",
+      "Execute functional testing and create defect reports",
+      "Build automation suite for critical user journeys",
+      "Perform regression testing for application updates"
+    ],
+    "timeline_weeks": 12,
+    "effort_per_week": "18-22 hours",
+    "prerequisite_skills": [
+      "Logical thinking",
+      "Good communication",
+      "Patience and meticulousness",
+      "Basic IT knowledge"
+    ],
+    "career_path": "QA Engineer \u2192 Senior QA Engineer \u2192 QA Analyst \u2192 QA Manager",
+    "job_market": "Consistently high demand across all industries",
+    "salary_range_usd": "$60K - $110K",
+    "notes": "Manual QA skills are always in demand. Transitioning to automation increases earning potential significantly."
+  },
+  "automation testing engineer": {
+    "role": "Automation Testing Engineer",
+    "technologies": [
+      "Selenium WebDriver",
+      "Appium",
+      "TestNG",
+      "pytest",
+      "Cucumber",
+      "Robot Framework",
+      "Git",
+      "Maven",
+      "Gradle",
+      "Python",
+      "Java",
+      "JavaScript"
+    ],
+    "core_skills": [
+      "Selenium WebDriver mastery",
+      "Test automation frameworks",
+      "Object-oriented programming",
+      "Data-driven testing",
+      "Behavior-driven development (BDD)",
+      "Page Object Model pattern",
+      "CI/CD pipeline integration",
+      "Debugging and troubleshooting"
+    ],
+    "learning_path": [
+      "Phase 1: Programming fundamentals - Java/Python basics",
+      "Phase 2: Selenium basics - Finding elements, interactions, waits",
+      "Phase 3: Test frameworks - TestNG, test organization, assertions",
+      "Phase 4: Page Object Model - Creating robust, maintainable tests",
+      "Phase 5: BDD and Cucumber - Gherkin syntax, feature files",
+      "Phase 6: CI/CD and DevOps - Jenkins, Docker, test execution pipelines"
+    ],
+    "projects": [
+      "Build cross-browser test suite using Selenium",
+      "Implement BDD framework with Cucumber for business requirements",
+      "Create API test automation with REST Assured or pytest-requests",
+      "Setup automated test execution in CI/CD pipeline"
+    ],
+    "timeline_weeks": 18,
+    "effort_per_week": "22-28 hours",
+    "prerequisite_skills": [
+      "Strong programming knowledge (Java or Python)",
+      "HTML/CSS understanding",
+      "Command-line familiarity",
+      "SQL basics"
+    ],
+    "career_path": "Automation Engineer \u2192 Senior Automation Engineer \u2192 SDET \u2192 Engineering Manager",
+    "job_market": "High demand, especially for SDET (Software Development Engineer in Test) roles",
+    "salary_range_usd": "$80K - $150K",
+    "notes": "SDET roles are the future of QA. Strong programming skills combined with testing knowledge is highly valued."
+  },
+  "sdet (software development engineer in test)": {
+    "role": "SDET",
+    "technologies": [
+      "Selenium WebDriver",
+      "Appium",
+      "Cypress",
+      "Playwright",
+      "Git",
+      "Docker",
+      "Kubernetes",
+      "Python",
+      "Java",
+      "JavaScript",
+      "TypeScript",
+      "AWS",
+      "Jenkins",
+      "GitLab CI"
+    ],
+    "core_skills": [
+      "Advanced automation framework development",
+      "Test infrastructure design",
+      "Continuous integration/deployment",
+      "Cloud testing infrastructure",
+      "Performance and load testing",
+      "Security testing automation",
+      "API test automation",
+      "Mobile test automation",
+      "DevOps practices"
+    ],
+    "learning_path": [
+      "Phase 1: Software engineering fundamentals - Design patterns, architecture",
+      "Phase 2: Advanced automation - Frameworks, scalability, reliability",
+      "Phase 3: DevOps skills - Docker, Kubernetes, cloud platforms",
+      "Phase 4: CI/CD mastery - Pipeline design, infrastructure as code",
+      "Phase 5: Performance and security testing - Load testing, security scanning",
+      "Phase 6: Leadership - Mentoring, architecture decisions, best practices"
+    ],
+    "projects": [
+      "Design and build scalable test automation framework",
+      "Implement multi-cloud test infrastructure with Docker/Kubernetes",
+      "Create performance testing suite with JMeter or Gatling",
+      "Build custom CI/CD pipeline with advanced reporting"
+    ],
+    "timeline_weeks": 24,
+    "effort_per_week": "25-30 hours",
+    "prerequisite_skills": [
+      "Strong programming background (Java/Python/C++)",
+      "Knowledge of software design patterns",
+      "Understanding of CI/CD concepts",
+      "Cloud platform familiarity"
+    ],
+    "career_path": "SDET \u2192 Senior SDET \u2192 Principal Engineer \u2192 Engineering Manager",
+    "job_market": "Very high demand, premium salaries",
+    "salary_range_usd": "$120K - $200K+",
+    "notes": "SDET is the highest-paying QA role. Combines deep engineering skills with testing expertise."
+  },
+  "mobile testing engineer": {
+    "role": "Mobile Testing Engineer",
+    "technologies": [
+      "Appium",
+      "XCUITest",
+      "Espresso",
+      "TestFlight",
+      "Xcode",
+      "Android Studio",
+      "Git",
+      "Python",
+      "Java",
+      "Objective-C",
+      "Swift",
+      "Kotlin"
+    ],
+    "core_skills": [
+      "Mobile app testing methodology",
+      "iOS and Android testing",
+      "Device testing and emulation",
+      "Touch gesture automation",
+      "Mobile performance testing",
+      "Orientation and responsiveness testing",
+      "Battery and memory testing",
+      "App permissions and security testing"
+    ],
+    "learning_path": [
+      "Phase 1: Mobile app fundamentals - iOS and Android architecture",
+      "Phase 2: Manual mobile testing - Device testing, emulators, real devices",
+      "Phase 3: Appium automation - iOS and Android test automation",
+      "Phase 4: Native frameworks - XCUITest for iOS, Espresso for Android",
+      "Phase 5: Performance testing - Battery, memory, network optimization",
+      "Phase 6: Continuous testing - Mobile CI/CD pipelines"
+    ],
+    "projects": [
+      "Build cross-platform test automation using Appium",
+      "Create native iOS test suite with XCUITest",
+      "Develop Android test automation with Espresso",
+      "Implement mobile performance testing suite"
+    ],
+    "timeline_weeks": 14,
+    "effort_per_week": "20-24 hours",
+    "prerequisite_skills": [
+      "Manual testing experience",
+      "Programming knowledge (Java/Python/Swift)",
+      "Understanding of mobile platforms",
+      "Familiarity with development tools"
+    ],
+    "career_path": "Mobile QA Engineer \u2192 Mobile Automation Engineer \u2192 Senior Mobile Engineer",
+    "job_market": "Growing demand with mobile app explosion",
+    "salary_range_usd": "$75K - $135K",
+    "notes": "Mobile testing is increasingly critical. Understanding of both iOS and Android is valuable."
+  },
+  "performance testing engineer": {
+    "role": "Performance Testing Engineer",
+    "technologies": [
+      "JMeter",
+      "LoadRunner",
+      "Gatling",
+      "Locust",
+      "New Relic",
+      "Datadog",
+      "Python",
+      "Java",
+      "SQL",
+      "Docker",
+      "Jenkins"
+    ],
+    "core_skills": [
+      "Load testing methodology",
+      "Stress testing and spike testing",
+      "Bottleneck identification",
+      "Performance analysis and reporting",
+      "Capacity planning",
+      "Scalability testing",
+      "Endurance testing",
+      "Memory and CPU profiling"
+    ],
+    "learning_path": [
+      "Phase 1: Performance testing concepts - Load, stress, soak testing",
+      "Phase 2: JMeter fundamentals - Test plan creation, thread groups, assertions",
+      "Phase 3: Advanced JMeter - Timers, listeners, reporting",
+      "Phase 4: Analysis and optimization - Identifying bottlenecks, metrics",
+      "Phase 5: Cloud load testing - AWS, Azure testing services",
+      "Phase 6: Continuous performance testing - Baseline, regression detection"
+    ],
+    "projects": [
+      "Design and execute load test for e-commerce platform",
+      "Create spike test to verify system stability under sudden load",
+      "Build endurance test to check memory leaks over time",
+      "Analyze results and provide performance optimization recommendations"
+    ],
+    "timeline_weeks": 12,
+    "effort_per_week": "18-22 hours",
+    "prerequisite_skills": [
+      "QA/Testing experience",
+      "Understanding of system architecture",
+      "Basic networking knowledge",
+      "Statistical analysis basics"
+    ],
+    "career_path": "Performance Tester \u2192 Senior Performance Engineer \u2192 Performance Architect",
+    "job_market": "Moderate demand, higher pay than functional QA",
+    "salary_range_usd": "$80K - $140K",
+    "notes": "Specialized skill with good earning potential. Critical for high-traffic applications."
+  },
+  "api testing engineer": {
+    "role": "API Testing Engineer",
+    "technologies": [
+      "Postman",
+      "REST Assured",
+      "Swagger/OpenAPI",
+      "JMeter",
+      "SoapUI",
+      "Insomnia",
+      "Python",
+      "Java",
+      "JSON",
+      "XML",
+      "Git"
+    ],
+    "core_skills": [
+      "REST API testing",
+      "SOAP web services testing",
+      "Request-response validation",
+      "Authentication and authorization testing",
+      "Data format validation (JSON/XML)",
+      "API contract testing",
+      "Load testing for APIs",
+      "Security testing for APIs"
+    ],
+    "learning_path": [
+      "Phase 1: API fundamentals - REST, SOAP, HTTP methods, headers",
+      "Phase 2: Postman mastery - Collections, assertions, automation",
+      "Phase 3: Code-based testing - REST Assured with Java/Python",
+      "Phase 4: Advanced scenarios - Authentication, complex workflows",
+      "Phase 5: Performance testing for APIs - Load testing, rate limiting",
+      "Phase 6: API security testing - SQL injection, token validation"
+    ],
+    "projects": [
+      "Build comprehensive API test suite using Postman",
+      "Implement API automation framework with REST Assured",
+      "Create data-driven API tests with various payloads",
+      "Design and execute API load testing scenarios"
+    ],
+    "timeline_weeks": 10,
+    "effort_per_week": "16-20 hours",
+    "prerequisite_skills": [
+      "HTTP protocol understanding",
+      "JSON/XML knowledge",
+      "Basic programming skills",
+      "Understanding of APIs and integration"
+    ],
+    "career_path": "API QA Engineer \u2192 API Automation Engineer \u2192 Backend Test Engineer",
+    "job_market": "High demand with microservices and API-first architectures",
+    "salary_range_usd": "$75K - $125K",
+    "notes": "API testing is crucial in microservices and cloud-native architectures. Growing demand."
+  },
+  "business operations manager": {
+    "role": "Business Operations Manager",
+    "technologies": [
+      "Excel",
+      "Power BI",
+      "Salesforce",
+      "Analytics",
+      "ERP Systems",
+      "Project Management Tools"
+    ],
+    "core_skills": [
+      "Process Optimization",
+      "Budget Management",
+      "Team Leadership",
+      "Strategic Planning",
+      "Data Analysis",
+      "Operations Management"
+    ],
+    "optional_skills": [
+      "Six Sigma",
+      "Lean Methodology",
+      "Change Management",
+      "Risk Assessment"
+    ],
+    "learning_path": [
+      "Fundamentals: Business operations, supply chain, organizational structure",
+      "Advanced processes: Resource planning, workflow optimization",
+      "Leadership: Team management, stakeholder communication",
+      "Analytics: Data-driven decision making, KPIs",
+      "Strategic: Operations strategy, scalability planning",
+      "Industry-specific: Compliance, regulations, best practices"
+    ],
+    "projects": [
+      "Process improvement initiative documentation",
+      "Operations efficiency analysis report",
+      "Resource allocation optimization plan",
+      "Stakeholder communication strategy"
+    ],
+    "timeline_weeks": 20,
+    "effort_per_week": "15-20 hours",
+    "prerequisite_skills": [
+      "Excel",
+      "Basic business analysis"
+    ],
+    "career_path": "Operations Coordinator \u2192 Operations Manager \u2192 Business Operations Manager \u2192 Operations Director",
+    "job_market": "High demand in all industries; critical for growth-stage companies",
+    "salary_range_usd": "$70,000-$120,000+",
+    "notes": "Non-IT role focused on business efficiency and organizational management"
+  },
+  "data analyst": {
+    "role": "Data Analyst",
+    "technologies": [
+      "SQL",
+      "Tableau",
+      "Power BI",
+      "Python",
+      "Excel",
+      "Google Analytics",
+      "Apache Spark"
+    ],
+    "core_skills": [
+      "SQL Querying",
+      "Data Visualization",
+      "Statistical Analysis",
+      "Business Intelligence",
+      "Report Writing",
+      "Problem Solving"
+    ],
+    "optional_skills": [
+      "Python/R Programming",
+      "ETL Processes",
+      "Database Design",
+      "Machine Learning Basics",
+      "Data Storytelling"
+    ],
+    "learning_path": [
+      "Fundamentals: Databases, data structure, SQL basics",
+      "Querying: Advanced SQL, complex joins, aggregations",
+      "Analysis: Statistical methods, hypothesis testing, data interpretation",
+      "Visualization: Creating dashboards, storytelling with data",
+      "Tools: BI tools (Tableau, Power BI), automation, scripting",
+      "Business: KPIs, metrics definition, business intelligence"
+    ],
+    "projects": [
+      "Sales performance dashboard creation",
+      "Customer behavior analysis report",
+      "Monthly KPI tracking dashboard",
+      "Data quality improvement initiative",
+      "Automated reporting system design"
+    ],
+    "timeline_weeks": 16,
+    "effort_per_week": "15-20 hours",
+    "prerequisite_skills": [
+      "SQL",
+      "Excel",
+      "Basic statistics"
+    ],
+    "career_path": "Data Analyst \u2192 Senior Data Analyst \u2192 Analytics Manager \u2192 Director of Analytics",
+    "job_market": "High demand across all industries; essential for data-driven organizations",
+    "salary_range_usd": "$70,000-$130,000+",
+    "notes": "Non-coding focused role emphasizing communication and business understanding"
+  },
+  "project manager": {
+    "role": "Project Manager",
+    "technologies": [
+      "Microsoft Project",
+      "Jira",
+      "Asana",
+      "Monday.com",
+      "Confluence",
+      "Slack"
+    ],
+    "core_skills": [
+      "Scope Management",
+      "Timeline Planning",
+      "Risk Management",
+      "Team Leadership",
+      "Stakeholder Communication",
+      "Budget Control"
+    ],
+    "optional_skills": [
+      "Agile Certification (Scrum Master)",
+      "PRINCE2",
+      "PMP Certification",
+      "Change Management",
+      "Conflict Resolution"
+    ],
+    "learning_path": [
+      "Fundamentals: Project management frameworks, PMBOK overview",
+      "Planning: Scope, schedule, budget, resource planning",
+      "Execution: Team coordination, communication, monitoring",
+      "Agile: Scrum, sprints, backlogs, ceremonies",
+      "Risk: Risk identification, mitigation strategies, issue management",
+      "Closure: Lessons learned, documentation, project completion"
+    ],
+    "projects": [
+      "Project charter and scope statement",
+      "Gantt chart and timeline development",
+      "Stakeholder communication plan",
+      "Risk register and mitigation strategies",
+      "Project status reporting dashboard"
+    ],
+    "timeline_weeks": 20,
+    "effort_per_week": "15-20 hours",
+    "prerequisite_skills": [
+      "Leadership experience",
+      "Organizational skills"
+    ],
+    "career_path": "Project Coordinator \u2192 Project Manager \u2192 Senior PM \u2192 Program Manager \u2192 PMO Director",
+    "job_market": "Consistent demand; larger organizations always need PMs",
+    "salary_range_usd": "$80,000-$140,000+",
+    "notes": "Applicable across IT and non-IT industries; foundation for leadership roles"
+  },
+  "sales engineer": {
+    "role": "Sales Engineer",
+    "technologies": [
+      "CRM (Salesforce, HubSpot)",
+      "Product Demo Tools",
+      "Technical Documentation",
+      "AWS/Cloud Basics",
+      "APIs/Integration Basics",
+      "SQL Basics"
+    ],
+    "core_skills": [
+      "Technical Communication",
+      "Product Knowledge",
+      "Sales Skills",
+      "Customer Problem Solving",
+      "Presentation Skills",
+      "Solution Design"
+    ],
+    "optional_skills": [
+      "Backend Technology Understanding",
+      "Cloud Architecture Basics",
+      "Integration Patterns",
+      "Contract Negotiation",
+      "RFP Response"
+    ],
+    "learning_path": [
+      "Fundamentals: Sales process, product knowledge, industry domain",
+      "Technical: Product architecture, technical capabilities, integration options",
+      "Communication: Customer demos, technical presentations, documentation",
+      "Solutions: Solution selling, requirement mapping, proposal writing",
+      "Negotiation: Contract terms, technical requirements, pricing discussions",
+      "Account Management: Long-term relationships, upselling, customer success"
+    ],
+    "projects": [
+      "Product demo scenario documentation",
+      "Customer technical requirement analysis",
+      "Solution proposal with technical details",
+      "Integration feasibility assessment",
+      "Customer onboarding technical plan"
+    ],
+    "timeline_weeks": 18,
+    "effort_per_week": "15-20 hours",
+    "prerequisite_skills": [
+      "Sales experience OR Technical knowledge",
+      "Communication skills"
+    ],
+    "career_path": "Sales Development Rep \u2192 Sales Engineer \u2192 Senior Sales Engineer \u2192 Sales Manager \u2192 VP Sales",
+    "job_market": "Very high demand in enterprise and SaaS companies",
+    "salary_range_usd": "$100,000-$180,000+ (plus commission)",
+    "notes": "Bridges gap between technical and sales teams; excellent career growth path"
+  },
+  "scrum master": {
+    "role": "Scrum Master",
+    "technologies": [
+      "Jira",
+      "Confluence",
+      "Azure DevOps",
+      "Slack",
+      "Git",
+      "CI/CD Basics"
+    ],
+    "core_skills": [
+      "Agile Methodology",
+      "Team Facilitation",
+      "Coaching",
+      "Process Improvement",
+      "Conflict Resolution",
+      "Communication"
+    ],
+    "optional_skills": [
+      "Scrum Certification (CSM)",
+      "Scaled Agile (SAFe)",
+      "Kanban",
+      "Servant Leadership",
+      "Retrospective Facilitation"
+    ],
+    "learning_path": [
+      "Fundamentals: Scrum framework, ceremonies, roles, artifacts",
+      "Facilitation: Sprint planning, standup, review, retrospective management",
+      "Coaching: Team development, individual growth, mentoring",
+      "Impediments: Obstacle removal, conflict resolution, escalation",
+      "Metrics: Velocity tracking, burndown charts, team performance",
+      "Continuous Improvement: Process optimization, team effectiveness"
+    ],
+    "projects": [
+      "Sprint planning and backlog refinement facilitation",
+      "Daily standup coordination",
+      "Sprint review preparation and facilitation",
+      "Retrospective facilitation and action items tracking",
+      "Team metrics and velocity dashboard"
+    ],
+    "timeline_weeks": 16,
+    "effort_per_week": "15-20 hours",
+    "prerequisite_skills": [
+      "Agile experience",
+      "Leadership experience"
+    ],
+    "career_path": "Team Lead/Senior Developer \u2192 Scrum Master \u2192 Agile Coach \u2192 Agile Manager \u2192 Director of Agile",
+    "job_market": "High demand; every tech company needs Scrum Masters",
+    "salary_range_usd": "$90,000-$150,000+",
+    "notes": "Servant leader role focused on team effectiveness and process improvement"
   }
 }

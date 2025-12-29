@@ -260,14 +260,198 @@ def get_skills():
         }), 500
 
 
+@app.route('/learning-paths', methods=['POST'])
+def get_learning_paths():
+    """
+    Get learning paths for specified technologies
+    
+    Request:
+    {
+        "technologies": ["Python", "Docker", "AWS"],
+        "difficulty_level": "Beginner"  (optional: "Beginner", "Intermediate", "Advanced")
+    }
+    
+    Response:
+    {
+        "matched_technologies": {...},
+        "learning_resources": {...},
+        "sources": {...}
+    }
+    """
+    try:
+        data = request.get_json()
+        
+        if not data or 'technologies' not in data:
+            return jsonify({
+                'error': 'Missing technologies parameter',
+                'example': {
+                    'technologies': ['Python', 'Docker'],
+                    'difficulty_level': 'Beginner'
+                }
+            }), 400
+        
+        technologies = data.get('technologies', [])
+        difficulty_level = data.get('difficulty_level', 'Beginner')
+        
+        if not isinstance(technologies, list):
+            return jsonify({
+                'error': 'technologies must be an array'
+            }), 400
+        
+        # Load learning paths data
+        import json
+        import os
+        learning_paths_file = os.path.join(os.path.dirname(__file__), 'data', 'learning_paths.json')
+        
+        with open(learning_paths_file, 'r') as f:
+            learning_paths_data = json.load(f)
+        
+        # Collect results for requested technologies
+        results = {
+            'requested_technologies': technologies,
+            'difficulty_level': difficulty_level,
+            'matched_technologies': {},
+            'not_found': [],
+            'learning_resources': [],
+            'total_resources': 0,
+            'sources': learning_paths_data.get('sources', {}),
+            'metadata': {
+                'version': learning_paths_data.get('version'),
+                'description': learning_paths_data.get('description'),
+                'note': 'Learning paths can be extended with external API integrations'
+            }
+        }
+        
+        technologies_data = learning_paths_data.get('technologies', {})
+        
+        for tech in technologies:
+            # Case-insensitive search
+            tech_lower = tech.lower()
+            found = False
+            
+            for tech_key, tech_info in technologies_data.items():
+                if tech_key.lower() == tech_lower or tech_info.get('display_name', '').lower() == tech_lower:
+                    results['matched_technologies'][tech_info['display_name']] = {
+                        'display_name': tech_info['display_name'],
+                        'category': tech_info['category'],
+                        'difficulty_levels': tech_info['difficulty_levels'],
+                        'learning_resources': {}
+                    }
+                    
+                    # Get resources for requested difficulty level
+                    resources_by_level = tech_info.get('learning_resources', {})
+                    
+                    if difficulty_level in resources_by_level:
+                        results['matched_technologies'][tech_info['display_name']]['learning_resources'] = {
+                            difficulty_level: resources_by_level[difficulty_level]
+                        }
+                        results['learning_resources'].extend(resources_by_level[difficulty_level])
+                        results['total_resources'] += len(resources_by_level[difficulty_level])
+                    else:
+                        # Return all available levels if specific level not found
+                        results['matched_technologies'][tech_info['display_name']]['learning_resources'] = resources_by_level
+                        for level_resources in resources_by_level.values():
+                            results['learning_resources'].extend(level_resources)
+                            results['total_resources'] += len(level_resources)
+                    
+                    found = True
+                    break
+            
+            if not found:
+                results['not_found'].append(tech)
+        
+        logger.info(f"Learning paths requested for: {technologies}")
+        
+        return jsonify(results), 200
+    
+    except FileNotFoundError:
+        logger.error("Learning paths data file not found")
+        return jsonify({
+            'error': 'Learning paths data not found',
+            'message': 'data/learning_paths.json is missing'
+        }), 500
+    
+    except json.JSONDecodeError:
+        logger.error("Invalid JSON in learning paths file")
+        return jsonify({
+            'error': 'Invalid learning paths data format'
+        }), 500
+    
+    except Exception as e:
+        logger.error(f"Error getting learning paths: {e}", exc_info=True)
+        return jsonify({
+            'error': str(e),
+            'message': 'Failed to retrieve learning paths'
+        }), 500
+
+
+@app.route('/learning-paths/all', methods=['GET'])
+def get_all_learning_paths():
+    """
+    Get all available learning paths and technologies
+    
+    Query parameters (optional):
+    - category: Filter by category (e.g., "Programming Language", "Frontend Framework")
+    - limit: Limit number of technologies (default: no limit)
+    """
+    try:
+        import json
+        import os
+        
+        learning_paths_file = os.path.join(os.path.dirname(__file__), 'data', 'learning_paths.json')
+        
+        with open(learning_paths_file, 'r') as f:
+            learning_paths_data = json.load(f)
+        
+        # Optional category filter
+        category_filter = request.args.get('category')
+        limit = request.args.get('limit', type=int)
+        
+        technologies_data = learning_paths_data.get('technologies', {})
+        
+        # Build response
+        technologies_list = []
+        for tech_key, tech_info in technologies_data.items():
+            if category_filter and tech_info.get('category') != category_filter:
+                continue
+            
+            technologies_list.append({
+                'display_name': tech_info['display_name'],
+                'category': tech_info['category'],
+                'difficulty_levels': tech_info['difficulty_levels'],
+                'resource_count': sum(len(resources) for resources in tech_info.get('learning_resources', {}).values())
+            })
+        
+        if limit:
+            technologies_list = technologies_list[:limit]
+        
+        return jsonify({
+            'total_technologies': len(technologies_list),
+            'technologies': technologies_list,
+            'categories': list(set(t['category'] for t in technologies_list)),
+            'sources': learning_paths_data.get('sources', {}),
+            'metadata': learning_paths_data.get('metadata', {})
+        }), 200
+    
+    except Exception as e:
+        logger.error(f"Error getting all learning paths: {e}", exc_info=True)
+        return jsonify({
+            'error': str(e),
+            'message': 'Failed to retrieve learning paths'
+        }), 500
+
+
 if __name__ == '__main__':
     logger.info("Starting Flask API...")
     logger.info(f"Parser loaded: {parser.nlp is not None}")
     logger.info(f"Entity types: {parser.get_entity_types()}")
-
+    
+    import os
+    port = int(os.environ.get("FLASK_PORT", 5000))
+    
     app.run(
         host='0.0.0.0',
-        port=5000,
+        port=port,
         debug=True
     )
 

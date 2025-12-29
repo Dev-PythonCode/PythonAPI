@@ -1,13 +1,17 @@
 import sys
 import os
+import logging
 
-# Attempt to import pyodbc and provide a clear error if missing
+logger = logging.getLogger(__name__)
+
+# Attempt to import pyodbc - optional for local development
 try:
     import pyodbc
+    PYODBC_AVAILABLE = True
 except ModuleNotFoundError as e:
-    raise ModuleNotFoundError(
-        "pyodbc is not installed in this environment. Install with: .venv/bin/pip install pyodbc"
-    ) from e
+    logger.warning("pyodbc is not installed. Database features will be disabled. Install with: pip install pyodbc")
+    PYODBC_AVAILABLE = False
+    pyodbc = None
 
 # `from config import Config` can fail when this file is executed directly
 # (python services/database.py) because the project root isn't on sys.path.
@@ -32,15 +36,20 @@ class DatabaseService:
         """Initialize database connection using existing config"""
         self.connection_string = Config.DB_CONNECTION
         self.connection = None
+        self.available = PYODBC_AVAILABLE
 
     def get_connection(self):
         """Get database connection (reuse or create new)"""
+        if not PYODBC_AVAILABLE:
+            logger.warning("Database connection unavailable: pyodbc not installed")
+            return None
+            
         try:
             if self.connection is None or self.connection.closed:
                 self.connection = pyodbc.connect(self.connection_string)
             return self.connection
         except Exception as e:
-            print(f"Database connection error: {e}")
+            logger.error(f"Database connection error: {e}")
             raise
 
     def execute_query(self, query, params=None):

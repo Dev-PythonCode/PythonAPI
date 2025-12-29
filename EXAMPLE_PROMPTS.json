@@ -1,0 +1,183 @@
+{
+  "title": "Career Roadmap AI - Example Prompts for Testing",
+  "description": "Comprehensive list of complex prompts covering IT and non-IT roles to demonstrate the career roadmap generation system",
+  "categories": {
+    "IT_Development_Roles": [
+      "How to become a full-stack web developer with React and Node.js",
+      "I want to transition from frontend developer to backend engineer",
+      "Career path: Python developer to data scientist with machine learning",
+      "Learning AI and machine learning engineering from zero experience",
+      "Cloud architect specializing in AWS and microservices",
+      "Mobile app developer for iOS and Android using React Native",
+      "DevOps engineer with Docker, Kubernetes, and CI/CD pipelines",
+      "Database administrator specializing in optimization and performance tuning",
+      "Systems architect designing enterprise-scale applications"
+    ],
+    "Testing_QA_Roles": [
+      "How to become software testing engineer with Selenium and Appium",
+      "QA automation engineer career with TestNG and Pytest",
+      "SDET (Software Development Engineer in Test) - combining development and testing",
+      "Performance testing engineer specializing in load testing with JMeter",
+      "API testing with Postman and REST API automation",
+      "Security testing and penetration testing career path",
+      "Mobile testing engineer for iOS and Android applications",
+      "Test automation architect designing testing frameworks"
+    ],
+    "Cloud_DevOps_Roles": [
+      "I want to become a cloud architect on Azure and AWS",
+      "DevOps engineer with Terraform and Kubernetes expertise",
+      "Site reliability engineer (SRE) focused on system reliability",
+      "Platform engineer building developer platforms and infrastructure",
+      "Cloud security engineer ensuring enterprise cloud security",
+      "Infrastructure automation with Ansible and Terraform"
+    ],
+    "Data_Analytics_Roles": [
+      "Data analyst career with SQL, Tableau, and Power BI",
+      "Data engineer building data pipelines with Apache Spark",
+      "Machine learning engineer with TensorFlow and PyTorch",
+      "Product analytics engineer using data for product decisions",
+      "Data scientist specializing in statistical analysis and modeling",
+      "Analytics engineer bridging data engineering and analytics"
+    ],
+    "Non_IT_Roles": [
+      "Career transition to product manager from software engineer",
+      "Business analyst with requirements gathering and SQL knowledge",
+      "Project manager transitioning to program management",
+      "Product owner in agile development environments",
+      "UX/UI designer interested in web and mobile design",
+      "Sales engineer bridging technical and sales teams",
+      "Business operations manager optimizing organizational processes",
+      "Scrum master and agile coach certification and career path",
+      "HR technology specialist implementing HR systems"
+    ],
+    "Career_Transitions": [
+      "5 years backend developer looking to move into SDET role",
+      "Senior QA engineer transitioning to cloud architecture",
+      "Frontend developer interested in becoming a solutions architect",
+      "Data analyst aspiring to become a machine learning engineer",
+      "Systems administrator transitioning to cloud engineer",
+      "Developer-turned-product manager career growth",
+      "QA automation engineer wanting to become SDET",
+      "Manual tester transitioning to test automation"
+    ],
+    "Non_IT_Career_Changes": [
+      "HR professional transitioning to HR tech specialist",
+      "Financial analyst becoming a fintech engineer",
+      "Sales manager moving into sales engineering",
+      "Operations manager transitioning to business analysis",
+      "Marketing professional interested in product management",
+      "Customer success manager moving to product management",
+      "Content creator becoming a product manager with analytics",
+      "Designer transitioning to web and UX/UI development"
+    ],
+    "Skill_Combinations": [
+      "Web developer with React, TypeScript, and Node.js seeking growth",
+      "Python developer wanting to add machine learning and data science",
+      "Java backend developer interested in cloud platforms and Docker",
+      "QA engineer with Selenium and API testing expertise expanding",
+      "Full-stack developer adding DevOps and Kubernetes skills",
+      "Database professional adding Python and data engineering skills",
+      "Frontend developer learning backend with Java and Spring Boot"
+    ],
+    "Complex_Scenarios": [
+      "10 years experience as backend developer, interested in becoming technical architect",
+      "Career switcher from non-tech background wanting to learn product management",
+      "Mid-level QA engineer with 3 years experience seeking SDET path",
+      "Self-taught developer wanting to formalize skills and move to tech lead",
+      "Bootcamp graduate starting as junior developer, roadmap for senior engineer",
+      "Technical lead wanting to transition to engineering management",
+      "Freelance developer wanting to transition to startup product engineering"
+    ]
+  },
+  "testing_guidelines": {
+    "description": "How to use these prompts to test the system",
+    "steps": [
+      "Copy a prompt from any category above",
+      "Send it to the /roadmap endpoint: POST /api/career/roadmap",
+      "Review the matched career profile",
+      "Check that recommendations align with the prompt intent",
+      "Verify no rule-based logic dictates the matching (pure NLP should drive it)",
+      "Look for technologies and skills recommendations below the learning path",
+      "Note job market insights and salary ranges"
+    ],
+    "validation_checklist": [
+      "✓ IT roles match to appropriate technical career paths",
+      "✓ Non-IT roles match to business/management paths",
+      "✓ Career transitions show appropriate progression",
+      "✓ Skill combinations identified and reflected in recommendations",
+      "✓ Complex scenarios handled with multi-factor matching",
+      "✓ NLP-based matching (no rule-based hardcoding)",
+      "✓ Learning path shows 6 phases with realistic timelines",
+      "✓ Job market information provided",
+      "✓ Salary ranges included with context"
+    ]
+  },
+  "demo_scenario": {
+    "title": "Complete Demo Workflow",
+    "steps": [
+      {
+        "step": 1,
+        "prompt": "I want to become a full-stack web developer with React and Node.js",
+        "expected_match": "Full Stack Developer",
+        "expected_skills": ["React", "Node.js", "JavaScript", "HTML/CSS", "Databases"],
+        "expected_timeline_weeks": 20
+      },
+      {
+        "step": 2,
+        "prompt": "5 years backend developer looking to move into SDET role",
+        "expected_match": "SDET (Software Development Engineer in Test)",
+        "expected_skills": ["Test Automation", "CI/CD", "Programming", "Testing Frameworks"],
+        "expected_timeline_weeks": 16
+      },
+      {
+        "step": 3,
+        "prompt": "Career transition to product manager from software engineer",
+        "expected_match": "Product Manager",
+        "expected_skills": ["Product Vision", "Market Analysis", "Roadmap Planning"],
+        "expected_timeline_weeks": 24
+      },
+      {
+        "step": 4,
+        "prompt": "Data scientist specializing in machine learning and deep learning",
+        "expected_match": "Data Scientist OR Machine Learning Engineer",
+        "expected_skills": ["Python", "TensorFlow", "Statistics", "Data Analysis"],
+        "expected_timeline_weeks": 20
+      },
+      {
+        "step": 5,
+        "prompt": "Business analyst with SQL and data visualization tools",
+        "expected_match": "Business Analyst",
+        "expected_skills": ["SQL", "Data Analysis", "Requirements Gathering"],
+        "expected_timeline_weeks": 18
+      }
+    ]
+  },
+  "api_endpoints": {
+    "career_roadmap": {
+      "method": "POST",
+      "path": "/api/career/roadmap",
+      "description": "Generate career roadmap for a given prompt",
+      "request_body": {
+        "prompt": "string (required) - The user's career goal or question"
+      },
+      "response": {
+        "matched_profile": "The identified career role",
+        "recommended_skills": "Array of core skills to learn",
+        "technologies": "Array of technologies to master",
+        "learning_path": "6-phase structured learning roadmap",
+        "timeline_weeks": "Estimated duration in weeks",
+        "job_market": "Job market outlook and demand",
+        "salary_range_usd": "Typical salary range for the role",
+        "matching_requirements": "Open job requirements matching these skills",
+        "career_path": "Typical career progression for this role"
+      }
+    }
+  },
+  "notes": [
+    "System uses pure NLP-based matching driven by training data, not hardcoded rules",
+    "All career paths cover both IT and non-IT domains",
+    "Complex prompts are handled through entity extraction and semantic matching",
+    "Job requirements are matched against core skills to show relevant open positions",
+    "Career transitions are supported through multi-factor skill matching"
+  ]
+}
