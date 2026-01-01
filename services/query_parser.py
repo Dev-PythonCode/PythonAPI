@@ -490,76 +490,95 @@ class QueryParser:
         skill_requirement_map = {}
         query_lower = query.lower()
         
-        # First split by comma, then by 'and' within clauses that don't have commas
-        clauses = []
+        # ⭐ FIX: First identify all "nice to have" / "optional" segments
+        # This handles cases where the keyword appears at the END of a comma-separated list
+        optional_keywords = ['optional', 'nice to have', 'good to have', 'preferred', 'bonus', 'added advantage', 'not required']
+        mandatory_keywords = ['mandatory', 'required', 'must have', 'essential']
         
-        for comma_clause in query.split(','):
-            # For each comma-separated clause, further split by 'and' if there are requirement keywords
-            # This handles cases like "C# mandatory and AWS nice to have"
-            if ' and ' in comma_clause.lower():
-                # Split by 'and' only if the clause contains requirement keywords
-                has_requirement = False
-                for keyword in ['mandatory', 'required', 'must have', 'essential', 'optional', 'nice to have', 'good to have', 'preferred', 'bonus']:
-                    if keyword in comma_clause.lower():
-                        has_requirement = True
-                        break
-                
-                if has_requirement:
-                    # Split by 'and' to separate different skill requirements
-                    and_parts = comma_clause.split(' and ')
-                    for part in and_parts:
-                        if part.strip():
-                            clauses.append(part.strip())
-                else:
-                    clauses.append(comma_clause.strip())
-            else:
-                clauses.append(comma_clause.strip())
+        # Find all skills that come after "and" or "," before "nice to have" or "optional"
+        # Split the query into major sections by "and" first
+        parts = []
+        current_part = ""
         
-        for clause in clauses:
-            clause_lower = clause.lower()
+        # Split by "and" to identify major requirement groupings
+        and_parts = query.split(' and ')
+        
+        for part_idx, part in enumerate(and_parts):
+            part_lower = part.lower()
             
-            # Skip empty clauses
-            if not clause.strip():
-                continue
-            
-            # Check if this clause contains a requirement keyword
-            mandatory_keywords = ['mandatory', 'required', 'must have', 'essential']
-            optional_keywords = ['optional', 'nice to have', 'good to have', 'preferred', 'bonus', 'added advantage', 'not required']
-            
-            requirement_type = None
-            
-            # Check mandatory keywords first (higher priority)
+            # Check what requirement type this part applies to
+            part_requirement = None
             for keyword in mandatory_keywords:
-                if keyword in clause_lower:
-                    requirement_type = 'mandatory'
+                if keyword in part_lower:
+                    part_requirement = 'mandatory'
                     break
             
-            # If mandatory not found, check optional keywords
-            if requirement_type is None:
+            if part_requirement is None:
                 for keyword in optional_keywords:
-                    if keyword in clause_lower:
-                        requirement_type = 'optional'
+                    if keyword in part_lower:
+                        part_requirement = 'optional'
                         break
             
-            # If we found a requirement type, extract ALL skill names from this clause
-            if requirement_type is not None:
-                skills_found_in_clause = []
+            # If no requirement found in this part, check if there's a trailing optional keyword
+            # by looking at the remaining text after this part
+            if part_requirement is None and part_idx < len(and_parts) - 1:
+                remaining_text = ' and '.join(and_parts[part_idx + 1:]).lower()
+                for keyword in optional_keywords:
+                    if keyword in remaining_text:
+                        # Check if the remaining part would apply to this part's skills
+                        # (i.e., there's no "mandatory" before the optional keyword)
+                        before_optional = remaining_text.split(keyword)[0]
+                        if not any(mk in before_optional for mk in mandatory_keywords):
+                            part_requirement = 'optional'
+                            break
+            
+            parts.append((part, part_requirement))
+        
+        # Now process comma-separated clauses within each major part
+        for part, default_requirement in parts:
+            for comma_clause in part.split(','):
+                clause = comma_clause.strip()
+                clause_lower = clause.lower()
                 
-                # Extract technology names from this clause using keyword matching
-                for tech in self.known_techs:
-                    tech_lower = tech.lower()
-                    if tech_lower in clause_lower:
-                        normalized = self.normalize_skill(tech)
-                        normalized_lower = normalized.lower()
-                        
-                        # Track this skill for this clause
-                        if normalized_lower not in skills_found_in_clause:
-                            skills_found_in_clause.append(normalized_lower)
+                # Skip empty clauses
+                if not clause:
+                    continue
                 
-                # Add all skills found in this clause with the same requirement type
-                for skill_lower in skills_found_in_clause:
-                    skill_requirement_map[skill_lower] = requirement_type
-                    print(f"[INFO] 📋 Skill '{skill_lower}' → '{requirement_type}' (clause: {clause.strip()[:50]}...)")
+                # Check if this specific clause has a requirement keyword
+                requirement_type = default_requirement
+                
+                for keyword in mandatory_keywords:
+                    if keyword in clause_lower:
+                        requirement_type = 'mandatory'
+                        break
+                
+                if requirement_type is None:
+                    for keyword in optional_keywords:
+                        if keyword in clause_lower:
+                            requirement_type = 'optional'
+                            break
+                
+                # Default to mandatory if no keyword found
+                if requirement_type is None:
+                    requirement_type = 'mandatory'
+                
+                # Extract technology names from this clause
+                if requirement_type is not None:
+                    skills_found_in_clause = []
+                    
+                    for tech in self.known_techs:
+                        tech_lower = tech.lower()
+                        if tech_lower in clause_lower:
+                            normalized = self.normalize_skill(tech)
+                            normalized_lower = normalized.lower()
+                            
+                            if normalized_lower not in skills_found_in_clause:
+                                skills_found_in_clause.append(normalized_lower)
+                    
+                    # Add all skills found in this clause with the determined requirement type
+                    for skill_lower in skills_found_in_clause:
+                        skill_requirement_map[skill_lower] = requirement_type
+                        print(f"[INFO] 📋 Skill '{skill_lower}' → '{requirement_type}' (clause: {clause[:50]}...)")
         
         return skill_requirement_map
 
