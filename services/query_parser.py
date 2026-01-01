@@ -579,100 +579,137 @@ class QueryParser:
         
         Example: "Python 2 years mandatory, SQL Server 2 years optional, AWS 2 years optional"
         Example: "C# 2 years mandatory and AWS 2 years nice to have, JavaScript 2 years as optional"
+        Example: "python mandatory java script nice to have"
         Returns: {'python': 'mandatory', 'sql': 'optional', 'aws': 'optional'}
         """
         skill_requirement_map = {}
         query_lower = query.lower()
         
-        # ⭐ FIX: First identify all "nice to have" / "optional" segments
-        # This handles cases where the keyword appears at the END of a comma-separated list
+        # ⭐ NEW APPROACH: Position-based skill classification
+        # For each skill, find its position and check which requirement keywords come before/after it
         optional_keywords = ['optional', 'nice to have', 'good to have', 'preferred', 'bonus', 'added advantage', 'not required']
         mandatory_keywords = ['mandatory', 'required', 'must have', 'essential']
         
-        # Find all skills that come after "and" or "," before "nice to have" or "optional"
-        # Split the query into major sections by "and" first
-        parts = []
-        current_part = ""
-        
-        # Split by "and" to identify major requirement groupings
-        and_parts = query.split(' and ')
-        
-        for part_idx, part in enumerate(and_parts):
-            part_lower = part.lower()
-            
-            # Check what requirement type this part applies to
-            part_requirement = None
-            for keyword in mandatory_keywords:
-                if keyword in part_lower:
-                    part_requirement = 'mandatory'
+        # Find positions of all requirement keywords
+        keyword_positions = []
+        for keyword in mandatory_keywords:
+            pos = 0
+            while True:
+                pos = query_lower.find(keyword, pos)
+                if pos == -1:
                     break
-            
-            if part_requirement is None:
-                for keyword in optional_keywords:
-                    if keyword in part_lower:
-                        part_requirement = 'optional'
-                        break
-            
-            # If no requirement found in this part, check if there's a trailing optional keyword
-            # by looking at the remaining text after this part
-            if part_requirement is None and part_idx < len(and_parts) - 1:
-                remaining_text = ' and '.join(and_parts[part_idx + 1:]).lower()
-                for keyword in optional_keywords:
-                    if keyword in remaining_text:
-                        # Check if the remaining part would apply to this part's skills
-                        # (i.e., there's no "mandatory" before the optional keyword)
-                        before_optional = remaining_text.split(keyword)[0]
-                        if not any(mk in before_optional for mk in mandatory_keywords):
-                            part_requirement = 'optional'
-                            break
-            
-            parts.append((part, part_requirement))
+                keyword_positions.append((pos, keyword, 'mandatory'))
+                pos += len(keyword)
         
-        # Now process comma-separated clauses within each major part
-        for part, default_requirement in parts:
-            for comma_clause in part.split(','):
-                clause = comma_clause.strip()
-                clause_lower = clause.lower()
-                
-                # Skip empty clauses
-                if not clause:
-                    continue
-                
-                # Check if this specific clause has a requirement keyword
-                requirement_type = default_requirement
-                
-                for keyword in mandatory_keywords:
-                    if keyword in clause_lower:
-                        requirement_type = 'mandatory'
+        for keyword in optional_keywords:
+            pos = 0
+            while True:
+                pos = query_lower.find(keyword, pos)
+                if pos == -1:
+                    break
+                keyword_positions.append((pos, keyword, 'optional'))
+                pos += len(keyword)
+        
+        # Sort by position
+        keyword_positions.sort(key=lambda x: x[0])
+        
+        # For each known tech, find its position and determine requirement type
+        # ⭐ IMPORTANT: Process skills by length (longest first) to match "JavaScript" before "Java"
+        sorted_techs = sorted(self.known_techs, key=len, reverse=True)
+        processed_positions = set()  # Track which positions we've already processed
+        
+        for tech in sorted_techs:
+            tech_lower = tech.lower()
+            
+            # ⭐ Also check for common variants (e.g., "java script" for "javascript")
+            tech_variants = [tech_lower]
+            # Add spaced version for single-word techs (e.g., "javascript" → "java script")
+            if ' ' not in tech_lower and len(tech_lower) > 4:
+                # Check if we can split into reasonable words
+                for i in range(3, len(tech_lower) - 2):
+                    variant = tech_lower[:i] + ' ' + tech_lower[i:]
+                    tech_variants.append(variant)
+            
+            # Find all occurrences of this tech in the query (trying all variants)
+            for variant in tech_variants:
+                pos = 0
+                while True:
+                    pos = query_lower.find(variant, pos)
+                    if pos == -1:
                         break
-                
-                if requirement_type is None:
-                    for keyword in optional_keywords:
-                        if keyword in clause_lower:
-                            requirement_type = 'optional'
-                            break
-                
-                # Default to mandatory if no keyword found
-                if requirement_type is None:
-                    requirement_type = 'mandatory'
-                
-                # Extract technology names from this clause
-                if requirement_type is not None:
-                    skills_found_in_clause = []
                     
-                    for tech in self.known_techs:
-                        tech_lower = tech.lower()
-                        if tech_lower in clause_lower:
-                            normalized = self.normalize_skill(tech)
-                            normalized_lower = normalized.lower()
-                            
-                            if normalized_lower not in skills_found_in_clause:
-                                skills_found_in_clause.append(normalized_lower)
+                    # Skip if this position overlaps with an already processed skill
+                    end_pos = pos + len(variant)
+                    if any(pos <= p < end_pos or p <= pos < p + 20 for p in processed_positions):
+                        pos += 1
+                        continue
                     
-                    # Add all skills found in this clause with the determined requirement type
-                    for skill_lower in skills_found_in_clause:
-                        skill_requirement_map[skill_lower] = requirement_type
-                        print(f"[INFO] 📋 Skill '{skill_lower}' → '{requirement_type}' (clause: {clause[:50]}...)")
+                    processed_positions.add(pos)
+                    
+                    # Determine requirement type based on nearest keyword
+                    requirement_type = None
+                    
+                    # Look for keywords that come AFTER this skill first (more specific)
+                    for kw_pos, kw_text, kw_type in keyword_positions:
+                        if kw_pos > pos + len(variant):
+                            # Check if keyword is within 30 characters after the skill
+                            if (kw_pos - (pos + len(variant))) < 30:
+                                # Check there's no other skill between this skill and the keyword
+                                text_between = query_lower[pos + len(variant):kw_pos]
+                                has_skill_between = False
+                                for other_tech in sorted_techs:
+                                    other_lower = other_tech.lower()
+                                    if other_lower != tech_lower and other_lower in text_between:
+                                        has_skill_between = True
+                                        break
+                                
+                                if not has_skill_between:
+                                    requirement_type = kw_type
+                                    print(f"[DEBUG] Skill '{tech}' gets '{kw_type}' from keyword '{kw_text}' AFTER it")
+                                    break
+                    
+                    # If no following keyword, look for keywords that come BEFORE this skill
+                    if requirement_type is None:
+                        for kw_pos, kw_text, kw_type in reversed(keyword_positions):
+                            if kw_pos < pos:
+                                # Check if keyword is within 50 characters before the skill
+                                if pos - (kw_pos + len(kw_text)) < 50:
+                                    # Check if the IMMEDIATELY preceding skill (if any) has been assigned this keyword already
+                                    text_between = query_lower[kw_pos + len(kw_text):pos]
+                                    
+                                    # Only reject if there's a skill VERY close to the keyword (within 15 chars)
+                                    has_close_skill = False
+                                    for other_tech in sorted_techs:
+                                        other_lower = other_tech.lower()
+                                        if other_lower != tech_lower:
+                                            other_pos = text_between.find(other_lower)
+                                            if other_pos != -1 and other_pos < 15:
+                                                has_close_skill = True
+                                                break
+                                    
+                                    if not has_close_skill:
+                                        requirement_type = kw_type
+                                        print(f"[DEBUG] Skill '{tech}' gets '{kw_type}' from keyword '{kw_text}' BEFORE it")
+                                        break
+                
+                    # Default to mandatory if no keyword found
+                    if requirement_type is None:
+                        requirement_type = 'mandatory'
+                    
+                    # Add to map
+                    normalized = self.normalize_skill(tech)
+                    normalized_lower = normalized.lower()
+                    skill_requirement_map[normalized_lower] = requirement_type
+                    
+                    # Find the clause context for debugging
+                    clause_start = max(0, pos - 30)
+                    clause_end = min(len(query), pos + len(variant) + 30)
+                    clause = query[clause_start:clause_end]
+                    print(f"[INFO] 📋 Skill '{normalized_lower}' → '{requirement_type}' (clause: {clause}...)")
+                    
+                    # Move to next occurrence
+                    pos += len(variant)
+                    break  # Only process first occurrence of each skill
         
         return skill_requirement_map
 
