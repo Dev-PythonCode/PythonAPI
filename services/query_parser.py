@@ -922,6 +922,15 @@ class QueryParser:
                 continue
 
             if ent.label_ == "TECHNOLOGY":
+                # ⭐ FILTER: Reject entities that contain requirement keywords (model misclassifications)
+                # Example: "script is optional" is not a valid technology
+                requirement_keywords = ['mandatory', 'required', 'must have', 'essential', 'optional', 'nice to have', 'good to have', 'preferred', 'bonus', 'is mandatory', 'is optional', 'is required']
+                contains_requirement = any(keyword in entity_text.lower() for keyword in requirement_keywords)
+                
+                if contains_requirement:
+                    print(f"[DEBUG] ⛔ Rejecting invalid TECHNOLOGY entity containing requirement keyword: '{entity_text}'")
+                    continue
+                
                 normalized = self.normalize_skill(entity_text)
                 normalized_lower = normalized.lower()
                 
@@ -1195,6 +1204,15 @@ class QueryParser:
         # Example: Remove "Java" if "JavaScript" exists
         technologies = self._deduplicate_conflicting_skills(technologies)
         optional_technologies = self._deduplicate_conflicting_skills(optional_technologies)
+        
+        # ⭐ CROSS-LIST DEDUPLICATION: Remove skills from one list if they conflict with skills in the other
+        # Example: If "JavaScript" is in optional and "Java" is in mandatory, remove "Java"
+        all_skills_for_check = technologies + optional_technologies
+        combined_deduplicated = self._deduplicate_conflicting_skills(all_skills_for_check)
+        
+        # Rebuild lists keeping only non-conflicting skills
+        technologies = [s for s in technologies if s in combined_deduplicated]
+        optional_technologies = [s for s in optional_technologies if s in combined_deduplicated]
 
         # Build parsed result WITH CATEGORIES AND OPTIONAL SKILLS
         # Calculate mandatory_skills = technologies that are NOT in optional_technologies
