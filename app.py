@@ -80,6 +80,7 @@ def parse_query_endpoint():
                 'skills': [],
                 'mandatory_skills': [],  # ⭐ FIXED: Added mandatory_skills field
                 'optional_skills': [],  # ⭐ Added optional_skills field
+                'skill_operator': 'AND',  # ⭐ NEW: Default to AND
                 'categories': [],
                 'category_skills': [],
                 'min_years_experience': None,

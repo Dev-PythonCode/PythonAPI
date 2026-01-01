@@ -299,6 +299,32 @@ class QueryParser:
 
         return deduplicated
 
+    def _detect_skill_operator(self, query: str, skills: List[str]) -> str:
+        """
+        Detect if skills are connected with OR operator
+        Returns: 'OR' if OR operator found between skills, otherwise 'AND'
+        
+        Examples:
+            "Python or JavaScript" → 'OR'
+            "Python and JavaScript" → 'AND'
+            "Python, JavaScript" → 'AND'
+        """
+        query_lower = query.lower()
+        
+        # Check for explicit OR keywords
+        or_keywords = [' or ', ' OR ', '|']
+        
+        for keyword in or_keywords:
+            if keyword in query:
+                # Verify that OR is between skills, not random text
+                # Simple heuristic: if we have 2+ skills and OR appears, assume it's skill OR
+                if len(skills) >= 2:
+                    print(f"[INFO] 🔀 Detected OR operator in query")
+                    return 'OR'
+        
+        # Default to AND
+        return 'AND'
+
     def _detect_categories_and_expand(self, query_lower: str, doc) -> Tuple[List[str], List[str]]:
         """
         ⭐ NEW: Detect technology categories in query and expand to specific skills
@@ -1174,10 +1200,14 @@ class QueryParser:
         # Calculate mandatory_skills = technologies that are NOT in optional_technologies
         mandatory_skills = [skill for skill in technologies if skill not in optional_technologies]
         
+        # ⭐ OR DETECTION: Check if skills are connected with OR operator (after mandatory_skills is calculated)
+        skill_operator = self._detect_skill_operator(query, mandatory_skills)
+        
         parsed_result = {
             'skills': technologies,
             'mandatory_skills': mandatory_skills,  # ⭐ FIXED: Added mandatory_skills field
             'optional_skills': optional_technologies,  # ⭐ NEW: Optional/nice-to-have skills
+            'skill_operator': skill_operator,  # ⭐ NEW: 'AND' or 'OR' for skill matching
             'categories': all_categories,  # ⭐ Now includes detected categories
             'mandatory_categories': mandatory_categories,  # ⭐ NEW: Categories marked as mandatory
             'optional_categories': optional_categories,  # ⭐ NEW: Categories marked as optional
@@ -1537,6 +1567,7 @@ class QueryParser:
                 'skills': [],
                 'mandatory_skills': [],  # ⭐ FIXED: Added mandatory_skills field
                 'optional_skills': [],  # ⭐ Added optional_skills field
+                'skill_operator': 'AND',  # ⭐ NEW: Default to AND
                 'categories': [],
                 'category_skills': [],
                 'min_years_experience': None,
