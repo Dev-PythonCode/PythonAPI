@@ -205,6 +205,7 @@ class QueryParser:
 
         # ⭐ DEDUPLICATION: Remove skills that are substrings of other skills
         # Example: "SQL" is a substring of "SQL Server", so remove "SQL" if "SQL Server" exists
+        # Also handle cases like "Java" vs "JavaScript" where one is a token within the other
         deduplicated_skills = []
         filtered_skills_lower = [s.lower() for s in filtered_skills]
         
@@ -232,11 +233,71 @@ class QueryParser:
                                 is_substring = True
                                 print(f"[DEBUG] Skipping '{skill}' as it's a substring of '{other_skill}'")
                                 break
+                    
+                    # ⭐ NEW: Also check if this skill's first word matches the other skill's first word
+                    # Example: "Java" should be skipped if "JavaScript" exists (since "java" is the root)
+                    skill_first_word = skill_lower.split()[0] if ' ' in skill_lower else skill_lower
+                    other_first_word = other_lower.split()[0] if ' ' in other_lower else other_lower
+                    
+                    # If current skill is single-word and it's contained in the first word of a multi-word skill
+                    if ' ' not in skill_lower and ' ' in other_lower:
+                        if skill_lower in other_first_word or other_first_word.startswith(skill_lower):
+                            is_substring = True
+                            print(f"[DEBUG] Skipping '{skill}' as it's likely part of multi-word skill '{other_skill}'")
+                            break
             
             if not is_substring:
                 deduplicated_skills.append(skill)
 
         return deduplicated_skills
+
+    def _deduplicate_conflicting_skills(self, skills: List[str]) -> List[str]:
+        """
+        Remove skills that are prefixes/substrings of other skills
+        Example: Remove "Java" if "JavaScript" exists, remove "SQL" if "SQL Server" exists
+        """
+        if not skills:
+            return skills
+        
+        deduplicated = []
+        
+        for i, skill in enumerate(skills):
+            skill_lower = skill.lower()
+            conflicts = False
+            
+            # Check if this skill is a prefix/substring of any other skill
+            for j, other_skill in enumerate(skills):
+                if i != j:
+                    other_lower = other_skill.lower()
+                    
+                    # Skip if same skill
+                    if skill_lower == other_lower:
+                        continue
+                    
+                    # Check if skill is a prefix of other_skill (e.g., "Java" vs "JavaScript")
+                    if other_lower.startswith(skill_lower) and len(other_lower) > len(skill_lower):
+                        # Make sure there's a word boundary (not just partial match like "go" vs "golang")
+                        next_char_idx = len(skill_lower)
+                        if next_char_idx < len(other_lower):
+                            next_char = other_lower[next_char_idx]
+                            # Word boundary = space, dash, or continuation (like "Java" + "Script")
+                            if next_char in ' -' or next_char.isalpha():
+                                conflicts = True
+                                print(f"[DEBUG] Final dedup: Removing '{skill}' as it's a prefix of '{other_skill}'")
+                                break
+                    
+                    # Check if skill is a word within a multi-word skill (e.g., "SQL" in "SQL Server")
+                    elif ' ' in other_lower:
+                        words = other_lower.split()
+                        if skill_lower in words:
+                            conflicts = True
+                            print(f"[DEBUG] Final dedup: Removing '{skill}' as it's a word in '{other_skill}'")
+                            break
+            
+            if not conflicts:
+                deduplicated.append(skill)
+
+        return deduplicated
 
     def _detect_categories_and_expand(self, query_lower: str, doc) -> Tuple[List[str], List[str]]:
         """
@@ -896,6 +957,32 @@ class QueryParser:
             normalized = self.normalize_skill(skill)
             normalized_lower = normalized.lower()
             
+            # ⭐ Check if this skill conflicts with existing skills (e.g., "Java" vs "JavaScript")
+            conflicts_with_existing = False
+            all_existing_skills = technologies + optional_technologies
+            
+            for existing_skill in all_existing_skills:
+                existing_lower = existing_skill.lower()
+                # Skip if single-word skill conflicts with multi-word skill containing it
+                if ' ' not in normalized_lower and ' ' in existing_lower:
+                    if normalized_lower in existing_lower.split()[0] or existing_lower.split()[0].startswith(normalized_lower):
+                        conflicts_with_existing = True
+                        print(f"[DEBUG] Skipping '{normalized}' as it conflicts with multi-word skill '{existing_skill}'")
+                        break
+                # Skip if multi-word skill conflicts with existing single-word skill
+                elif ' ' in normalized_lower and ' ' not in existing_lower:
+                    if existing_lower in normalized_lower.split()[0] or normalized_lower.split()[0].startswith(existing_lower):
+                        # Remove the single-word skill in favor of the multi-word one
+                        if existing_skill in technologies:
+                            technologies.remove(existing_skill)
+                            print(f"[DEBUG] Removing '{existing_skill}' in favor of multi-word skill '{normalized}'")
+                        elif existing_skill in optional_technologies:
+                            optional_technologies.remove(existing_skill)
+                            print(f"[DEBUG] Removing '{existing_skill}' in favor of multi-word skill '{normalized}'")
+            
+            if conflicts_with_existing:
+                continue
+            
             if normalized not in technologies and normalized not in optional_technologies:
                 # Check skill requirement map first
                 if normalized_lower in skill_requirement_map:
@@ -1040,6 +1127,11 @@ class QueryParser:
 
         location = locations[0] if locations else None
         availability = self._detect_availability(query)
+
+        # ⭐ DEDUPLICATION: Remove single-word skills that conflict with multi-word skills
+        # Example: Remove "Java" if "JavaScript" exists
+        technologies = self._deduplicate_conflicting_skills(technologies)
+        optional_technologies = self._deduplicate_conflicting_skills(optional_technologies)
 
         # Build parsed result WITH CATEGORIES AND OPTIONAL SKILLS
         # Calculate mandatory_skills = technologies that are NOT in optional_technologies
