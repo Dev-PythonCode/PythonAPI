@@ -1,17 +1,47 @@
+# Virtual environments
 venv/
 env/
 .venv/
+ENV/
+
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.py[cod]
+*$py.class
 .Python
-models/talent_ner_model/
+*.so
+
+# Models (large files - prevent commits)
+models/
 *.bin
+*.pkl
+*.h5
+*.pth
+*.model
+
+# Build artifacts (large files)
+build/
+dist/
+*.exe
+*.spec
+*.pkg
+*.pyz
+*.zip
+
+# IDE
 .DS_Store
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# Logs and databases
 *.log
 .env
 *.db
+
+# Training data
 data/complete_training_data.json
