@@ -203,7 +203,40 @@ class QueryParser:
             else:
                 print(f"[DEBUG] Skipping verb-like skill: '{skill}'")
 
-        return filtered_skills
+        # ⭐ DEDUPLICATION: Remove skills that are substrings of other skills
+        # Example: "SQL" is a substring of "SQL Server", so remove "SQL" if "SQL Server" exists
+        deduplicated_skills = []
+        filtered_skills_lower = [s.lower() for s in filtered_skills]
+        
+        for i, skill in enumerate(filtered_skills):
+            skill_lower = skill.lower()
+            is_substring = False
+            
+            # Check if this skill is a substring of any other skill
+            for j, other_skill in enumerate(filtered_skills):
+                if i != j:  # Don't compare with itself
+                    other_lower = other_skill.lower()
+                    # Check if skill appears as a word within other_skill
+                    if skill_lower in other_lower and len(other_lower) > len(skill_lower):
+                        # Verify it's not just character overlap (e.g., "sql" vs "sqlalchemy")
+                        # but rather a real word boundary
+                        idx = other_lower.find(skill_lower)
+                        if idx != -1:
+                            # Check word boundary: either at start or after space/dash
+                            before_ok = (idx == 0 or other_lower[idx-1] in ' -')
+                            # Check end boundary: either at end or before space/dash
+                            after_idx = idx + len(skill_lower)
+                            after_ok = (after_idx >= len(other_lower) or other_lower[after_idx] in ' -')
+                            
+                            if before_ok and after_ok:
+                                is_substring = True
+                                print(f"[DEBUG] Skipping '{skill}' as it's a substring of '{other_skill}'")
+                                break
+            
+            if not is_substring:
+                deduplicated_skills.append(skill)
+
+        return deduplicated_skills
 
     def _detect_categories_and_expand(self, query_lower: str, doc) -> Tuple[List[str], List[str]]:
         """
