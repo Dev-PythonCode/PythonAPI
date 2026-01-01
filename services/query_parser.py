@@ -685,9 +685,21 @@ class QueryParser:
                                 has_skill_between = False
                                 for other_tech in sorted_techs:
                                     other_lower = other_tech.lower()
-                                    if other_lower != tech_lower and other_lower in text_between:
-                                        has_skill_between = True
-                                        break
+                                    if other_lower != tech_lower:
+                                        # ⭐ FIX: Use word boundary check to avoid matching "R" in "yeaRs"
+                                        # Check if other_tech appears as a complete word, not as part of another word
+                                        if other_lower in text_between:
+                                            # Find the position of other_tech in text_between
+                                            idx = text_between.find(other_lower)
+                                            if idx != -1:
+                                                # Check word boundaries: before and after
+                                                before_ok = (idx == 0 or not text_between[idx-1].isalnum())
+                                                after_idx = idx + len(other_lower)
+                                                after_ok = (after_idx >= len(text_between) or not text_between[after_idx].isalnum())
+                                                
+                                                if before_ok and after_ok:
+                                                    has_skill_between = True
+                                                    break
                                 
                                 if not has_skill_between:
                                     requirement_type = kw_type
