@@ -78,6 +78,8 @@ def parse_query_endpoint():
             'original_query': data.get('query', ''),
             'parsed': {
                 'skills': [],
+                'mandatory_skills': [],  # ⭐ FIXED: Added mandatory_skills field
+                'optional_skills': [],  # ⭐ Added optional_skills field
                 'categories': [],
                 'category_skills': [],
                 'min_years_experience': None,

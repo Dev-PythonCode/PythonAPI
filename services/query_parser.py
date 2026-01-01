@@ -1009,8 +1009,12 @@ class QueryParser:
         availability = self._detect_availability(query)
 
         # Build parsed result WITH CATEGORIES AND OPTIONAL SKILLS
+        # Calculate mandatory_skills = technologies that are NOT in optional_technologies
+        mandatory_skills = [skill for skill in technologies if skill not in optional_technologies]
+        
         parsed_result = {
             'skills': technologies,
+            'mandatory_skills': mandatory_skills,  # ⭐ FIXED: Added mandatory_skills field
             'optional_skills': optional_technologies,  # ⭐ NEW: Optional/nice-to-have skills
             'categories': all_categories,  # ⭐ Now includes detected categories
             'mandatory_categories': mandatory_categories,  # ⭐ NEW: Categories marked as mandatory
@@ -1369,6 +1373,8 @@ class QueryParser:
             'original_query': '',
             'parsed': {
                 'skills': [],
+                'mandatory_skills': [],  # ⭐ FIXED: Added mandatory_skills field
+                'optional_skills': [],  # ⭐ Added optional_skills field
                 'categories': [],
                 'category_skills': [],
                 'min_years_experience': None,
