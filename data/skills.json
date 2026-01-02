@@ -13,7 +13,7 @@
     {"name": "Swift", "aliases": ["swift programming"], "category": "Programming"},
     {"name": "Kotlin", "aliases": ["kt", "kotlin android"], "category": "Programming"},
     {"name": "Scala", "aliases": ["scala programming"], "category": "Programming"},
-    {"name": "R", "aliases": ["r language", "r programming"], "category": "Programming"},
+    {"name": "R Programming", "aliases": ["r language", "r programming", "r statistical"], "category": "Programming"},
     
     {"name": "AWS", "aliases": ["amazon web services", "ec2", "s3", "lambda", "aws cloud", "amazon cloud"], "category": "Cloud"},
     {"name": "AWS Cognito", "aliases": ["cognito", "aws user pools"], "category": "Cloud"},

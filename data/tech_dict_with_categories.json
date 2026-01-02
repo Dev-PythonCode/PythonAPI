@@ -2,8 +2,8 @@
   "categories": {
     "Programming Language": {
       "description": "Programming languages for software development",
-      "keywords": ["programming", "coding", "developer", "language", "code"],
-      "technologies": ["Python", "JavaScript", "TypeScript", "Java", "C++", "C#", "Ruby", "Go", "Rust", "PHP", "Swift", "Kotlin", "Scala", "R", "MATLAB"],
+      "keywords": ["programming", "coding", "language", "code"],
+      "technologies": ["Python", "JavaScript", "TypeScript", "Java", "C++", "C#", "Ruby", "Go", "Rust", "PHP", "Swift", "Kotlin", "Scala", "R Programming", "MATLAB"],
       "aliases": ["programming languages", "coding languages", "dev languages", "software development languages"]
     },
     "Cloud Platform": {
@@ -20,7 +20,7 @@
     },
     "Backend Framework": {
       "description": "Backend server-side frameworks",
-      "keywords": ["backend", "server", "api", "server-side", "rest", "microservices"],
+      "keywords": ["backend", "backend framework", "server-side", "rest", "microservices"],
       "technologies": ["Django", "Flask", "Spring", "Express", "FastAPI", "Laravel", "ASP.NET", "Node.js"],
       "aliases": ["back-end", "server framework", "api framework", "backend library"]
     },
