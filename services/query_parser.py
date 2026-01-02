@@ -347,6 +347,28 @@ class QueryParser:
         
         print(f"[DEBUG] Checking for categories in query: {query_lower}")
         
+        # ⭐ FIX: Only detect categories if there are explicit category phrases
+        # Explicit category phrases: "any X", "X skills", "X technology", "one or more X"
+        # This prevents false matches when someone just mentions a technology name
+        explicit_category_phrases = [
+            r'\bany\s+\w+\s+(skill|technology|tool|platform|framework)',  # "any cloud platform"
+            r'\b(one|more)\s+or\s+more\s+\w+\s+(skill|technology)',  # "one or more cloud technology"
+            r'\b(database|cloud|frontend|backend|devops|mobile)\s+(expert|specialist)',  # "database expert"
+        ]
+        
+        has_explicit_category_phrase = False
+        for pattern in explicit_category_phrases:
+            if re.search(pattern, query_lower):
+                has_explicit_category_phrase = True
+                print(f"[DEBUG] ✅ Found explicit category phrase matching: {pattern}")
+                break
+        
+        # ⭐ If no explicit category phrases, skip keyword matching (only use category names/aliases)
+        # This prevents "JavaScript 2.00 years" from matching "JavaScript Library" category
+        use_keywords = has_explicit_category_phrase
+        
+        print(f"[DEBUG] use_keywords={use_keywords}, has_explicit_category_phrase={has_explicit_category_phrase}")
+        
         # ⭐ FIX: Define role-based keywords that should skip expansion if preceded by a technology
         role_based_keywords = {'developer', 'programmer', 'engineer', 'architect', 'analyst', 'consultant'}
         
@@ -418,6 +440,12 @@ class QueryParser:
             if category_name in detected_categories:
                 continue
             
+            # ⭐ Check keywords ONLY if there are explicit category phrases in the query
+            # This prevents false matches like "JavaScript" matching "JavaScript Library" category
+            if not use_keywords:
+                print(f"[DEBUG] 🚫 Skipping keyword matching for '{category_name}' (no explicit category phrase)")
+                continue
+            
             # Check keywords (more lenient matching)
             for keyword in keywords:
                 keyword_lower = keyword.lower()
@@ -433,6 +461,14 @@ class QueryParser:
                             span = doc.char_span(m.start(), m.end(), alignment_mode='contract')
                             if span is not None and any(tok.pos_ in ('VERB', 'AUX') for tok in span):
                                 # skip matches where the keyword functions as a verb
+                                continue
+                            
+                            # ⭐ FIX: Check if the keyword is actually a technology name in the category
+                            # Example: "JavaScript" keyword in "JavaScript Library" category shouldn't expand
+                            # when the query is "JavaScript 2.00 years mandatory"
+                            keyword_is_tech_name = keyword_lower in [t.lower() for t in technologies]
+                            if keyword_is_tech_name:
+                                print(f"[DEBUG] 🚫 Skipping keyword '{keyword_lower}' as it's a technology name, not a category")
                                 continue
                             
                             # ⭐ FIX: Check if this is a role-based keyword preceded by a specific technology
