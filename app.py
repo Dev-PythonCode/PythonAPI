@@ -444,6 +444,246 @@ def get_all_learning_paths():
         }), 500
 
 
+@app.route('/parse-requirement', methods=['POST'])
+def parse_requirement():
+    """
+    Parse natural language requirement description and extract job details
+    
+    Request:
+    {
+        "description": "Need a senior Python developer with 5 years experience in Django and React, located in Bangalore"
+    }
+    
+    Response:
+    {
+        "original_description": "...",
+        "extracted": {
+            "skills": [
+                {"name": "Python", "years": 5, "is_mandatory": true},
+                {"name": "Django", "years": 0, "is_mandatory": false},
+                {"name": "React", "years": 0, "is_mandatory": false}
+            ],
+            "location": "Bangalore",
+            "min_years_experience": 5,
+            "experience_context": "overall",
+            "roles": ["developer"],
+            "seniority": "senior"
+        }
+    }
+    """
+    try:
+        data = request.get_json()
+        
+        if not data or 'description' not in data:
+            return jsonify({
+                'error': 'Missing description parameter',
+                'example': {
+                    'description': 'Senior Python developer with 5 years experience in Bangalore'
+                }
+            }), 400
+        
+        description = data['description']
+        
+        logger.info(f"Parsing requirement description: {description}")
+        
+        # Parse the description using the existing parser
+        parse_result = parser.parse_query(description)
+        
+        if 'error' in parse_result:
+            return jsonify({
+                'error': parse_result['error'],
+                'original_description': description
+            }), 500
+        
+        parsed_data = parse_result['parsed']
+        
+        # Extract and structure requirement-specific data
+        extracted_skills = []
+        
+        # Get all skills (both direct and from categories)
+        all_skills = list(set(
+            parsed_data.get('skills', []) + 
+            parsed_data.get('category_skills', [])
+        ))
+        
+        # Get mandatory and optional skills
+        mandatory_skills = parsed_data.get('mandatory_skills', [])
+        optional_skills = parsed_data.get('optional_skills', [])
+        
+        # ⭐ IMPROVED: Extract skill-specific experience using regex patterns
+        # Pattern: "Python with 2 years", "5 years of JavaScript", "3+ years SQL"
+        import re
+        skill_experience_patterns = [
+            r'(\w+(?:\s+\w+)*?)\s+with\s+(\d+)\s*(?:\+)?\s*years?',  # "Python with 2 years"
+            r'(\d+)\s*(?:\+)?\s*years?\s+(?:of\s+)?(?:experience\s+)?(?:in\s+)?(\w+(?:\s+\w+)*)',  # "2 years of experience in Python"
+            r'(\w+(?:\s+\w+)*?)\s+(\d+)\s*(?:\+)?\s*years?',  # "Python 2 years"
+        ]
+        
+        skill_years_map = {}
+        for pattern in skill_experience_patterns:
+            matches = re.finditer(pattern, description, re.IGNORECASE)
+            for match in matches:
+                # Determine which group has skill vs years based on pattern structure
+                groups = match.groups()
+                
+                # Try to identify which is the number
+                skill_part = None
+                years_part = None
+                
+                for g in groups:
+                    if g and g.strip().isdigit():
+                        years_part = g.strip()
+                    elif g and not g.strip().isdigit():
+                        skill_part = g.strip()
+                
+                if not skill_part or not years_part:
+                    continue
+                
+                # Normalize skill name and match against extracted skills
+                for extracted_skill in all_skills:
+                    # Check if either contains the other (handles "SQL Server" vs "SQL")
+                    skill_lower = extracted_skill.lower()
+                    part_lower = skill_part.lower()
+                    
+                    if (skill_lower in part_lower or part_lower in skill_lower or
+                        # Handle compound names like "SQL Server"
+                        any(word in part_lower for word in skill_lower.split() if len(word) > 2)):
+                        try:
+                            years = int(years_part)
+                            # Keep the highest years found for each skill
+                            if extracted_skill not in skill_years_map or years > skill_years_map[extracted_skill]:
+                                skill_years_map[extracted_skill] = years
+                                logger.info(f"  📊 Extracted: {extracted_skill} -> {years} years (from '{match.group(0)}')")
+                        except ValueError:
+                            pass
+        
+        # Combine skill information with experience data
+        skill_experiences = parsed_data.get('skill_levels', [])
+        
+        # Check for "good to have", "optional", "nice to have" keywords in description
+        description_lower = description.lower()
+        has_optional_keywords = any(keyword in description_lower for keyword in 
+            ['good to have', 'optional', 'nice to have', 'preferred', 'bonus'])
+        
+        for skill_name in all_skills:
+            # ⭐ IMPROVED: Check regex-extracted years first, then fallback to skill_experiences
+            years_required = 0
+            
+            # Priority 1: Check regex-extracted skill-years map
+            if skill_name in skill_years_map:
+                years_required = skill_years_map[skill_name]
+            else:
+                # Priority 2: Check skill_experiences from parser
+                skill_exp_data = next(
+                    (se for se in skill_experiences if se.get('skill', '').lower() == skill_name.lower()),
+                    None
+                )
+                if skill_exp_data:
+                    years_required = skill_exp_data.get('years', 0)
+            
+            # ⭐ IMPROVED: Determine if mandatory based on explicit keywords
+            # Default to True (mandatory) unless explicitly marked as optional
+            is_mandatory = True
+            
+            if skill_name in optional_skills:
+                # Explicitly marked as optional by parser
+                is_mandatory = False
+            elif skill_name in mandatory_skills:
+                # Explicitly marked as mandatory
+                is_mandatory = True
+            else:
+                # ⭐ NEW: Check if skill appears near "optional" keywords in text
+                # For now, if not explicitly mentioned, default to mandatory
+                # This matches the requirement: "If not specified explicitly then skills are mandatory"
+                skill_lower = skill_name.lower()
+                
+                # Look for patterns like "React nice to have" or "optional: Angular"
+                optional_patterns = [
+                    f'good to have.*{skill_lower}',
+                    f'{skill_lower}.*good to have',
+                    f'optional.*{skill_lower}',
+                    f'{skill_lower}.*optional',
+                    f'nice to have.*{skill_lower}',
+                    f'{skill_lower}.*nice to have',
+                    f'preferred.*{skill_lower}',
+                    f'{skill_lower}.*preferred'
+                ]
+                
+                import re
+                for pattern in optional_patterns:
+                    if re.search(pattern, description_lower):
+                        is_mandatory = False
+                        break
+            
+            extracted_skills.append({
+                'name': skill_name,
+                'years': years_required,
+                'is_mandatory': is_mandatory
+            })
+        
+        # Sort skills: mandatory first, then by years required
+        extracted_skills.sort(key=lambda x: (not x['is_mandatory'], -x['years']))
+        
+        # Extract location
+        location = parsed_data.get('location', None)
+        
+        # Extract overall experience
+        min_years_experience = parsed_data.get('min_years_experience', None)
+        experience_context = parsed_data.get('experience_context', None)
+        
+        # Extract roles and seniority
+        roles = parsed_data.get('roles', [])
+        seniority = None
+        
+        # Check for seniority keywords in description
+        description_lower = description.lower()
+        if 'senior' in description_lower:
+            seniority = 'Senior'
+        elif 'junior' in description_lower or 'fresher' in description_lower:
+            seniority = 'Junior'
+        elif 'lead' in description_lower or 'principal' in description_lower:
+            seniority = 'Lead'
+        
+        # Build response
+        result = {
+            'original_description': description,
+            'extracted': {
+                'skills': extracted_skills,
+                'location': location,
+                'min_years_experience': min_years_experience,
+                'experience_context': experience_context,
+                'roles': roles,
+                'seniority': seniority,
+                'skill_count': len(extracted_skills),
+                'mandatory_count': len([s for s in extracted_skills if s['is_mandatory']])
+            },
+            'parse_details': parsed_data  # Include full parse data for debugging
+        }
+        
+        logger.info(f"Successfully parsed requirement: {len(extracted_skills)} skills extracted")
+        
+        # ⭐ DEBUG: Log extracted skills with details
+        for skill in extracted_skills:
+            logger.info(f"  - {skill['name']}: {skill['years']} years, Mandatory: {skill['is_mandatory']}")
+        
+        return jsonify(result), 200
+    
+    except Exception as e:
+        logger.error(f"Error parsing requirement: {e}", exc_info=True)
+        return jsonify({
+            'error': str(e),
+            'original_description': data.get('description', ''),
+            'extracted': {
+                'skills': [],
+                'location': None,
+                'min_years_experience': None,
+                'experience_context': None,
+                'roles': [],
+                'seniority': None
+            }
+        }), 500
+
+
 if __name__ == '__main__':
     logger.info("Starting Flask API...")
     logger.info(f"Parser loaded: {parser.nlp is not None}")
